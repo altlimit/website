@@ -1,4 +1,17 @@
 {{define "head"}}
+{{if not .Dev}}
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-239138-28"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-239138-28');
+</script>
+{{end}}
 <meta charset="utf-8">
 <title>{{if .title}} {{.title}} -{{end}} Altlimit LLC</title>
 <meta name="description" content="{{.description}}">
