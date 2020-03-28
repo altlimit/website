@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:css": "node_modules/postcss-cli/bin/postcss src/css/styles.css -o public/css/styles.css",
-    "build:prod:css": "node_modules/postcss-cli/bin/postcss --env=production src/css/styles.css -o public/css/styles.css"
+    "build:css": "node_modules/postcss-cli/bin/postcss src/css/styles.css -o docs/css/styles.css",
+    "build:prod:css": "node_modules/postcss-cli/bin/postcss --env=production src/css/styles.css -o docs/css/styles.css"
   },
   "keywords": [],
   "author": "",
