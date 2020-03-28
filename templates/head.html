@@ -1,0 +1,11 @@
+{{define "head"}}
+<meta charset="utf-8">
+<title>{{if .title}} {{.title}} -{{end}} Altlimit LLC</title>
+<meta name="description" content="{{.description}}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<link rel="stylesheet" href="/css/styles.css">
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+{{template "addHead" .}}
+{{end}}
+
+{{define "addHead"}}{{end}}

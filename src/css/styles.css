@@ -1,0 +1,13 @@
+/*
+---
+serve: npm run build:css
+build: npm run build:prod:css
+---
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+  display: none;
+}
