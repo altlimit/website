@@ -52,7 +52,7 @@ title: Work
 {{define "content"}}
 {{$slides := data "work.json"}}
 <div x-data="work()" x-init="init()">
-    <input x-ref="slides" value="{{$slides | escapeJS}}" type="hidden" />
+    <input x-ref="slides" value="{{$slides | json}}" type="hidden" />
     <h1 class="text-lg font-medium pb-4" x-on:click="test">Projects</h1>
     <!-- Carousel Body -->
     <div class="relative rounded block md:flex items-center bg-gray-100 shadow" style="min-height: 19rem;">

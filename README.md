@@ -6,7 +6,7 @@ This uses [sitegen](https://github.com/faisalraja/sitegen) static site generator
 # Install dependencies
 npm install
 # Run development
-sitegen -serve
+sitegen -site ./ -public ./docs -serve
 # Run build
-sitegen -public ./docs -minify
+sitegen -site ./ -public ./docs -minify
 ```
