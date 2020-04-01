@@ -7,7 +7,7 @@
         function menu() {
             return {
                 viewMenu: false,
-                isActive(link) {
+                isActive: function (link) {
                     return location.pathname == (link === "/" ? link : link + "/")
                 }
             }
