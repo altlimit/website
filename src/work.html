@@ -30,7 +30,7 @@ title: Work
                     this.slideIndex = 0;
                 }
             },
-            prevSlide: function(cancel) {
+            prevSlide: function (cancel) {
                 if (cancel) {
                     this.cancelIterval();
                 }
@@ -40,7 +40,7 @@ title: Work
                     this.slideIndex = slides.length - 1;
                 }
             },
-            cancelIterval: function() {
+            cancelIterval: function () {
                 clearInterval(this.timer);
                 this.timer = null;
             }
@@ -71,7 +71,7 @@ title: Work
                 </template>
                 <a class="flex items-baseline mt-3 text-red-600 hover:text-red-900 focus:text-red-900" target="_blank"
                     x-bind:href="slide().url">
-                    <span x-text="'Visit' + slide().title"></span>
+                    <span x-text="'Visit ' + slide().title"></span>
                     <span class="text-xs ml-1">&#x279c;</span>
                 </a>
             </div>

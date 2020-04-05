@@ -98,6 +98,7 @@
     {
         "image": "/screen/randomapp.png",
         "url": "https://play.google.com/store/apps/details?id=com.altlimit.randomapp",
+        "title": "Random App",
         "description": [
             "Random App shows random application from Google Play Store."
         ]
@@ -105,6 +106,7 @@
     {
         "image": "/screen/openurl.png",
         "url": "https://play.google.com/store/apps/details?id=com.altlimit.openfromurl",
+        "title": "Open From URL",
         "description": [
             "Open from URL is a Google Play app that lets you choose to get any files from internet with a link."
         ]
