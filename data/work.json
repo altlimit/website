@@ -1,4 +1,28 @@
 [{
+        "image": "/screen/wikiyou.png",
+        "url": "https://www.wikiyou.org",
+        "title": "WikiYou.org",
+        "description": [
+            "A site powered by sitegen as a community driven static site for anything you can think of."
+        ]
+    },
+    {
+        "image": "/screen/fileshare.png",
+        "url": "https://www.wikiyou.org/tools/fileshare/",
+        "title": "P2P File Sharing",
+        "description": [
+            "A peer to peer file sharing web app that is a wikiyou page. Allows you to share any files directly to anybody you share your share url with."
+        ]
+    },
+    {
+        "image": "/screen/github.png",
+        "url": "https://github.com/altlimit/sitegen",
+        "title": "Sitegen Static Site Generator",
+        "description": [
+            "Simple but flexible static site generator. Create static sites to host on github pages, netlify, firebase or any file hosting sites."
+        ]
+    },
+    {
         "image": "/screen/applauncher.png",
         "url": "https://play.google.com/store/apps/details?id=com.altlimit.applauncherfree",
         "title": "AppLauncher",
