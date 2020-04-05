@@ -1,6 +1,6 @@
 # altlimit
 
-This uses [sitegen](https://github.com/faisalraja/sitegen) static site generator.
+This uses [sitegen](https://github.com/altlimit/sitegen) static site generator.
 
 ```shell
 # Install dependencies
