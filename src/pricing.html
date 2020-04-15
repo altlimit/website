@@ -60,23 +60,23 @@ title: Pricing
         1 month.
         Use the calculator below to get an estimate on your project.
     </p>
-    <div class="flex flex-row flex-wrap items-center">
+    <div class="flex flex-wrap items-center">
         <template x-for="(project, index) in projects" :key="index">
-            <div class="w-full sm:w-32 mx-4 py-4">
+            <div class="mx-4 py-4">
                 <label x-bind:for="'project_' + index" class="w-full text-gray-700 text-sm font-semibold"
                     x-text="'Project ' + (index + 1) +' Capacity'">
                 </label>
-                <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1 z-0">
+                <div class="flex flex-row h-10 w-full rounded-sm relative bg-transparent mt-1 z-0">
                     <button x-on:click="project.val--" x-bind:disabled="project.val <= 0"
                         class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
-                        <span class="m-auto text-2xl font-thin">−</span>
+                        <span class="m-auto text-2xl font-thin px-2">−</span>
                     </button>
-                    <input type="number" readonly="true"
-                        class="outline-none focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+                    <input type="text" readonly="true"
+                        class="outline-none focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black md:text-basecursor-default flex items-center text-gray-700 outline-none"
                         x-bind:name="'project_' + index" x-model="project.val">
                     <button x-on:click="project.val++"
                         class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
-                        <span class="m-auto text-2xl font-thin">+</span>
+                        <span class="m-auto text-2xl font-thin px-2">+</span>
                     </button>
                 </div>
             </div>
@@ -84,7 +84,7 @@ title: Pricing
 
         <div class="px-4 py-4">
             <button type="button" title="Add Project" x-on:click="addProject"
-                class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 px-3 py-2 border-gray-800">
+                class="bg-gray-300 text-gray-600 rounded-sm hover:text-gray-700 hover:bg-gray-400 px-3 py-2 border-gray-800">
                 +
             </button>
         </div>
@@ -92,7 +92,7 @@ title: Pricing
         <div class="px-4 py-4">
             <label class="flex justify-start items-start">
                 <div
-                    class="bg-white border-2 rounded border-gray-400 w-6 h-6 flex flex-shrink-0 justify-center items-center mr-2 focus-within:border-blue-500">
+                    class="bg-white border-2 rounded-sm border-gray-400 w-6 h-6 flex flex-shrink-0 justify-center items-center mr-2 focus-within:border-blue-500">
                     <input type="checkbox" class="opacity-0 absolute" x-model="support">
                     <svg class="fill-current hidden w-4 h-4 text-green-500 pointer-events-none" viewBox="0 0 20 20">
                         <path d="M0 11l2-2 5 5L18 3l2 2L7 18z"></path></svg>
