@@ -55,10 +55,13 @@ title: Pricing
 <div x-data="pricing()">
     <h1 class="text-lg font-medium">Pricing</h1>
     <p class="py-4 text-gray-700 text-base">
-        Altlimit uses a simple pricing model starting with a fixed monthly rate per project and capacity with a minimum
-        of
-        1 month.
-        Use the calculator below to get an estimate on your project.
+        Below are different pricing models we charge for custom software development and web design.
+    </p>
+    <h2 class="font-medium mt-2">Software Development</h2>
+    <div class="py-2 text-gray-700 text-base">
+        Simple pricing model starting with a fixed monthly rate per project and capacity with a minimum of 1 month.
+        Use the calculator below to get an estimate on your project. Includes custom web, mobile, desktop apps, scripting,
+        automation and anything you want to develop.
     </p>
     <div class="flex flex-wrap items-center">
         <template x-for="(project, index) in projects" :key="index">
@@ -131,10 +134,45 @@ title: Pricing
         projects.
     </p>
     <p class="text-sm text-gray-700 py-2">
-        Server costs are the responsibility of the client. If we manage the servers we will share the billing account
-        for
-        the project for you to fill your own method of payment.
+        Server costs are the responsibility of the client. 
+        If we manage the servers we will share the billing account for the project for you to fill your own method of payment.
     </p>
+
+    <h2 class="font-medium mt-2">Web Design</h2>
+    <p class="py-2 text-gray-700 text-base">
+        We also build marketing, information or corporate websites. We don't use blog platform such as wordpress and only build
+        with static site generators and host your site on Netlify, Github Pages or Firebase. You can also host it yourself
+        on any static site hosts.
+    </p>
+    <div class="py-2 text-gray-700 text-base">
+        <p class="text-sm font-semibold">Below are commonly requested estimates for web design up to 10 pages.</p>
+        <p class="py-1">$1500 - Website with existing logo.</p>
+        <p class="py-1">$2000 - Create logo with website.</p>
+        <p class="py-1">$3000 - Implementing existing complex mock up.</p>
+    </div>
+    <div class="py-2 text-gray-700 text-base">
+        <p class="text-sm font-semibold">Hosting Costs</p>
+        <p class="py-1">Netlify - First 100GB/month bandwidth free then $20/100GB</p>
+        <p class="py-1">Github Pages - Soft limit of 100GB/month, then we'll need to put it on Netlify or other static hosts</p>
+        <p class="py-1">Firebase - First 10GB/month bandwidth free then $0.15/GB</p>
+        <p class="text-sm font-semibold">Contact Form Costs</p>        
+        <p class="py-1">Sendgrid - 100 emails/day free then $14.95/month up to 40k emails</p>
+    </div>    
+    <p class="text-sm text-gray-700 py-2">
+        Most websites will not go over the free limits and end up with a $0/month hosting cost.
+    </p>    
+    <p class="text-sm text-gray-700 py-2">
+        We don't create text content, buy templates or produce unique images for your website. You can provide text and
+        image content you want to include or we can add existing open source illustrations from the internet.
+    </p>
+    <p class="text-sm text-gray-700 py-2">
+        You can do content updates yourself for free through Github UI if we host your site at Netlify.
+        Updates will trigger an automated deployment to your website. If you need more complex updates such
+        as new page structures we charge $125/hour.
+    </p>
+    <p class="text-sm text-gray-700 py-2">
+        We require a 50% deposit for web design projects.
+    </p>    
 </div>
 
 {{end}}
