@@ -1,4 +1,11 @@
 [{
+        "image": "/screen/shopswired.png",
+        "url": "https://shopswired.com",
+        "title": "SHOPSWIRED",
+        "description": [
+            "A simple eCommerce platform."
+        ]
+    }, {
         "image": "/screen/wikiyou.png",
         "url": "https://www.wikiyou.org",
         "title": "WikiYou.org",
