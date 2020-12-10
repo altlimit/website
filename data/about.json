@@ -1,31 +1,21 @@
 [{
         "image": "/img/dev_man.svg",
         "name": "Faisal R.",
-        "role": "Backend / Mobile Dev"
+        "role": "Developer"
     },
     {
         "image": "/img/dev_woman.svg",
         "name": "Monna R.",
-        "role": "Frontend Dev"
+        "role": "Developer"
     },
     {
-        "image": "/img/dev_man.svg",
-        "name": "Almond M.",
-        "role": "Full Stack / Mobile Dev"
-    },
-    {
-        "image": "/img/dev_man.svg",
-        "name": "Oliver G.",
-        "role": "Backend / Mobile Dev"
-    },
-    {
-        "image": "/img/dev_man.svg",
-        "name": "Su Hyun K.",
-        "role": "Backend Dev"
+        "image": "/img/dev_woman.svg",
+        "name": "AB M.",
+        "role": "Graphic Artist"
     },
     {
         "image": "/img/dev_woman.svg",
         "name": "Lea M.",
-        "role": "Frontend Dev"
+        "role": "Marketing"
     }
 ]
