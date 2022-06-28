@@ -1,7 +1,7 @@
 /*
 ---
-serve: npm run build:css
-build: npm run build:prod:css
+serve: npx tailwindcss -i ./src/css/styles.css -o ./docs/css/styles.css
+build: npx tailwindcss -i ./src/css/styles.css -o ./docs/css/styles.css --minify
 ---
 */
 @tailwind base;

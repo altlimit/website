@@ -1,18 +1,5 @@
 {
-  "name": "testsite",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build:css": "node_modules/postcss-cli/bin/postcss src/css/styles.css -o docs/css/styles.css",
-    "build:prod:css": "node_modules/postcss-cli/bin/postcss --env=production src/css/styles.css -o docs/css/styles.css"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "autoprefixer": "^9.7.5",
-    "postcss-cli": "^7.1.0",
-    "tailwindcss": "^1.2.0"
+  "devDependencies": {
+    "tailwindcss": "^3.1.4"
   }
 }
