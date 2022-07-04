@@ -11,3 +11,46 @@ build: npx tailwindcss -i ./src/css/styles.css -o ./docs/css/styles.css --minify
 [x-cloak] {
   display: none;
 }
+
+p {
+  @apply my-4 text-neutral-medium;
+}
+
+.hero {
+  @apply flex flex-col justify-start;
+}
+
+.hero > .pitch > .title {
+  @apply text-2xl tracking-wide text-primary;
+}
+
+.hero .subtitle {
+  @apply text-xl tracking-wide text-accent;
+}
+
+.hero p {
+  @apply text-lg;
+}
+
+@screen sm {
+  .hero {
+    @apply flex-row justify-between my-8 items-center;
+  }
+
+  .hero > .pitch {
+    @apply flex flex-col justify-items-center items-start h-full;
+  }
+
+  .hero > .pitch > .title {
+    @apply text-5xl font-bold;
+  }
+
+  .hero > .pitch > .subtitle {
+    @apply text-3xl font-semibold;
+  }
+
+  .hero p {
+    @apply text-2xl;
+  }
+
+}

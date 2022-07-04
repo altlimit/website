@@ -1,31 +1,242 @@
-<!doctype html><html><head><script async src="https://www.googletagmanager.com/gtag/js?id=UA-239138-28"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-239138-28');</script><meta charset=utf-8><title>Pricing - Altlimit LLC</title><meta name=description content><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><link rel=stylesheet href=/css/styles.css><script>(function(d){if(d.currentScript){const s=d.createElement("script");s.src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.2.4/dist/alpine.min.js";s.defer=true;d.head.appendChild(s);}else{var s=d.createElement("script");s.src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.2.4/dist/alpine-ie11.min.js";d.head.appendChild(s);}})(document);</script><style>.tooltip-trigger .tooltip-target{display:none;z-index:1}.tooltip-trigger:hover .tooltip-target{display:block}input:checked+svg{display:block}</style><script>function pricing(){return{cost:10000,projects:[{val:0,}],support:false,addProject:function(){this.projects=this.projects.concat([{val:0}]);},total:function(){const total={cost:0,devs:0};for(let i=0;i<this.projects.length;i++){const p=this.projects[i];total.cost+=p.val*this.cost;total.devs+=p.val;}
-if(this.support&&total.cost<=0){total.cost+=500;}
-total.prorate=Number(total.cost/30).toFixed(0);return total;}}}</script><script>function menu(){return{viewMenu:false,isActive:function(link){return location.pathname==(link==="/"?link:link+"/")}}}</script></head><body><div class="bg-blue-500 px-6 pt-6"><div class="bg-white flex flex-col font-sans"><div class="container mx-auto px-8 py-4"><header class="flex flex-col sm:flex-row items-center justify-between py-6 relative" x-data=menu()><h3 class="text-gray-700 text-center"><a href=/><img src=/logo.png class=mb-1> Altlimit LLC</a></h3><nav class="md:flex text-lg" x-bind:class="{'flex flex-wrap': viewMenu, 'hidden': !viewMenu}" x-cloak><a href=/ class="py-3 px-6" x-bind:class="{'w-full': viewMenu, 'text-gray-800 hover:text-blue-300': !isActive('/'), 'bg-blue-200 text-blue-700 hover:bg-blue-300 rounded-sm':isActive('/')}">Home</a>
-<a href=/services class="py-3 px-6" x-bind:class="{'w-full': viewMenu, 'text-gray-800 hover:text-blue-300': !isActive('/services'), 'bg-blue-200 text-blue-700 hover:bg-blue-300 rounded-sm':isActive('/services')}">Services</a>
-<a href=/work class="py-3 px-6" x-bind:class="{'w-full': viewMenu, 'text-gray-800 hover:text-blue-300': !isActive('/work'), 'bg-blue-200 text-blue-700 hover:bg-blue-300 rounded-sm':isActive('/work')}">Work</a>
-<a href=/pricing class="py-3 px-6" x-bind:class="{'w-full': viewMenu, 'text-gray-800 hover:text-blue-300': !isActive('/pricing'), 'bg-blue-200 text-blue-700 hover:bg-blue-300 rounded-sm':isActive('/pricing')}">Pricing</a>
-<a href=/about class="py-3 px-6" x-bind:class="{'w-full': viewMenu, 'text-gray-800 hover:text-blue-300': !isActive('/about'), 'bg-blue-200 text-blue-700 hover:bg-blue-300 rounded-sm':isActive('/about')}">About</a>
-<a href=/contact class="py-3 px-6" x-bind:class="{'w-full': viewMenu, 'text-gray-800 hover:text-blue-300': !isActive('/contact'), 'bg-blue-200 text-blue-700 hover:bg-blue-300 rounded-sm':isActive('/contact')}">Contact</a></nav><button class="flex md:hidden flex-col absolute top-0 right-0 p-4 mt-5" x-on:click="viewMenu = !viewMenu">
-<span class="w-5 h-px mb-1 bg-red-500"></span><span class="w-5 h-px mb-1 bg-red-500"></span><span class="w-5 h-px mb-1 bg-red-500"></span></button></header><div x-data=pricing()><h1 class="text-lg font-medium">Pricing</h1><p class="py-4 text-gray-700 text-base">Below are different pricing models we charge for custom software development and web design.<h2 class="font-medium mt-2">Software Development</h2><div class="py-2 text-gray-700 text-base">Simple pricing model starting with a fixed monthly rate per project and capacity with a minimum of 1 month.
-Use the calculator below to get an estimate on your project. Includes custom web, mobile, desktop apps, scripting,
-automation and anything you want to develop.<div class="flex flex-wrap items-center"><template x-for="(project, index) in projects" :key=index><div class="mx-4 py-4"><label x-bind:for="'project_' + index" class="w-full text-gray-700 text-sm font-semibold" x-text="'Project ' + (index + 1) +' Capacity'"></label><div class="flex flex-row h-10 w-full rounded-sm relative bg-transparent mt-1 z-0"><button x-on:click=project.val-- x-bind:disabled="project.val <= 0" class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
-<span class="m-auto text-2xl font-thin px-2">−</span></button>
-<input readonly class="outline-none focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black md:text-basecursor-default flex items-center text-gray-700 outline-none" x-bind:name="'project_' + index" x-model=project.val>
-<button x-on:click=project.val++ class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
-<span class="m-auto text-2xl font-thin px-2">+</span></button></div></div></template><div class="px-4 py-4"><button type=button title="Add Project" x-on:click=addProject class="bg-gray-300 text-gray-600 rounded-sm hover:text-gray-700 hover:bg-gray-400 px-3 py-2 border-gray-800">
-+</button></div><div class="px-4 py-4"><label class="flex justify-start items-start"><div class="bg-white border-2 rounded-sm border-gray-400 w-6 h-6 flex flex-shrink-0 justify-center items-center mr-2 focus-within:border-blue-500"><input type=checkbox class="opacity-0 absolute" x-model=support><svg class="fill-current hidden w-4 h-4 text-green-500 pointer-events-none" viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg></div><div class=select-none>Support</div></label></div><div class="px-4 py-4"><div><strong class="inline-block w-32 text-right">Active Devs:</strong> <span x-text=total().devs></span></div><div><strong class="inline-block w-32 text-right">Monthly Cost:</strong> $<span x-text=total().cost></span></div><div><strong class="inline-block w-32 text-right">Prorate Cost:</strong> $<span x-text=total().prorate></span></div></div></div><p class="text-sm text-gray-700 py-2">We will provide you status updates every two weeks at the very least (you can request for more frequency as
-desired).
-After the minimum one month, costs will be prorated daily until the project has been delivered.
-You may cancel anytime after the first month if you are not happy with the progress.<p class="text-sm text-gray-700 py-2">Support is included with an active project. This is also required if you want us to manage your servers.
-A server setup, configuration or implementation is a project. Manage here means that we make sure your servers
-are
-running
-and depending on what needs to be done can be a whole project of itself.<p class="text-sm text-gray-700 py-2">You decide if a project is complete before we can start a new project without increasing the number of active
-projects.<p class="text-sm text-gray-700 py-2">Server costs are the responsibility of the client.
-If we manage the servers we will share the billing account for the project for you to fill your own method of payment.<h2 class="font-medium mt-2">Web Design</h2><p class="py-2 text-gray-700 text-base">We also build marketing, information or corporate websites. We don't use blog platform such as wordpress and only build
-with static site generators and host your site on Netlify, Github Pages or Firebase. You can also host it yourself
-on any static site hosts.<div class="py-2 text-gray-700 text-base"><p class="text-sm font-semibold">Below are commonly requested estimates for web design up to 10 pages.<p class=py-1>$1500 - Website with existing logo.<p class=py-1>$2000 - Create logo with website.<p class=py-1>$3000 - Implementing existing complex mock up.</div><div class="py-2 text-gray-700 text-base"><p class="text-sm font-semibold">Hosting Costs<p class=py-1>Netlify - First 100GB/month bandwidth free then $20/100GB<p class=py-1>Github Pages - Soft limit of 100GB/month, then we'll need to put it on Netlify or other static hosts<p class=py-1>Firebase - First 10GB/month bandwidth free then $0.15/GB<p class="text-sm font-semibold">Contact Form Costs<p class=py-1>Sendgrid - 100 emails/day free then $14.95/month up to 40k emails</div><p class="text-sm text-gray-700 py-2">Most websites will not go over the free limits and end up with a $0/month hosting cost.<p class="text-sm text-gray-700 py-2">We don't create text content, buy templates or produce unique images for your website. You can provide text and
-image content you want to include or we can add existing open source illustrations from the internet.<p class="text-sm text-gray-700 py-2">You can do content updates yourself for free through Github UI if we host your site at Netlify.
-Updates will trigger an automated deployment to your website. If you need more complex updates such
-as new page structures we charge $125/hour.<p class="text-sm text-gray-700 py-2">We require a 50% deposit for web design projects.</div></div></div><div class="text-center text-white text-base border-0 py-2 bg-blue-500">&copy; Altlimit LLC 2020</div></div></body></html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+
+<meta charset="utf-8">
+<title> Pricing - Altlimit LLC</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<link rel="stylesheet" href="/css/styles.css">
+<script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
+
+<style>
+    .tooltip-trigger .tooltip-target {
+        display: none;
+        z-index: 1;
+    }
+
+    .tooltip-trigger:hover .tooltip-target {
+        display: block;
+    }
+
+    input:checked+svg {
+        display: block;
+    }
+</style>
+<script>
+    function pricing() {
+        return {
+            cost: 10000,
+            projects: [{
+                val: 0,
+            }],
+            support: false,
+            addProject: function () {
+                this.projects = this.projects.concat([{
+                    val: 0
+                }]);
+            },
+            total: function () {
+                const total = {cost: 0, devs: 0};
+                for (let i = 0; i < this.projects.length; i++) {
+                    const p = this.projects[i];
+                    total.cost += p.val * this.cost;
+                    total.devs += p.val;
+                }
+
+                if (this.support && total.cost <= 0) {
+                    total.cost += 500;
+                }
+                total.prorate = Number(total.cost / 30).toFixed(0);
+                return total;
+            }
+        }
+    }
+</script>
+
+
+    <script>
+        function menu() {
+            return {
+                viewMenu: false,
+                isActive: function (link) {
+                    return location.pathname == (link === "/" ? link : link + "/")
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="bg-blue-500 px-6 pt-6">
+        <div class="bg-white flex flex-col font-sans">
+            <div class="container mx-auto px-8 py-4">
+                <header class="flex flex-col sm:flex-row items-center justify-between py-6 relative" x-data="menu()">
+                    <h3 class="text-gray-700 text-center">
+                        <a href="/"><img src="/logo.png" class="mb-1" /> Altlimit LLC</a>
+                    </h3>
+                    <nav class="md:flex text-lg" x-bind:class="{'flex flex-wrap': viewMenu, 'hidden': !viewMenu}"
+                        x-cloak>
+                        
+                        
+                        <a href="/" class="py-3 px-6"
+                            x-bind:class="{'w-full': viewMenu, 'text-gray-800 hover:text-blue-300': !isActive('/'), 'bg-blue-200 text-blue-700 hover:bg-blue-300 rounded-sm':isActive('/')}">Home</a>
+                        
+                        <a href="/services" class="py-3 px-6"
+                            x-bind:class="{'w-full': viewMenu, 'text-gray-800 hover:text-blue-300': !isActive('/services'), 'bg-blue-200 text-blue-700 hover:bg-blue-300 rounded-sm':isActive('/services')}">Services</a>
+                        
+                        <a href="/work" class="py-3 px-6"
+                            x-bind:class="{'w-full': viewMenu, 'text-gray-800 hover:text-blue-300': !isActive('/work'), 'bg-blue-200 text-blue-700 hover:bg-blue-300 rounded-sm':isActive('/work')}">Work</a>
+                        
+                        <a href="/pricing" class="py-3 px-6"
+                            x-bind:class="{'w-full': viewMenu, 'text-gray-800 hover:text-blue-300': !isActive('/pricing'), 'bg-blue-200 text-blue-700 hover:bg-blue-300 rounded-sm':isActive('/pricing')}">Pricing</a>
+                        
+                        <a href="/about" class="py-3 px-6"
+                            x-bind:class="{'w-full': viewMenu, 'text-gray-800 hover:text-blue-300': !isActive('/about'), 'bg-blue-200 text-blue-700 hover:bg-blue-300 rounded-sm':isActive('/about')}">About</a>
+                        
+                        <a href="/contact" class="py-3 px-6"
+                            x-bind:class="{'w-full': viewMenu, 'text-gray-800 hover:text-blue-300': !isActive('/contact'), 'bg-blue-200 text-blue-700 hover:bg-blue-300 rounded-sm':isActive('/contact')}">Contact</a>
+                        
+                    </nav>
+                    <button class="flex md:hidden flex-col absolute top-0 right-0 p-4 mt-5"
+                        x-on:click="viewMenu = !viewMenu">
+                        <span class="w-5 h-px mb-1 bg-red-500"></span>
+                        <span class="w-5 h-px mb-1 bg-red-500"></span>
+                        <span class="w-5 h-px mb-1 bg-red-500"></span>
+                    </button>
+                </header>
+                
+
+<div x-data="pricing()">
+    <h1 class="text-lg font-medium">Pricing</h1>
+    <p class="py-4 text-gray-700 text-base">
+        Below are different pricing models we charge for custom software development and web design.
+    </p>
+    <h2 class="font-medium mt-2">Software Development</h2>
+    <div class="py-2 text-gray-700 text-base">
+        Simple pricing model starting with a fixed monthly rate per project and capacity with a minimum of 1 month.
+        Use the calculator below to get an estimate on your project. Includes custom web, mobile, desktop apps, scripting,
+        automation and anything you want to develop.
+    </p>
+    <div class="flex flex-wrap items-center">
+        <template x-for="(project, index) in projects" :key="index">
+            <div class="mx-4 py-4">
+                <label x-bind:for="'project_' + index" class="w-full text-gray-700 text-sm font-semibold"
+                    x-text="'Project ' + (index + 1) +' Capacity'">
+                </label>
+                <div class="flex flex-row h-10 w-full rounded-sm relative bg-transparent mt-1 z-0">
+                    <button x-on:click="project.val--" x-bind:disabled="project.val <= 0"
+                        class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                        <span class="m-auto text-2xl font-thin px-2">−</span>
+                    </button>
+                    <input type="text" readonly="true"
+                        class="outline-none focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black md:text-basecursor-default flex items-center text-gray-700 outline-none"
+                        x-bind:name="'project_' + index" x-model="project.val">
+                    <button x-on:click="project.val++"
+                        class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                        <span class="m-auto text-2xl font-thin px-2">+</span>
+                    </button>
+                </div>
+            </div>
+        </template>
+
+        <div class="px-4 py-4">
+            <button type="button" title="Add Project" x-on:click="addProject"
+                class="bg-gray-300 text-gray-600 rounded-sm hover:text-gray-700 hover:bg-gray-400 px-3 py-2 border-gray-800">
+                +
+            </button>
+        </div>
+
+        <div class="px-4 py-4">
+            <label class="flex justify-start items-start">
+                <div
+                    class="bg-white border-2 rounded-sm border-gray-400 w-6 h-6 flex flex-shrink-0 justify-center items-center mr-2 focus-within:border-blue-500">
+                    <input type="checkbox" class="opacity-0 absolute" x-model="support">
+                    <svg class="fill-current hidden w-4 h-4 text-green-500 pointer-events-none" viewBox="0 0 20 20">
+                        <path d="M0 11l2-2 5 5L18 3l2 2L7 18z"></path></svg>
+                </div>
+                <div class="select-none">
+                    Support
+                </div>
+            </label>
+        </div>
+
+        <div class="px-4 py-4">
+            <div><strong class="inline-block w-32 text-right">Active Devs:</strong> <span x-text="total().devs"></span>
+            </div>
+            <div><strong class="inline-block w-32 text-right">Monthly Cost:</strong> $<span
+                    x-text="total().cost"></span></div>
+            <div><strong class="inline-block w-32 text-right">Prorate Cost:</strong> $<span
+                    x-text="total().prorate"></span></div>
+        </div>
+    </div>
+
+    <p class="text-sm text-gray-700 py-2">
+        We will provide you status updates every two weeks at the very least (you can request for more frequency as
+        desired).
+        After the minimum one month, costs will be prorated daily until the project has been delivered.
+        You may cancel anytime after the first month if you are not happy with the progress.
+    </p>
+    <p class="text-sm text-gray-700 py-2">
+        Support is included with an active project. This is also required if you want us to manage your servers.
+        A server setup, configuration or implementation is a project. Manage here means that we make sure your servers
+        are
+        running
+        and depending on what needs to be done can be a whole project of itself.
+    </p>
+    <p class="text-sm text-gray-700 py-2">
+        You decide if a project is complete before we can start a new project without increasing the number of active
+        projects.
+    </p>
+    <p class="text-sm text-gray-700 py-2">
+        Server costs are the responsibility of the client. 
+        If we manage the servers we will share the billing account for the project for you to fill your own method of payment.
+    </p>
+
+    <h2 class="font-medium mt-2">Web Design</h2>
+    <p class="py-2 text-gray-700 text-base">
+        We also build marketing, information or corporate websites. We don't use blog platform such as wordpress and only build
+        with static site generators and host your site on Netlify, Github Pages or Firebase. You can also host it yourself
+        on any static site hosts.
+    </p>
+    <div class="py-2 text-gray-700 text-base">
+        <p class="text-sm font-semibold">Below are commonly requested estimates for web design up to 10 pages.</p>
+        <p class="py-1">$1500 - Website with existing logo.</p>
+        <p class="py-1">$2000 - Create logo with website.</p>
+        <p class="py-1">$3000 - Implementing existing complex mock up.</p>
+    </div>
+    <div class="py-2 text-gray-700 text-base">
+        <p class="text-sm font-semibold">Hosting Costs</p>
+        <p class="py-1">Netlify - First 100GB/month bandwidth free then $20/100GB</p>
+        <p class="py-1">Github Pages - Soft limit of 100GB/month, then we'll need to put it on Netlify or other static hosts</p>
+        <p class="py-1">Firebase - First 10GB/month bandwidth free then $0.15/GB</p>
+        <p class="text-sm font-semibold">Contact Form Costs</p>        
+        <p class="py-1">Sendgrid - 100 emails/day free then $14.95/month up to 40k emails</p>
+    </div>    
+    <p class="text-sm text-gray-700 py-2">
+        Most websites will not go over the free limits and end up with a $0/month hosting cost.
+    </p>    
+    <p class="text-sm text-gray-700 py-2">
+        We don't create text content, buy templates or produce unique images for your website. You can provide text and
+        image content you want to include or we can add existing open source illustrations from the internet.
+    </p>
+    <p class="text-sm text-gray-700 py-2">
+        You can do content updates yourself for free through Github UI if we host your site at Netlify.
+        Updates will trigger an automated deployment to your website. If you need more complex updates such
+        as new page structures we charge $125/hour.
+    </p>
+    <p class="text-sm text-gray-700 py-2">
+        We require a 50% deposit for web design projects.
+    </p>    
+</div>
+
+
+            </div>
+        </div>
+        <div class="text-center text-white text-base border-0 py-2 bg-blue-500">&copy; Altlimit LLC 2020</div>
+    </div>
+</body>
+
+</html>

@@ -56,7 +56,7 @@ title: Contact
                             "g-recaptcha": captchaResp,
                             "personalizations": [{
                                 "to": [{
-                                    "email": "hello@altlimit.com"
+                                    "email": "support@altlimit.com"
                                 }],
                             }],
                             "subject": "Altlimit LLC Contact",
@@ -149,7 +149,7 @@ title: Contact
             </template>
             <div class="md:flex md:items-center">
                 <div class="md:w-1/3">
-                    <button
+                    <button :disabled="sending"
                         class="shadow bg-red-400 hover:bg-red-500 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4"
                         type="submit" x-text="'Send' + (sending ? 'ing' : '')">
                     </button>
