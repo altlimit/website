@@ -686,14 +686,6 @@ video {
   margin-bottom: 0.5rem;
 }
 
-.mb-16 {
-  margin-bottom: 4rem;
-}
-
-.mt-8 {
-  margin-top: 2rem;
-}
-
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -756,10 +748,6 @@ video {
 
 .h-48 {
   height: 12rem;
-}
-
-.h-64 {
-  height: 16rem;
 }
 
 .h-10 {
@@ -968,11 +956,6 @@ video {
   background-color: rgb(248 113 113 / var(--tw-bg-opacity));
 }
 
-.bg-blue-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(147 197 253 / var(--tw-bg-opacity));
-}
-
 .bg-transparent {
   background-color: transparent;
 }
@@ -1032,11 +1015,6 @@ video {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}
-
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 
 .px-2 {
@@ -1212,11 +1190,6 @@ video {
   color: rgb(127 29 29 / var(--tw-text-opacity));
 }
 
-.underline {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
-}
-
 .opacity-0 {
   opacity: 0;
 }
@@ -1250,6 +1223,11 @@ video {
   display: none;
 }
 
+h1,  h2,  h3,  h4,  h5,  h6 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 p {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -1257,10 +1235,87 @@ p {
   color: rgb(92 93 95 / var(--tw-text-opacity));
 }
 
+.link {
+  border-bottom-width: 1px;
+  border-style: dotted;
+  --tw-border-opacity: 1;
+  border-color: rgb(79 214 251 / var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(26 161 225 / var(--tw-text-opacity));
+}
+
+.link:hover {
+  border-style: solid;
+  --tw-text-opacity: 1;
+  color: rgb(14 149 213 / var(--tw-text-opacity));
+}
+
+.button {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+.primary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(26 161 225 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(211 255 255 / var(--tw-text-opacity));
+}
+
+.primary:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 149 213 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.call-to-action {
+  border-radius: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .hero {
+  position: relative;
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+
+.hero > .backdrop {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, white 35%, rgba(256,256,256,0.7) 75%, transparent 100%);
+}
+
+.hero > .pitch {
+  position: absolute;
+  bottom: 0px;
+  top: 0px;
   display: flex;
+  width: 100%;
   flex-direction: column;
-  justify-content: flex-start;
+  align-items: center;
+  justify-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  text-align: center;
 }
 
 .hero > .pitch > .title {
@@ -1268,7 +1323,7 @@ p {
   line-height: 2rem;
   letter-spacing: 0.025em;
   --tw-text-opacity: 1;
-  color: rgb(26 161 225 / var(--tw-text-opacity));
+  color: rgb(34 35 37 / var(--tw-text-opacity));
 }
 
 .hero .subtitle {
@@ -1282,23 +1337,45 @@ p {
 .hero p {
   font-size: 1.125rem;
   line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(53 54 56 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
+  nav {
+    display: flex;
+    gap: 2rem;
+    --tw-text-opacity: 1;
+    color: rgb(26 161 225 / var(--tw-text-opacity));
+  }
+
   .hero {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    background-size: contain;
+    height:500px;
+  }
+
+  .hero > .backdrop {
+    background: linear-gradient(115deg, white, white 58%,rgba(256,256,256,0.8) 58%,rgba(256,256,256,0.8) 60%, rgba(256,256,256,0.6) 60%, rgba(256,256,256,0.6) 61%, transparent 65%, transparent);
   }
 
   .hero > .pitch {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     display: flex;
-    height: 100%;
+    width: 50%;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
     justify-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: left;
+    background: linear-gradient(45deg, white 75, transparent 100);
   }
 
   .hero > .pitch > .title {
@@ -1327,11 +1404,6 @@ p {
 .hover\:bg-red-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-blue-400:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(96 165 250 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-gray-400:hover {
@@ -1403,32 +1475,12 @@ p {
 }
 
 @media (min-width: 640px) {
-  .sm\:mb-0 {
-    margin-bottom: 0px;
-  }
-
-  .sm\:mt-0 {
-    margin-top: 0px;
-  }
-
-  .sm\:h-auto {
-    height: auto;
-  }
-
   .sm\:w-1\/4 {
     width: 25%;
   }
 
-  .sm\:w-3\/5 {
-    width: 60%;
-  }
-
   .sm\:flex-row {
     flex-direction: row;
-  }
-
-  .sm\:pl-12 {
-    padding-left: 3rem;
   }
 }
 

@@ -12,16 +12,54 @@ build: npx tailwindcss -i ./src/css/styles.css -o ./docs/css/styles.css --minify
   display: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  @apply my-4;
+}
+
 p {
   @apply my-4 text-neutral-medium;
 }
 
+.link {
+  @apply text-primary border-b border-primary-subtle border-dotted;
+}
+
+.link:hover {
+  @apply text-primary-strong border-solid;
+}
+
+.button {
+  @apply my-4 px-6 py-2 font-semibold tracking-wide text-lg;
+}
+
+.primary {
+  @apply bg-primary text-primary-inverse;
+}
+
+.primary:hover {
+  @apply bg-primary-strong text-white;
+}
+
+.call-to-action {
+  @apply text-2xl rounded-lg py-4 px-6;
+}
+
 .hero {
-  @apply flex flex-col justify-start;
+  @apply relative bg-no-repeat bg-right bg-cover;
+  height: 500px;
+}
+
+.hero > .backdrop {
+  @apply absolute top-0 left-0 h-full w-full;
+  background: linear-gradient(to bottom, white 35%, rgba(256,256,256,0.7) 75%, transparent 100%)
+}
+
+.hero > .pitch {
+  @apply absolute w-full p-8 bottom-0 top-0 flex flex-col gap-4 justify-items-center items-center text-center;
 }
 
 .hero > .pitch > .title {
-  @apply text-2xl tracking-wide text-primary;
+  @apply text-2xl tracking-wide text-neutral-strong;
 }
 
 .hero .subtitle {
@@ -29,16 +67,27 @@ p {
 }
 
 .hero p {
-  @apply text-lg;
+  @apply text-lg text-neutral;
 }
 
 @screen sm {
+
+  nav {
+    @apply flex gap-8 text-primary;
+  }
+
   .hero {
-    @apply flex-row justify-between my-8 items-center;
+    @apply bg-contain;
+    height:500px;
+  }
+
+  .hero > .backdrop {
+    background: linear-gradient(115deg, white, white 58%,rgba(256,256,256,0.8) 58%,rgba(256,256,256,0.8) 60%, rgba(256,256,256,0.6) 60%, rgba(256,256,256,0.6) 61%, transparent 65%, transparent);
   }
 
   .hero > .pitch {
-    @apply flex flex-col justify-items-center items-start h-full;
+    @apply absolute w-1/2 py-8 px-8 bottom-0 left-0 my-8 flex flex-col justify-items-center text-left items-start justify-center;
+    background: linear-gradient(45deg, white 75, transparent 100);
   }
 
   .hero > .pitch > .title {
