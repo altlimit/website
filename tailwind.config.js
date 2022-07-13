@@ -13,12 +13,12 @@ module.exports = {
         'primary-strong' : '#0E95D5',
         'primary-medium' : '#30B7F7',
         'primary-subtle' : '#4FD6FB',
-        'primary-inverse' : '#D3FFFF',
-        'accent' : '#CE5043',
-        'accent-strong' : '#B23427',
-        'accent-medium' : '#F6786B',
-        'accent-subtle' : '#FFA396',
-        'accent-inverse' : '#FFC9BC',
+        'primary-inverse' : '#EBFDFD',
+        'accent' : '#EDB954',
+        'accent-strong' : '#D6A03E',
+        'accent-medium' : '#FFD977',
+        'accent-subtle' : '#FFF08E',
+        'accent-inverse' : '#FFFFCA',
         'success' : '#B3C833',
         'success-strong' : '#859A05',
         'success-medium' : '#C6DB46',
@@ -37,5 +37,8 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss'),
+    require('autoprefixer')
+  ],
 }

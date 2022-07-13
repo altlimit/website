@@ -2,21 +2,18 @@
         "path": "/",
         "name": "Home"
     },
-    {
-        "path": "/services",
-        "name": "Services"
-    },
+
     {
         "path": "/work",
-        "name": "Work"
+        "name": "Our Solutions"
     },
     {
         "path": "/pricing",
         "name": "Pricing"
     },
     {
-        "path": "/about",
-        "name": "About"
+        "path": "/company",
+        "name": "Company"
     },
     {
         "path": "/contact",

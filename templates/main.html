@@ -16,33 +16,33 @@
 </head>
 
 <body>
-    <div class="bg-blue-500 px-6 pt-6">
-        <div class="bg-white flex flex-col font-sans">
-            <div class="container mx-auto px-8 py-4">
-                <header class="flex flex-col sm:flex-row items-center justify-between py-6 relative" x-data="menu()">
-                    <h3 class="text-gray-700 text-center">
-                        <a href="/"><img src="/logo.png" class="mb-1" /> Altlimit LLC</a>
-                    </h3>
-                    <nav class="md:flex text-lg" x-bind:class="{'flex flex-wrap': viewMenu, 'hidden': !viewMenu}"
-                        x-cloak>
-                        {{$links := data "links.json"}}
-                        {{ range $links }}
-                        <a href="{{.path}}" class="py-3 px-6"
-                            x-bind:class="{'w-full': viewMenu, 'text-gray-800 hover:text-blue-300': !isActive('{{.path}}'), 'bg-blue-200 text-blue-700 hover:bg-blue-300 rounded-sm':isActive('{{.path}}')}">{{.name}}</a>
-                        {{end}}
-                    </nav>
-                    <button class="flex md:hidden flex-col absolute top-0 right-0 p-4 mt-5"
-                        x-on:click="viewMenu = !viewMenu">
-                        <span class="w-5 h-px mb-1 bg-red-500"></span>
-                        <span class="w-5 h-px mb-1 bg-red-500"></span>
-                        <span class="w-5 h-px mb-1 bg-red-500"></span>
-                    </button>
-                </header>
-                {{template "content" .}}
-            </div>
-        </div>
-        <div class="text-center text-white text-base border-0 py-2 bg-blue-500">&copy; Altlimit LLC 2020</div>
+    <div class="container mx-auto px-8 py-4">
+        <header class="flex flex-col sm:flex-row items-center justify-between py-6 relative" x-data="menu()">
+            <h3 class="text-gray-700 text-center">
+                <a href="/"><img src="/logo.png" class="mb-1" alt="Altlimit LLC logo" /></a>
+            </h3>
+            <nav class="md:flex text-lg" x-bind:class="{'flex flex-wrap': viewMenu, 'hidden': !viewMenu}"
+                x-cloak>
+                {{$links := data "links.json"}}
+                {{ range $links }}
+                <a href="{{.path}}"
+                    x-bind:class="{'w-full': viewMenu, 'active':isActive('{{.path}}')}">{{.name}}</a>
+                {{end}}
+            </nav>
+            <button class="flex md:hidden flex-col absolute top-0 right-0 p-4 mt-5"
+                x-on:click="viewMenu = !viewMenu">
+                <span class="w-5 h-px mb-1 bg-red-500"></span>
+                <span class="w-5 h-px mb-1 bg-red-500"></span>
+                <span class="w-5 h-px mb-1 bg-red-500"></span>
+            </button>
+        </header>
+        {{template "content" .}}
     </div>
+    <footer class="footer">
+        <div class="container bg-primary">
+            &copy; Altlimit LLC 2022
+        </div>
+    </footer>
 </body>
 
 </html>
