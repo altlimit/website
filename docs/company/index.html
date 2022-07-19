@@ -30,8 +30,9 @@
             <h3 class="text-gray-700 text-center">
                 <a href="/"><img src="/logo.png" class="mb-1" alt="Altlimit LLC logo" /></a>
             </h3>
-            <nav class="md:flex text-lg" x-bind:class="{'flex flex-wrap': viewMenu, 'hidden': !viewMenu}"
+            <nav class="md:flex text-lg" :class="{'flex flex-wrap': viewMenu}"
                 x-cloak>
+                <a href="#">Test</a>
                 
                 
                 <a href="/"
@@ -60,6 +61,20 @@
         
 
 <div>
+    <div class="banner accent" style="background-image:url('/img/company.jpg')">
+        <div class="backdrop"></div>
+        <div class="pitch">
+            <h1 class="title">Our Company
+            </h1>
+            <p>See some of our work</p>
+        </div>
+    </div>
+    <div class="overview">
+        <h1 class="title">
+            Our Company
+        </h1>
+
+    </div>
     <h1 class="text-lg font-medium">About</h1>
     <p class="py-4 text-gray-700 text-base">
         We are a team of remote developers around the world.

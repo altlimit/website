@@ -74,8 +74,9 @@
             <h3 class="text-gray-700 text-center">
                 <a href="/"><img src="/logo.png" class="mb-1" alt="Altlimit LLC logo" /></a>
             </h3>
-            <nav class="md:flex text-lg" x-bind:class="{'flex flex-wrap': viewMenu, 'hidden': !viewMenu}"
+            <nav class="md:flex text-lg" :class="{'flex flex-wrap': viewMenu}"
                 x-cloak>
+                <a href="#">Test</a>
                 
                 
                 <a href="/"
@@ -104,54 +105,75 @@
         
 
 <div x-data="work()" x-init="init()">
-    <input x-ref="slides" value="[{&#34;description&#34;:[&#34;A simple eCommerce platform.&#34;],&#34;image&#34;:&#34;/screen/shopswired.jpg&#34;,&#34;title&#34;:&#34;SHOPSWIRED&#34;,&#34;url&#34;:&#34;https://shopswired.com&#34;},{&#34;description&#34;:[&#34;A site powered by sitegen as a community driven static site for anything you can think of.&#34;],&#34;image&#34;:&#34;/screen/wikiyou.png&#34;,&#34;title&#34;:&#34;WikiYou.org&#34;,&#34;url&#34;:&#34;https://www.wikiyou.org&#34;},{&#34;description&#34;:[&#34;A peer to peer file sharing web app that is a wikiyou page. Allows you to share any files directly to anybody you share your share url with.&#34;],&#34;image&#34;:&#34;/screen/fileshare.png&#34;,&#34;title&#34;:&#34;P2P File Sharing&#34;,&#34;url&#34;:&#34;https://www.wikiyou.org/tools/fileshare/&#34;},{&#34;description&#34;:[&#34;Simple but flexible static site generator. Create static sites to host on github pages, netlify, firebase or any file hosting sites.&#34;],&#34;image&#34;:&#34;/screen/github.png&#34;,&#34;title&#34;:&#34;Sitegen Static Site Generator&#34;,&#34;url&#34;:&#34;https://github.com/altlimit/sitegen&#34;},{&#34;description&#34;:[&#34;App Launcher Plus is an App Drawer that automatically organize your apps base on google play categories. It is not a full featured launcher, so it will not replace your current launcher. But you can use it as an alternative app drawer.&#34;],&#34;image&#34;:&#34;/screen/applauncher.png&#34;,&#34;title&#34;:&#34;AppLauncher&#34;,&#34;url&#34;:&#34;https://play.google.com/store/apps/details?id=com.altlimit.applauncherfree&#34;},{&#34;description&#34;:[&#34;App Caller is an android application that helps you get an immediate response from other users to launch an app, share links and photos.&#34;],&#34;image&#34;:&#34;/screen/appcaller.png&#34;,&#34;title&#34;:&#34;AppCaller&#34;,&#34;url&#34;:&#34;https://play.google.com/store/apps/details?id=com.altlimit.caller&#34;},{&#34;description&#34;:[&#34;Crowdfunding platform for online shopping and group gifting. It targets users who wants to buy something online by sharing expenses.&#34;,&#34;Unlike other crowdgifting/donation platforms, this eliminates the need for a middle person in purchasing the items when a wish has been granted. The platform automatically places the order and the items gets delivered.&#34;],&#34;image&#34;:&#34;/screen/chipnship.png&#34;,&#34;title&#34;:&#34;Chip&#39;n Ship&#34;,&#34;url&#34;:&#34;http://www.chipnship.com&#34;},{&#34;description&#34;:[&#34;HeardIt.org is an online community like reddit.&#34;],&#34;image&#34;:&#34;/screen/heardit.png&#34;,&#34;title&#34;:&#34;HeardIt.org&#34;,&#34;url&#34;:&#34;http://www.heardit.org/&#34;},{&#34;description&#34;:[&#34;flickrsmartsync is a tool you can use to easily sync up or down your photos in a drive/folder to flickr since now it has a free 1TB storage you can probably sync all your photo collection.&#34;],&#34;image&#34;:&#34;/screen/flickersmartsync.png&#34;,&#34;title&#34;:&#34;flickrsmartsync&#34;,&#34;url&#34;:&#34;https://pypi.python.org/pypi/flickrsmartsync&#34;},{&#34;description&#34;:[&#34;Easily read news and articles by highlighting your progress.&#34;],&#34;image&#34;:&#34;/screen/highlightread.png&#34;,&#34;title&#34;:&#34;Highlight Reading&#34;,&#34;url&#34;:&#34;https://chrome.google.com/webstore/detail/highlight-reading/lmphbhgdfgnojcapdibpfaihoabannoj&#34;},{&#34;description&#34;:[&#34;This is a informational website about natural health products and food supplements.&#34;],&#34;image&#34;:&#34;/screen/buyfkc.png&#34;,&#34;title&#34;:&#34;BuyFKC&#34;,&#34;url&#34;:&#34;http://www.buyfkc.com/&#34;},{&#34;description&#34;:[&#34;Live Battery is a live wallpaper that shows your battery status bar on the corner of your wallpaper. It also warns you if your battery is below the warning specified on the config.&#34;],&#34;image&#34;:&#34;/screen/livebattery.png&#34;,&#34;title&#34;:&#34;Live Battery&#34;,&#34;url&#34;:&#34;https://play.google.com/store/apps/details?id=com.altlimit.livebatteryfree&#34;},{&#34;description&#34;:[&#34;Null Doc is a website of collections of programming terms.&#34;],&#34;image&#34;:&#34;/screen/nulldoc.png&#34;,&#34;title&#34;:&#34;Null Doc&#34;,&#34;url&#34;:&#34;http://nulldoc.altlimit.com/&#34;},{&#34;description&#34;:[&#34;Random App shows random application from Google Play Store.&#34;],&#34;image&#34;:&#34;/screen/randomapp.png&#34;,&#34;title&#34;:&#34;Random App&#34;,&#34;url&#34;:&#34;https://play.google.com/store/apps/details?id=com.altlimit.randomapp&#34;},{&#34;description&#34;:[&#34;Open from URL is a Google Play app that lets you choose to get any files from internet with a link.&#34;],&#34;image&#34;:&#34;/screen/openurl.png&#34;,&#34;title&#34;:&#34;Open From URL&#34;,&#34;url&#34;:&#34;https://play.google.com/store/apps/details?id=com.altlimit.openfromurl&#34;}]" type="hidden">
-    <h1 class="text-lg font-medium pb-4" x-on:click="test">Projects</h1>
-    
-    <div class="relative rounded block md:flex items-center bg-gray-100 shadow" style="min-height: 19rem;">
-        <div class="relative w-full md:w-2/5 h-full overflow-hidden rounded-t-lg md:rounded-t-none md:rounded-l-lg"
-            style="min-height: 25rem;">
-            <div class="absolute inset-0 w-full h-full opacity-75"></div>
-            <div class="absolute inset-0 w-full h-full flex items-center justify-center fill-current text-white">
-                <img class="w-full" x-bind:src="slide().image">
-            </div>
+    <div class="banner primary" style="background-image:url('/img/solutions.jpg')">
+        <div class="backdrop"></div>
+        <div class="pitch">
+            <h1 class="title">Our Solutions
+            </h1>
+            <p>See some of our work</p>
         </div>
-        <div class="w-full md:w-3/5 h-full flex items-center bg-gray-100 rounded-lg">
-            <div class="p-12 md:pr-24 md:pl-16 md:py-12">
-                <span class="text-gray-900" x-text="slide().title"></span>
-                <template x-for="(desc, index) in slide().description" :key="index">
-                    <p class="text-gray-600 py-1" x-html="desc"></p>
-                </template>
-                <a class="flex items-baseline mt-3 text-red-600 hover:text-red-900 focus:text-red-900" target="_blank"
-                    x-bind:href="slide().url">
-                    <span x-text="'Visit ' + slide().title"></span>
-                    <span class="text-xs ml-1">&#x279c;</span>
-                </a>
-            </div>
-            <svg class="hidden md:block absolute inset-y-0 h-full w-24 fill-current text-gray-100 -ml-12"
-                viewBox="0 0 100 100" preserveAspectRatio="none">
-                <polygon points="50,0 100,0 50,100 0,100"></polygon>
-            </svg>
-        </div>
-        <button x-on:click="prevSlide"
-            class="absolute top-0 mt-32 left-0 bg-white rounded-full shadow-md h-12 w-12 text-2xl text-red-600 hover:text-red-400 focus:text-red-400 -ml-6 focus:outline-none focus:shadow-outline">
-            <span class="block" style="transform: scale(-1);">&#x279c;</span>
-        </button>
-        <button x-on:click="nextSlide"
-            class="absolute top-0 mt-32 right-0 bg-white rounded-full shadow-md h-12 w-12 text-2xl text-red-600 hover:text-red-400 focus:text-red-400 -mr-6 focus:outline-none focus:shadow-outline">
-            <span class="block" style="transform: scale(1);">&#x279c;</span>
-        </button>
     </div>
-
-    
-    <div class="hidden md:flex items-center pt-5 justify-between">
-        <template x-for="(s, index) in slides()" :key="index">
-            <button x-on:click="slideIndex = index;cancelIterval()"
-                class="px-2 opacity-50 hover:opacity-100 focus:opacity-100"
-                x-bind:class="{'text-red-900' : index == slideIndex}" x-text="s.title">
-            </button>
-        </template>
+    <div class="overview">
+        <h1 class="title">
+            See Our Work
+        </h1>
     </div>
-
+    <div class="feature">
+        <figure>
+            <img src="/screen/shopswired.jpg" alt="Image"/>
+        </figure>
+        <article>
+            <h2 class="title">Shopswired</h2>
+            <p>A simple eCommerce platform.</p>
+        </article>
+    </div>
+    <div class="feature reverse">
+        <figure>
+            <img src="/screen/bullion.jpg" alt="Image"/>
+        </figure>
+        <article>
+            <h2 class="title">A State Bullion Depository</h2>
+            <p>A precious metal depository that keeps track of citizens' holdings and billing system that integrates into the state's
+                .
+            </p>
+        </article>
+    </div>
+    <div class="feature">
+        <figure>
+            <img src="/screen/passedbox.png" alt="Image"/>
+        </figure>
+        <article>
+            <h2 class="title">Passed Box</h2>
+            <p></p>
+        </article>
+    </div>
+    <div class="feature reverse">
+        <figure>
+            <img src="/screen/dms.jpg" alt="Image"/>
+        </figure>
+        <article>
+            <h2 class="title">A Document Management System</h2>
+            <p></p>
+        </article>
+    </div>
+    <div class="feature">
+        <figure>
+            <img src="/screen/applauncher.png" alt="Image"/>
+        </figure>
+        <article>
+            <h2 class="title">AppLauncher</h2>
+            <p>App Launcher Plus is an App Drawer that automatically organize your apps base on google play categories. It is not a full featured launcher, so it will not replace your current launcher. But you can use it as an alternative app drawer.</p>
+        </article>
+    </div>
+    <div class="feature reverse">
+        <figure>
+            <img src="/screen/wikiyou.png" alt="Image"/>
+        </figure>
+        <article>
+            <h2 class="title">WikiYou</h2>
+            <p>A site powered by sitegen as a community driven static site for anything you can think of.</p>
+        </article>
+    </div>
 </div>
 
     </div>

@@ -54,12 +54,48 @@ p {
   @apply font-light tracking-wide text-xl text-center;
 }
 
-.sidebar > article > .title {
+.sidebar.rows {
+  @apply content-start items-start;
+}
+
+.sidebar.card {
+  @apply p-0 drop-shadow-md justify-start gap-8 bg-white;
+}
+
+.sidebar.card > article {
+  @apply text-center;
+}
+
+.sidebar.card > article > .title {
+  @apply text-5xl font-serif text-primary;
+}
+
+.sidebar.card > article > .subtitle {
+  @apply text-3xl font-sans text-neutral;
+}
+
+article {
+  @apply text-lg;
+}
+
+article > .title {
   @apply font-serif tracking-wider font-semibold text-primary text-lg;
+}
+
+.subscript {
+  @apply text-xs italic tracking-wide;
 }
 
 .main {
   @apply flex-grow flex items-start p-4;
+}
+
+.main.rows {
+  @apply p-8 max-w-4xl;
+}
+
+.rows {
+  @apply flex-col gap-8 py-8;
 }
 
 .link {
@@ -118,7 +154,6 @@ p {
 footer > div {
   @apply text-neutral;
 }
-
 .form {
   @apply flex flex-col flex-grow w-full max-w-lg gap-4;
 }
@@ -211,6 +246,105 @@ input[type=checkbox]:checked:after {
   @apply absolute w-full p-8 bottom-0 top-0 flex flex-col justify-items-center items-center text-center gap-0 leading-tight;
 }
 
+.banner.quote {
+  @apply bg-neutral-inverse h-auto;
+}
+
+.banner.quote > article {
+  @apply flex flex-col h-full justify-center justify-items-center content-center my-8 px-8 py-16;
+}
+
+.banner.quote > article > h1,.banner.quote > article > p {
+  @apply text-center text-neutral;
+}
+
+.quote > article > p {
+  @apply font-serif normal-case my-4;
+}
+
+.quote > article > p > span.byline {
+  @apply font-sans block font-light tracking-widest uppercase text-base my-4;
+}
+
+.checklist {
+  @apply text-lg;
+}
+
+.checklist > li {
+  @apply ml-6 -indent-6;
+}
+
+.checklist > li:before {
+  content: "\1F5F8";
+  @apply text-success-strong font-bold text-2xl mr-2;
+}
+
+.checklist.cross > li:before {
+  content: "\2A2F";
+  @apply text-neutral-subtle font-bold text-2xl mr-2;
+}
+
+.table {
+  @apply bg-white text-neutral mb-4 mx-4;
+}
+
+.table > thead > tr > th {
+  @apply text-lg font-semibold;
+}
+
+.table > tbody > tr > td, .table > thead > tr > th {
+  @apply px-4 py-1 text-left;
+}
+
+.table > tbody > tr > td.check, .table > tbody > tr > td.cross {
+  @apply text-center;
+
+}
+
+td.check,td.cross {
+  @apply w-1;
+}
+
+.check,.cross {
+  @apply text-lg font-bold;
+}
+
+.check {
+  @apply text-success;
+}
+
+.cross {
+  @apply text-neutral-subtle;
+}
+
+.feature {
+  @apply flex flex-col gap-8 w-full my-16;
+}
+
+.feature > figure > img {
+  @apply w-full;
+}
+
+.feature > article {
+  @apply p-8 text-lg text-neutral;
+}
+
+.feature > article > .title {
+  @apply text-primary text-2xl tracking-wide;
+}
+
+.logos {
+  @apply flex flex-wrap gap-16 items-center justify-center justify-items-center my-16;
+}
+
+.logos > figure {
+  @apply h-16 w-auto mx-4;
+}
+
+.logos > figure > img {
+  @apply w-full h-full;
+}
+
 @screen sm {
 
   .container {
@@ -295,23 +429,23 @@ input[type=checkbox]:checked:after {
   }
 
   .banner {
-    @apply bg-contain h-96 bg-accent-subtle;
+    @apply bg-contain h-96;
   }
 
   .banner > .backdrop {
-    @apply absolute top-0 left-0 h-full w-full bg-accent-subtle;
-    background: linear-gradient(125deg, #FFF08E, #FFF08E 58%,rgba(255,240,142,0.8) 58%,rgba(255,240,142,0.8) 60%, rgba(255,240,142,0.6) 60%, rgba(255,240,142,0.6) 61%, transparent 65%, transparent);
+    @apply absolute top-0 left-0 h-full w-full bg-neutral-inverse;
+    background: linear-gradient(125deg, #F2F3F5, #F2F3F5 58%,rgba(242,243,245,0.8) 58%,rgba(242,243,245,0.8) 60%, rgba(242,243,245,0.6) 60%, rgba(242,243,245,0.6) 61%, transparent 65%, transparent);
   }
 
   .banner > .backdrop:after {
-    @apply absolute top-0 left-0 h-full w-full bg-accent-subtle;
+    @apply absolute top-0 left-0 h-full w-full bg-neutral-inverse;
     content: "";
-    background: linear-gradient(65deg, #FFF08E, #FFF08E 58%,rgba(255,240,142,0.8) 58%,rgba(255,240,142,0.8) 60%, rgba(255,240,142,0.6) 60%, rgba(255,240,142,0.6) 61%, transparent 65%, transparent);
+    background: linear-gradient(65deg, #F2F3F5, #F2F3F5 58%,rgba(242,243,245,0.8) 58%,rgba(242,243,245,0.8) 60%, rgba(242,243,245,0.6) 60%, rgba(242,243,245,0.6) 61%, transparent 65%, transparent);
   }
 
   .banner > .pitch {
     @apply absolute w-1/2 p-24 bottom-0 left-0 my-8 flex flex-col justify-items-center text-left items-start justify-center;
-    background: linear-gradient(45deg, white 75, transparent 100);
+    background: linear-gradient(45deg, #F2F3F5 75, transparent 100);
   }
 
   .banner > .pitch > .title {
@@ -324,5 +458,121 @@ input[type=checkbox]:checked:after {
 
   .banner p {
     @apply text-2xl -mt-4 tracking-wider uppercase;
+  }
+
+  .banner.accent > .backdrop {
+    @apply absolute top-0 left-0 h-full w-full bg-accent-subtle;
+    background: linear-gradient(125deg, #FFF08E, #FFF08E 58%,rgba(255,240,142,0.8) 58%,rgba(255,240,142,0.8) 60%, rgba(255,240,142,0.6) 60%, rgba(255,240,142,0.6) 61%, transparent 65%, transparent);
+  }
+
+  .banner.accent > .backdrop:after {
+    @apply absolute top-0 left-0 h-full w-full bg-accent-subtle;
+    content: "";
+    background: linear-gradient(65deg, #FFF08E, #FFF08E 58%,rgba(255,240,142,0.8) 58%,rgba(255,240,142,0.8) 60%, rgba(255,240,142,0.6) 60%, rgba(255,240,142,0.6) 61%, transparent 65%, transparent);
+  }
+
+  .banner.accent > .pitch {
+    @apply absolute w-1/2 p-24 bottom-0 left-0 my-8 flex flex-col justify-items-center text-left items-start justify-center;
+    background: linear-gradient(45deg, white 75, transparent 100);
+  }
+
+  .banner.accent > .pitch > .title {
+    @apply text-3xl font-bold text-primary-strong;
+  }
+
+  .banner.accent > .pitch > .subtitle {
+    @apply text-primary;
+  }
+
+  .banner.primary > .backdrop {
+    @apply absolute top-0 left-0 h-full w-full bg-primary;
+    background: linear-gradient(125deg, #1AA1E1, #1AA1E1 58%,rgba(26,161,225,0.8) 58%,rgba(26,161,225,0.8) 60%, rgba(26,161,225,0.6) 60%, rgba(26,161,225,0.6) 61%, transparent 65%, transparent);
+  }
+
+  .banner.primary > .backdrop:after {
+    @apply absolute top-0 left-0 h-full w-full bg-accent-subtle;
+    content: "";
+    background: linear-gradient(65deg, #1AA1E1, #1AA1E1 58%,rgba(26,161,225,0.8) 58%,rgba(26,161,225,0.8) 60%, rgba(26,161,225,0.6) 60%, rgba(26,161,225,0.6) 61%, transparent 65%, transparent);
+  }
+
+  .banner.primary > .pitch {
+    @apply absolute w-1/2 p-24 bottom-0 left-0 my-8 flex flex-col justify-items-center text-left items-start justify-center;
+    background: linear-gradient(45deg, white 75, transparent 100);
+  }
+
+  .banner.primary > .pitch > .title {
+    @apply text-3xl font-bold text-accent-subtle;
+  }
+
+  .banner.primary > .pitch > .title > .subtitle {
+    @apply text-3xl font-bold text-white;
+  }
+
+  .banner.primary p {
+    @apply text-primary-inverse;
+  }
+
+  .banner.highlight > .backdrop {
+    @apply absolute top-0 left-0 h-full w-full bg-highlight;
+    background: linear-gradient(125deg, #CE5043, #CE5043 58%,rgba(206,80,67,0.8) 58%,rgba(206,80,67,0.8) 60%, rgba(206,80,67,0.6) 60%, rgba(206,80,67,0.6) 61%, transparent 65%, transparent);
+  }
+
+  .banner.highlight > .backdrop:after {
+    @apply absolute top-0 left-0 h-full w-full bg-accent-subtle;
+    content: "";
+    background: linear-gradient(65deg, #CE5043, #CE5043 58%,rgba(206,80,67,0.8) 58%,rgba(206,80,67,0.8) 60%, rgba(206,80,67,0.6) 60%, rgba(206,80,67,0.6) 61%, transparent 65%, transparent);
+  }
+
+  .banner.highlight > .pitch {
+    @apply absolute w-1/2 p-24 bottom-0 left-0 my-8 flex flex-col justify-items-center text-left items-start justify-center;
+    background: linear-gradient(45deg, white 75, transparent 100);
+  }
+
+  .banner.highlight > .pitch > .title {
+    @apply text-3xl font-bold text-accent-subtle;
+  }
+
+  .banner.highlight > .pitch > .title > .subtitle {
+    @apply text-3xl font-bold text-white;
+  }
+
+  .banner.highlight p {
+    @apply text-primary-inverse;
+  }
+
+  .feature {
+    @apply flex-row;
+  }
+
+  .feature.reverse {
+    @apply flex-row-reverse;
+  }
+
+  .feature > figure {
+    @apply w-1/3 flex-grow;
+  }
+
+  .feature > figure > img {
+    @apply w-full;
+  }
+
+  .feature > article {
+    @apply w-2/3;
+  }
+
+  .feature > article > .title {
+    @apply text-3xl;
+  }
+
+  .logos {
+    @apply flex flex-wrap gap-16 items-center justify-center justify-items-center my-16;
+  }
+
+  .logos > figure {
+    @apply h-16 w-auto mx-4;
+  }
+
+  .logos > figure > img {
+    @apply w-full h-full;
   }
 }

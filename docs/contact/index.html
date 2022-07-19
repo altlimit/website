@@ -130,8 +130,9 @@
             <h3 class="text-gray-700 text-center">
                 <a href="/"><img src="/logo.png" class="mb-1" alt="Altlimit LLC logo" /></a>
             </h3>
-            <nav class="md:flex text-lg" x-bind:class="{'flex flex-wrap': viewMenu, 'hidden': !viewMenu}"
+            <nav class="md:flex text-lg" :class="{'flex flex-wrap': viewMenu}"
                 x-cloak>
+                <a href="#">Test</a>
                 
                 
                 <a href="/"
@@ -160,7 +161,7 @@
         
 
 <main x-data="contact()">
-    <div class="banner" style="background-image:url('/img/contact.jpg')">
+    <div class="banner highlight" style="background-image:url('/img/contact.jpg')">
         <div class="backdrop"></div>
         <div class="pitch">
             <h1 class="title">Contact Us
