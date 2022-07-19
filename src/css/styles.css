@@ -338,12 +338,38 @@ td.check,td.cross {
 }
 
 .logos > figure {
-  @apply h-16 w-auto mx-4;
+  @apply w-auto mx-4;
 }
 
 .logos > figure > img {
   @apply w-full h-full;
 }
+
+.feature.cards {
+  @apply flex gap-8 justify-center flex-wrap;
+}
+
+.card {
+  @apply flex flex-col border bg-white border-primary-subtle drop-shadow-md p-8 max-w-sm items-center;
+}
+
+.card > .title {
+  @apply text-center;
+}
+
+.card > figure > img {
+  @apply h-32;
+}
+
+.card > p {
+  @apply text-neutral text-xl text-center;
+}
+
+.card > .title {
+  @apply text-primary font-sans text-2xl;
+}
+
+
 
 @screen sm {
 
@@ -569,7 +595,7 @@ td.check,td.cross {
   }
 
   .logos > figure {
-    @apply h-16 w-auto mx-4;
+    @apply w-24 max-w-xs mx-4 max-h-12;
   }
 
   .logos > figure > img {

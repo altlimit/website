@@ -21,9 +21,8 @@
             <h3 class="text-gray-700 text-center">
                 <a href="/"><img src="/logo.png" class="mb-1" alt="Altlimit LLC logo" /></a>
             </h3>
-            <nav class="md:flex text-lg" :class="{'flex flex-wrap': viewMenu}"
+            <nav class="flex flex-wrap text-lg"
                 x-cloak>
-                <a href="#">Test</a>
                 {{$links := data "links.json"}}
                 {{ range $links }}
                 <a href="{{.path}}"

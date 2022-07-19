@@ -50,7 +50,6 @@ title: Work
 {{end}}
 
 {{define "content"}}
-{{$slides := data "work.json"}}
 <div x-data="work()" x-init="init()">
     <div class="banner primary" style="background-image:url('/img/solutions.jpg')">
         <div class="backdrop"></div>
@@ -65,61 +64,22 @@ title: Work
             See Our Work
         </h1>
     </div>
+    {{$work := data "work.json"}}
+    {{ range $work }}
     <div class="feature">
         <figure>
-            <img src="/screen/shopswired.jpg" alt="Image"/>
+            <img src="{{.image}}" alt="{{.title}}"/>
         </figure>
         <article>
-            <h2 class="title">Shopswired</h2>
-            <p>A simple eCommerce platform.</p>
+            <h2 class="title">{{.title}}</h2>
+            {{ range .description }}
+            <p>{{.}}</p>
+            {{end}}
+            {{if .url}}
+            <a class="mt-5 link" href="{{.url}}">&#x23F5; Learn More</a>
+            {{end}}
         </article>
     </div>
-    <div class="feature reverse">
-        <figure>
-            <img src="/screen/bullion.jpg" alt="Image"/>
-        </figure>
-        <article>
-            <h2 class="title">A State Bullion Depository</h2>
-            <p>A precious metal depository that keeps track of citizens' holdings and billing system that integrates into the state's
-                .
-            </p>
-        </article>
-    </div>
-    <div class="feature">
-        <figure>
-            <img src="/screen/passedbox.png" alt="Image"/>
-        </figure>
-        <article>
-            <h2 class="title">Passed Box</h2>
-            <p></p>
-        </article>
-    </div>
-    <div class="feature reverse">
-        <figure>
-            <img src="/screen/dms.jpg" alt="Image"/>
-        </figure>
-        <article>
-            <h2 class="title">A Document Management System</h2>
-            <p></p>
-        </article>
-    </div>
-    <div class="feature">
-        <figure>
-            <img src="/screen/applauncher.png" alt="Image"/>
-        </figure>
-        <article>
-            <h2 class="title">AppLauncher</h2>
-            <p>App Launcher Plus is an App Drawer that automatically organize your apps base on google play categories. It is not a full featured launcher, so it will not replace your current launcher. But you can use it as an alternative app drawer.</p>
-        </article>
-    </div>
-    <div class="feature reverse">
-        <figure>
-            <img src="/screen/wikiyou.png" alt="Image"/>
-        </figure>
-        <article>
-            <h2 class="title">WikiYou</h2>
-            <p>A site powered by sitegen as a community driven static site for anything you can think of.</p>
-        </article>
-    </div>
+    {{end}}
 </div>
 {{end}}

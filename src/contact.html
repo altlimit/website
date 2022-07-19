@@ -135,22 +135,13 @@ title: Contact
         <div class="workspace">
             <!-- <figure class="sidebar" style="background-image:url('/img/contact.jpg');background-size:cover;"> </figure>-->
             <div class="sidebar">
+                {{$contact := data "contact.json"}}
+                {{ range $contact }}
                 <article>
-                    <h2 class="title">Consulting</h2>
-                    <p>We will help you decide the best approach on how to solve business problems with the right technology.</p>
+                    <h2 class="title">{{.name}}</h2>
+                    <p>{{.description}}</p>
                 </article>
-                <article>
-                    <h2 class="title">Development</h2>
-                    <p>We will work with you throughout the project for a smooth development process.</p>
-                </article>
-                <article>
-                    <h2 class="title">Implement</h2>
-                    <p>Already have a design? We'll take it and develop it for you.</p>
-                </article>
-                <article>
-                    <h2 class="title">Support</h2>
-                    <p>We provide support of any size. Even the smallest tasks get handled efficiently.</p>
-                </article>
+                {{end}}
             </div>
 
 

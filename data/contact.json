@@ -1,31 +1,25 @@
 [{
-        "image": "/img/responsivewebapp.svg",
-        "name": "Web App",
+        "image": "/img/consult.svg",
+        "name": "Consulting",
         "description": "We will help you decide the best approach on how to solve business problems with the right technology.",
         "tags": ["ui", "ux", "solution"]
     },
     {
-        "image": "/img/native.svg",
-        "name": "Native Apps",
+        "image": "/img/mobile.svg",
+        "name": "Development",
         "description": "We will work with you throughout the project for a smooth development process.",
         "tags": ["web", "mobile", "desktop"]
     },
     {
-        "image": "/img/flutter.svg",
-        "name": "Mobile Apps",
+        "image": "/img/support.svg",
+        "name": "Support",
         "description": "We provide support of any size. Even the smallest tasks get handled efficiently.",
         "tags": ["bugs", "issues", "optimize"]
     },
     {
-        "image": "/img/migration.svg",
-        "name": "Data Migration",
+        "image": "/img/implement.svg",
+        "name": "Implement",
         "description": "Already have a design? We'll take it and develop it for you.",
-        "tags": ["email", "landing", "custom"]
-    },
-    {
-        "image": "/img/integration.svg",
-        "name": "Service Integration",
-        "description": "Want to integrate your system to a third party service? We can help you with that.",
         "tags": ["email", "landing", "custom"]
     }
 ]
