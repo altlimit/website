@@ -15,7 +15,7 @@
     <script>
         function menu() {
             return {
-                viewMenu: false,
+                isOpen: false,
                 isActive: function (link) {
                     return location.pathname == (link === "/" ? link : link + "/")
                 }
@@ -25,59 +25,86 @@
 </head>
 
 <body>
-    <div class="container mx-auto px-8 py-4">
-        <header class="flex flex-col sm:flex-row items-center justify-between py-6 relative" x-data="menu()">
-            <h3 class="text-gray-700 text-center">
-                <a href="/"><img src="/logo.png" class="mb-1" alt="Altlimit LLC logo" /></a>
-            </h3>
-            <nav class="flex flex-wrap text-lg"
+    <div class="header">
+        <header x-data="menu()">
+            <div class="brand">
+            <a href="/">
+                <figure>
+                    <img src="/logo.png" class="mb-1" alt="Altlimit LLC logo" />
+                    <figcaption>Altlimit
+                        <div class="tagline">Alternative to Limitations</div>
+                    </figcaption>
+                </figure>
+                </a>
+                <button
+                    @click="isOpen = !isOpen"
+                    type="button"
+                    class="block sm:hidden px-2 text-gray-500 hover:text-white focus:outline-none focus:text-white"
+                    :class="{ 'transition transform-180': isOpen }"
+                >Menu
+                    <svg
+                    class="h-6 w-6 fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    >
+                    <path
+                        x-show="isOpen"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+                    />
+                    <path
+                        x-show="!isOpen"
+                        fill-rule="evenodd"
+                        d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+                    />
+                    </svg>
+                </button>
+
+        </div>
+            <nav :class="{'visible' : isOpen, 'invisible' : !isOpen}"
                 x-cloak>
                 
                 
                 <a href="/"
-                    x-bind:class="{'w-full': viewMenu, 'active':isActive('/')}">Home</a>
+                    :class="{'active':isActive('/')}">Home</a>
                 
                 <a href="/work"
-                    x-bind:class="{'w-full': viewMenu, 'active':isActive('/work')}">Our Solutions</a>
+                    :class="{'active':isActive('/work')}">Solutions</a>
                 
                 <a href="/pricing"
-                    x-bind:class="{'w-full': viewMenu, 'active':isActive('/pricing')}">Pricing</a>
+                    :class="{'active':isActive('/pricing')}">Pricing</a>
                 
                 <a href="/company"
-                    x-bind:class="{'w-full': viewMenu, 'active':isActive('/company')}">Company</a>
+                    :class="{'active':isActive('/company')}">Company</a>
                 
                 <a href="/contact"
-                    x-bind:class="{'w-full': viewMenu, 'active':isActive('/contact')}">Contact</a>
+                    :class="{'active':isActive('/contact')}">Contact</a>
                 
             </nav>
-            <button class="flex md:hidden flex-col absolute top-0 right-0 p-4 mt-5"
-                x-on:click="viewMenu = !viewMenu">
-                <span class="w-5 h-px mb-1 bg-red-500"></span>
-                <span class="w-5 h-px mb-1 bg-red-500"></span>
-                <span class="w-5 h-px mb-1 bg-red-500"></span>
-            </button>
         </header>
-        
+    </div>
+    
 
 <div>
     <div class="banner accent" style="background-image:url('/img/company.jpg')">
         <div class="backdrop"></div>
         <div class="pitch">
-            <h1 class="title">Our Company
-            </h1>
-            <p>See some of our work</p>
+            <article>
+                <h1 class="title">Our Company
+                </h1>
+                <p>Who we are and what we do</p>
+            </article>
         </div>
     </div>
     <div class="overview">
         <h1 class="title">
             Our Company
         </h1>
-
+        <p>
+            We are a team of remote developers around the world.
+        </p>
     </div>
-    <h1 class="text-lg font-medium">About</h1>
-    <p class="py-4 text-gray-700 text-base">
-        We are a team of remote developers around the world.
-    </p>
 
     <div class="flex flex-col sm:flex-row">
         
@@ -125,7 +152,6 @@
 </div>
 
 
-    </div>
     <footer class="footer">
         <div class="container bg-primary">
             &copy; Altlimit LLC 2022

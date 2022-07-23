@@ -1,13 +1,13 @@
 [{
         "image": "/img/responsivewebapp.svg",
-        "name": "Web App",
-        "description": "We will help you decide the best approach on how to solve business problems with the right technology.",
-        "tags": ["ui", "ux", "solution"]
+        "name": "Web Application",
+        "description": "Responsive and modern HTML5/CSS3 web applications built with VueJS and Go running on Google Cloud.",
+        "tags": ["responsive", "web", "cloud"]
     },
     {
         "image": "/img/native.svg",
         "name": "Native Apps",
-        "description": "We will work with you throughout the project for a smooth development process.",
+        "description": "Desktop or server applications and services for Windows or Ubuntu.",
         "tags": ["web", "mobile", "desktop"]
     },
     {

@@ -4,11 +4,6 @@
         "url": "https://www.docker.com/"
     },
     {
-        "image": "/screen/vuejs.svg",
-        "name": "Vue JS",
-        "url": "https://vuejs.org/"
-    },
-    {
         "image": "/screen/go.svg",
         "name": "Go",
         "url": "https://go.dev/"
@@ -17,6 +12,11 @@
         "image": "/screen/python.png",
         "name": "Python",
         "url": "https://www.python.org/"
+    },
+    {
+        "image": "/screen/vuejs.svg",
+        "name": "Vue JS",
+        "url": "https://vuejs.org/"
     },
     {
         "image": "/screen/flutter.svg",
