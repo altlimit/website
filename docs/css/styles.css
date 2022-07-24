@@ -1577,34 +1577,64 @@ td.check, td.cross {
 
 nav {
   display: flex;
-  width: auto;
-  flex-direction: column;
-  gap: 0.5rem;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
-nav > :not([hidden]) ~ :not([hidden]) {
+nav.open > ul.links {
+  display: flex;
+}
+
+nav.close > ul.links {
+  display: none;
+}
+
+nav > ul.links {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  margin-top: 7rem;
+  width: auto;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+nav > ul.links > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-y-reverse: 0;
   border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
   border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
 }
 
-nav {
+nav > ul.links {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   --tw-text-opacity: 1;
   color: rgb(26 161 225 / var(--tw-text-opacity));
 }
 
-nav > a {
+nav > button {
+  height: 2.5rem;
+  width: 2.5rem;
+  flex-grow: 0;
+}
+
+nav > ul.links > li > a {
   padding-left: 2rem;
   padding-right: 2rem;
-  padding-top: 0.5rem;
   font-size: 1.25rem;
-  line-height: 1.75rem;
   font-weight: 600;
+  line-height: 2.5rem;
   --tw-text-opacity: 1;
   color: rgb(92 93 95 / var(--tw-text-opacity));
 }
 
-nav > a:hover,  nav > a.active {
+nav > ul.links > li > a:hover,  nav > ul.links > li > a.active {
   --tw-text-opacity: 1;
   color: rgb(34 35 37 / var(--tw-text-opacity));
 }
@@ -1716,7 +1746,14 @@ nav > a:hover,  nav > a.active {
     padding-bottom: 1rem;
   }
 
-  nav {
+  nav > button {
+    visibility: hidden;
+  }
+
+  nav > ul.links {
+    position: relative;
+    margin-top: 0px;
+    display: flex;
     flex-direction: row;
     align-content: center;
     align-items: center;
@@ -1724,17 +1761,17 @@ nav > a:hover,  nav > a.active {
     gap: 2rem;
   }
 
-  nav > :not([hidden]) ~ :not([hidden]) {
+  nav > ul.links > :not([hidden]) ~ :not([hidden]) {
     --tw-divide-y-reverse: 0;
     border-top-width: calc(0px * calc(1 - var(--tw-divide-y-reverse)));
     border-bottom-width: calc(0px * var(--tw-divide-y-reverse));
   }
 
-  nav {
+  nav > ul.links {
     line-height: 1.25;
   }
 
-  nav > a {
+  nav > ul.links > li > a {
     border-bottom-width: 1px;
     border-style: solid;
     border-color: transparent;
@@ -1744,11 +1781,15 @@ nav > a:hover,  nav > a.active {
     line-height: 1.25;
   }
 
-  nav > a:hover,  nav > a.active {
+  nav > ul.links > li > a:hover,  nav > ul.links > li > a.active {
     border-bottom-width: 1px;
     border-style: solid;
     --tw-border-opacity: 1;
     border-color: rgb(53 54 56 / var(--tw-border-opacity));
+  }
+
+  nav.close > ul.links {
+    display: flex;
   }
 
   .hero {

@@ -410,14 +410,29 @@ td.check,td.cross {
 }
 
 nav {
-  @apply flex flex-col divide-y w-auto gap-2 text-primary;
+  @apply flex flex-row justify-between items-center w-full;
 }
 
-nav > a {
-  @apply text-neutral-medium font-semibold text-xl px-8 pt-2;
+nav.open > ul.links {
+  @apply flex;
+}
+nav.close > ul.links {
+  @apply hidden;
 }
 
-nav > a:hover, nav > a.active {
+nav > ul.links {
+  @apply flex-col divide-y w-auto gap-1 text-primary w-full absolute top-0 left-0 mt-28 bg-white py-4 z-10;
+}
+
+nav > button {
+  @apply flex-grow-0 w-10 h-10;
+}
+
+nav > ul.links > li > a {
+  @apply text-neutral-medium font-semibold text-xl px-8 leading-10;
+}
+
+nav > ul.links > li > a:hover, nav > ul.links > li > a.active {
   @apply text-neutral-strong;
 }
 
@@ -450,16 +465,24 @@ nav > a:hover, nav > a.active {
     @apply px-12 py-4 self-start justify-self-start;
   }
 
-  nav {
-    @apply flex-row gap-8 divide-y-0 leading-tight justify-items-center items-center content-center;
+  nav > button {
+    @apply invisible;
   }
 
-  nav > a {
+  nav > ul.links {
+    @apply relative mt-0 flex flex-row gap-8 divide-y-0 leading-tight justify-items-center items-center content-center;
+  }
+
+  nav > ul.links > li > a {
     @apply border-b border-transparent border-solid px-2 leading-tight pb-0;
   }
 
-  nav > a:hover, nav > a.active {
+  nav > ul.links > li > a:hover, nav > ul.links > li > a.active {
     @apply border-neutral border-b border-solid;
+  }
+
+  nav.close > ul.links {
+    @apply flex;
   }
 
   .hero {

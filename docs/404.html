@@ -27,23 +27,25 @@
 <body>
     <div class="header">
         <header x-data="menu()">
-            <div class="brand">
-            <a href="/">
-                <figure>
-                    <img src="/logo.png" class="mb-1" alt="Altlimit LLC logo" />
-                    <figcaption>Altlimit
-                        <div class="tagline">Alternative to Limitations</div>
-                    </figcaption>
-                </figure>
-                </a>
-                <button
-                    @click="isOpen = !isOpen"
-                    type="button"
-                    class="block sm:hidden px-2 text-gray-500 hover:text-white focus:outline-none focus:text-white"
+            <nav :class="[isOpen ? 'open' : 'close']" @click.away="isOpen=false"
+                x-cloak>
+                <div class="brand">
+                    <a href="/">
+                        <figure>
+                            <img src="/logo.png" class="mb-1" alt="Altlimit LLC logo" />
+                            <figcaption>Altlimit
+                                <div class="tagline">Alternative to Limitations</div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <button type="button"
+                @click="isOpen = !isOpen"
+                    class="flex w-10 h-10 px-2 text-gray-500 hover:text-white focus:outline-none focus:text-white"
                     :class="{ 'transition transform-180': isOpen }"
-                >Menu
+                >
                     <svg
-                    class="h-6 w-6 fill-current"
+                    class="h-10 w-10 block fill-current"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     >
@@ -60,27 +62,26 @@
                     />
                     </svg>
                 </button>
+                <ul class="links">
+                    
+                
+                <li><a href="/" @click="isOpen = false"
+                    :class="{'active':isActive('/')}">Home</a></li>
+                
+                <li><a href="/work" @click="isOpen = false"
+                    :class="{'active':isActive('/work')}">Solutions</a></li>
+                
+                <li><a href="/pricing" @click="isOpen = false"
+                    :class="{'active':isActive('/pricing')}">Pricing</a></li>
+                
+                <li><a href="/company" @click="isOpen = false"
+                    :class="{'active':isActive('/company')}">Company</a></li>
+                
+                <li><a href="/contact" @click="isOpen = false"
+                    :class="{'active':isActive('/contact')}">Contact</a></li>
+                
+                </ul>
 
-        </div>
-            <nav :class="{'visible' : isOpen, 'invisible' : !isOpen}"
-                x-cloak>
-                
-                
-                <a href="/"
-                    :class="{'active':isActive('/')}">Home</a>
-                
-                <a href="/work"
-                    :class="{'active':isActive('/work')}">Solutions</a>
-                
-                <a href="/pricing"
-                    :class="{'active':isActive('/pricing')}">Pricing</a>
-                
-                <a href="/company"
-                    :class="{'active':isActive('/company')}">Company</a>
-                
-                <a href="/contact"
-                    :class="{'active':isActive('/contact')}">Contact</a>
-                
             </nav>
         </header>
     </div>

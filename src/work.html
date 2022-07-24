@@ -3,54 +3,8 @@ template: main.html
 title: Work
 ---
 
-{{define "addHead"}}
-<script>
-    function work() {
-        let slides = null;
-        return {
-            init: function () {
-                slides = JSON.parse(this.$refs.slides.value);
-                this.timer = setInterval(this.nextSlide.bind(this), 10000);
-            },
-            slides: function () {
-                return slides;
-            },
-            slideIndex: 0,
-            timer: null,
-            slide: function () {
-                return this.slides()[this.slideIndex];
-            },
-            nextSlide: function (cancel) {
-                if (cancel) {
-                    this.cancelIterval();
-                }
-                if (this.slideIndex + 1 < slides.length) {
-                    this.slideIndex++;
-                } else {
-                    this.slideIndex = 0;
-                }
-            },
-            prevSlide: function (cancel) {
-                if (cancel) {
-                    this.cancelIterval();
-                }
-                if (this.slideIndex - 1 >= 0) {
-                    this.slideIndex--;
-                } else {
-                    this.slideIndex = slides.length - 1;
-                }
-            },
-            cancelIterval: function () {
-                clearInterval(this.timer);
-                this.timer = null;
-            }
-        }
-    }
-</script>
-{{end}}
-
 {{define "content"}}
-<div x-data="work()" x-init="init()">
+<div>
     <div class="banner primary" style="background-image:url('/img/solutions.jpg')">
         <div class="backdrop"></div>
         <div class="pitch">

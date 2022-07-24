@@ -18,23 +18,25 @@
 <body>
     <div class="header">
         <header x-data="menu()">
-            <div class="brand">
-            <a href="/">
-                <figure>
-                    <img src="/logo.png" class="mb-1" alt="Altlimit LLC logo" />
-                    <figcaption>Altlimit
-                        <div class="tagline">Alternative to Limitations</div>
-                    </figcaption>
-                </figure>
-                </a>
-                <button
-                    @click="isOpen = !isOpen"
-                    type="button"
-                    class="block sm:hidden px-2 text-gray-500 hover:text-white focus:outline-none focus:text-white"
+            <nav :class="[isOpen ? 'open' : 'close']" @click.away="isOpen=false"
+                x-cloak>
+                <div class="brand">
+                    <a href="/">
+                        <figure>
+                            <img src="/logo.png" class="mb-1" alt="Altlimit LLC logo" />
+                            <figcaption>Altlimit
+                                <div class="tagline">Alternative to Limitations</div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <button type="button"
+                @click="isOpen = !isOpen"
+                    class="flex w-10 h-10 px-2 text-gray-500 hover:text-white focus:outline-none focus:text-white"
                     :class="{ 'transition transform-180': isOpen }"
-                >Menu
+                >
                     <svg
-                    class="h-6 w-6 fill-current"
+                    class="h-10 w-10 block fill-current"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     >
@@ -51,15 +53,14 @@
                     />
                     </svg>
                 </button>
-
-        </div>
-            <nav :class="{'visible' : isOpen, 'invisible' : !isOpen}"
-                x-cloak>
-                {{$links := data "links.json"}}
+                <ul class="links">
+                    {{$links := data "links.json"}}
                 {{ range $links }}
-                <a href="{{.path}}"
-                    :class="{'active':isActive('{{.path}}')}">{{.name}}</a>
+                <li><a href="{{.path}}" @click="isOpen = false"
+                    :class="{'active':isActive('{{.path}}')}">{{.name}}</a></li>
                 {{end}}
+                </ul>
+
             </nav>
         </header>
     </div>
