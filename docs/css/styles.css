@@ -808,19 +808,18 @@ article.bullet > ul > li > i {
   display: flex;
   flex-grow: 1;
   align-items: flex-start;
-  padding: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .main.rows {
   max-width: 56rem;
-  padding: 2rem;
 }
 
 .rows {
   flex-direction: column;
   gap: 2rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 2rem;
 }
 
 .link {
@@ -938,10 +937,14 @@ article.bullet > ul > li > i {
 
 .footer {
   margin-bottom: 0px;
+  margin-top: 3rem;
   display: flex;
   justify-content: center;
   justify-items: center;
   gap: 1rem;
+  border-top-width: 8px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(242 243 245 / var(--tw-bg-opacity));
   padding-top: 2rem;
@@ -1147,6 +1150,8 @@ input[type=checkbox]:checked:after {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .overview > .title {
@@ -1235,6 +1240,8 @@ input[type=checkbox]:checked:after {
   height: auto;
   --tw-bg-opacity: 1;
   background-color: rgb(242 243 245 / var(--tw-bg-opacity));
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .banner.quote > article {
@@ -1356,12 +1363,11 @@ td.check, td.cross {
 }
 
 .feature {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   display: flex;
   width: 100%;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .feature > figure > img {
@@ -1418,11 +1424,12 @@ td.check, td.cross {
   justify-content: center;
   justify-items: center;
   gap: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .feature.cards > .card {
   display: flex;
-  max-width: 24rem;
   flex-direction: column;
   align-items: center;
   border-width: 1px;
@@ -1593,7 +1600,6 @@ nav > ul.links > li > a:hover,  nav > ul.links > li > a.active {
 
 .cards > .card {
   width: auto;
-  max-width: 24rem;
   border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(242 243 245 / var(--tw-border-opacity));
@@ -1669,7 +1675,13 @@ nav > ul.links > li > a:hover,  nav > ul.links > li > a.active {
     margin-left: auto;
     margin-right: auto;
     max-width: 80rem;
+    padding: 0px;
   }
+}
+
+.bio {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .bio > figure {
@@ -1795,7 +1807,13 @@ nav > ul.links > li > a:hover,  nav > ul.links > li > a.active {
     margin-left: auto;
     margin-right: auto;
     max-width: 80rem;
+    padding: 0px;
   }
+}
+
+.history {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .history > div {
@@ -1834,6 +1852,11 @@ nav > ul.links > li > a:hover,  nav > ul.links > li > a.active {
   align-items: center;
 }
 
+.container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 @media (min-width: 640px) {
   .bio {
     flex-direction: row;
@@ -1847,6 +1870,7 @@ nav > ul.links > li > a:hover,  nav > ul.links > li > a.active {
     margin-left: auto;
     margin-right: auto;
     max-width: 80rem;
+    padding: 0px;
   }
 
   h1.title {
@@ -1902,7 +1926,13 @@ nav > ul.links > li > a:hover,  nav > ul.links > li > a.active {
       margin-left: auto;
       margin-right: auto;
       max-width: 80rem;
+      padding: 0px;
     }
+  }
+
+  .workspace {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .sidebar {
@@ -1938,6 +1968,12 @@ nav > ul.links > li > a:hover,  nav > ul.links > li > a.active {
   .main {
     width: auto;
     flex-grow: 1;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .cards > .card {
+    max-width: 24rem;
   }
 
   .button {
@@ -2062,7 +2098,13 @@ nav > ul.links > li > a:hover,  nav > ul.links > li > a.active {
       margin-left: auto;
       margin-right: auto;
       max-width: 80rem;
+      padding: 0px;
     }
+  }
+
+  .hero > .pitch > article {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .hero > .pitch > article > .title,  .hero > .pitch > article > .subtitle,  .hero > .pitch > article > p {
@@ -2104,11 +2146,57 @@ nav > ul.links > li > a:hover,  nav > ul.links > li > a.active {
     width: 100%;
   }
 
-  .overview > .title, .overview > p {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 80rem;
-    padding-bottom: 2rem;
+  @media (min-width: 640px) {
+    .overview {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .overview {
+      max-width: 768px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .overview {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .overview {
+      max-width: 1280px;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .overview {
+      max-width: 1536px;
+    }
+  }
+
+  .overview {
+    margin-top: 4rem;
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .overview {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 80rem;
+      padding: 0px;
+    }
+  }
+
+  .overview {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .overview > .title, .overview > p:not(:last-child) {
+    padding-bottom: 1.5rem;
   }
 
   .banner {
@@ -2196,7 +2284,13 @@ nav > ul.links > li > a:hover,  nav > ul.links > li > a.active {
       margin-left: auto;
       margin-right: auto;
       max-width: 80rem;
+      padding: 0px;
     }
+  }
+
+  .banner > .pitch > article {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .banner > .pitch > article > .title {
@@ -2351,7 +2445,13 @@ nav > ul.links > li > a:hover,  nav > ul.links > li > a.active {
       margin-left: auto;
       margin-right: auto;
       max-width: 80rem;
+      padding: 0px;
     }
+  }
+
+  .banner.quote > article {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .feature {
@@ -2397,7 +2497,13 @@ nav > ul.links > li > a:hover,  nav > ul.links > li > a.active {
       margin-left: auto;
       margin-right: auto;
       max-width: 80rem;
+      padding: 0px;
     }
+  }
+
+  .feature {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .cards {
@@ -2439,7 +2545,13 @@ nav > ul.links > li > a:hover,  nav > ul.links > li > a.active {
       margin-left: auto;
       margin-right: auto;
       max-width: 80rem;
+      padding: 0px;
     }
+  }
+
+  .cards {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .feature.reverse {
@@ -2518,7 +2630,13 @@ nav > ul.links > li > a:hover,  nav > ul.links > li > a.active {
       margin-left: auto;
       margin-right: auto;
       max-width: 80rem;
+      padding: 0px;
     }
+  }
+
+  .logos {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .logos > figure {
@@ -2586,7 +2704,13 @@ nav > ul.links > li > a:hover,  nav > ul.links > li > a.active {
       margin-left: auto;
       margin-right: auto;
       max-width: 80rem;
+      padding: 0px;
     }
+  }
+
+  .header > header {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .brand {
@@ -2609,5 +2733,15 @@ nav > ul.links > li > a:hover,  nav > ul.links > li > a.active {
     font-size: 1.875rem;
     line-height: 2.25rem;
     font-weight: 300;
+  }
+
+  .sidebar.card {
+    margin: 0px;
+    width: 33.333333%;
+    padding: 0px;
+  }
+
+  .rows {
+    padding: 1rem;
   }
 }
