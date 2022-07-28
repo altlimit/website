@@ -135,15 +135,15 @@ title: Contact
     </template>
     <template x-if="!success">
         <div class="workspace">
-            <!-- <figure class="sidebar" style="background-image:url('/img/contact.jpg');background-size:cover;"> </figure>-->
             <div class="sidebar">
-                {{$contact := data "contact.json"}}
-                {{ range $contact }}
-                <article>
-                    <h2 class="title">{{.name}}</h2>
-                    <p>{{.description}}</p>
+                <article class="bullet">
+                    <h2 class="title">Contact Information</h2>
+                    <ul>
+                        <li><i class="fa-solid fa-map-location-dot"></i>539 W. Commerce St #4071<br/>Dallas, TX 75208</li>
+                        <li><i class="fa-solid fa-envelope"></i>support@altlimit.com</li>
+                        <li><i class="fa-solid fa-phone"></i>512 912 7775</li>
+                    </ul>
                 </article>
-                {{end}}
             </div>
 
 

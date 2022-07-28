@@ -1,54 +1,33 @@
 [{
         "image": "/screen/shopswired.jpg",
         "url": "https://shopswired.com",
-        "title": "SHOPSWIRED",
+        "title": "Shopswired",
         "description": [
-            "A simple eCommerce platform."
+            "A simple eCommerce platform for physical and digital products that allows sellers to build their shop quickly. Features includes unlimited variants, built in messaging system, risk scores, website embed and more.",
+            "Technologies: Google Cloud, VueJS, Go, Stripe Connect, SendGrid, TailwindCSS"
         ]
     }, {
         "image": "/screen/passedbox.png",
         "url": "https://passedbox.com",
-        "title": "PassedBox",
+        "title": "Passed Box",
         "description": [
-            "A safety deposit box management system"
+            "A client-side encrypted digital deposit box that sends keep-alive messages and automatically sends to your designated beneficiary.",
+            "Technologies: Google Cloud, VueJS/TypeScript, Go, Stripe, SendGrid, TailwindCSS"
         ]
     }, {
         "image": "/screen/dms.jpg",
         "title": "Document Management System",
         "description": [
-            "A document management system for a client"
+            "A document management system for a car dealership systems provider with scanning solution, flexible search engine and metadata, with DMS third party integration.",
+            "Technologies: Google Cloud, VueJS, Go, SendGrid, TailwindCSS, C#, BigQuery"
         ]
     }, {
         "image": "/screen/bullion.jpg",
         "url": "https://www.texasbulliondepository.gov/",
         "title": "State Bullion Depository",
         "description": [
-            "A safety deposit box management system"
-        ]
-    },
-    {
-        "image": "/screen/wikiyou.png",
-        "url": "https://www.wikiyou.org",
-        "title": "WikiYou.org",
-        "description": [
-            "A site powered by sitegen as a community driven static site for anything you can think of."
-        ]
-    },
-    {
-        "image": "/screen/fileshare.png",
-        "url": "https://www.wikiyou.org/tools/fileshare/",
-        "title": "P2P File Sharing",
-        "description": [
-            "A peer to peer file sharing web app that is a wikiyou page. Allows you to share any files directly to anybody you share your share url with.",
-            "test"
-        ]
-    },
-    {
-        "image": "/screen/github.png",
-        "url": "https://github.com/altlimit/sitegen",
-        "title": "Sitegen Static Site Generator",
-        "description": [
-            "Simple but flexible static site generator. Create static sites to host on github pages, netlify, firebase or any file hosting sites."
+            "A government audited bullion management system with banking level security and transaction system including client portal, support system, and logistics administration.",
+            "Technologies: AWS, S3, VueJS, Python3, SendGrid, Bulma"
         ]
     },
     {
@@ -56,15 +35,8 @@
         "url": "https://play.google.com/store/apps/details?id=com.altlimit.applauncherfree",
         "title": "AppLauncher",
         "description": [
-            "App Launcher Plus is an App Drawer that automatically organize your apps base on google play categories. It is not a full featured launcher, so it will not replace your current launcher. But you can use it as an alternative app drawer."
-        ]
-    },
-    {
-        "image": "/screen/flickersmartsync.png",
-        "url": "https://pypi.python.org/pypi/flickrsmartsync",
-        "title": "flickrsmartsync",
-        "description": [
-            "flickrsmartsync is a tool you can use to easily sync up or down your photos in a drive/folder to flickr since now it has a free 1TB storage you can probably sync all your photo collection."
+            "App Launcher Plus is an App Drawer that automatically organize your apps base on google play categories with customizable category groups and more.",
+            "Technologies: Flutter, Go, AppEngine, Datastore"
         ]
     }
 ]

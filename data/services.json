@@ -8,24 +8,42 @@
         "image": "/img/native.svg",
         "name": "Native Apps",
         "description": "Desktop or server applications and services for Windows or Ubuntu.",
-        "tags": ["web", "mobile", "desktop"]
+        "tags": ["windows", "ubuntu", "desktop", "native"]
     },
     {
         "image": "/img/flutter.svg",
         "name": "Mobile Apps",
-        "description": "We provide support of any size. Even the smallest tasks get handled efficiently.",
-        "tags": ["bugs", "issues", "optimize"]
+        "description": "Fast, reliable and intuitive applications for Android/iOS mobile built with Flutter.",
+        "tags": ["iOS", "Android", "Flutter"]
     },
     {
         "image": "/img/migration.svg",
         "name": "Data Migration",
-        "description": "Already have a design? We'll take it and develop it for you.",
-        "tags": ["email", "landing", "custom"]
+        "description": "Custom application to extract data from ab=n existing system or storage to a new location.",
+        "tags": ["migration", "extract", "data"]
     },
     {
         "image": "/img/integration.svg",
         "name": "Service Integration",
-        "description": "Want to integrate your system to a third party service? We can help you with that.",
-        "tags": ["email", "landing", "custom"]
+        "description": "Implementation of third party service integration to current system.",
+        "tags": ["integration"]
+    },
+    {
+        "image": "/img/automation.svg",
+        "name": "Automation",
+        "description": "Automate manual processes to improve efficiency and reduce errors significantly.",
+        "tags": ["automation"]
+    },
+    {
+        "image": "/img/rewrite.svg",
+        "name": "Application Rewrite",
+        "description": "Modernize legacy application by rebuilding it using the best of today's technologies.",
+        "tags": ["modernization", "rewrite"]
+    },
+    {
+        "image": "/img/support.svg",
+        "name": "Maintenance & Support",
+        "description": "Codebase updates to improve software, fix bugs, or apply new features.",
+        "tags": ["maintenance", "support"]
     }
 ]

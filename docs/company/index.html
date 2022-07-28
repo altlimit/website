@@ -9,6 +9,9 @@
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 <link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/fontawesome.min.css" integrity="sha512-R+xPS2VPCAFvLRy+I4PgbwkWjw1z5B5gNDYgJN5LfzV4gGNeRQyVrY7Uk59rX+c8tzz63j8DeZPLqmXvBxj8pA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/solid.min.css" integrity="sha512-EvFBzDO3WBynQTyPJI+wLCiV0DFXzOazn6aoy/bGjuIhGCZFh8ObhV/nVgDgL0HZYC34D89REh6DOfeJEWMwgg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/brands.min.css" integrity="sha512-nS1/hdh2b0U8SeA8tlo7QblY6rY6C+MgkZIeRzJQQvMsFfMQFUKp+cgMN2Uuy+OtbQ4RoLMIlO2iF7bIEY3Oyg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
 
 
@@ -100,55 +103,64 @@
     </div>
     <div class="overview">
         <h1 class="title">
-            Our Company
+            The Story So Far
         </h1>
-        <p>
-            We are a team of remote developers around the world.
+        <article class="history">
+            <div>
+                <span class="milestone">2014</span><span class="event">Founded in 2014, Altlimit's mission has always been to find workarounds for limitations - thus, alternative to limitations. Eversince, they have always strived to deliver cost-efficient solutions to their clients' software needs.</span>
+                <span></span><span class="event">Initially, Altlimit was focused on web applications and they have delivered a full fledged crowdfunding website, a community portal, and some e-commerce websites.</span>
+                <span class="milestone">2017</span><span class="event">In 2017, they had the honor of building an application for the state's bullion depository through a private company. This paved the way for the company to expand services after the experience it brought to the table.</span>
+                <span class="milestone">2018</span><span class="event">In 2018, a repeat customer rehired the team to work on automation, data extraction and migration. This relationship with this client has brought in more projects including a document management system with scanning solutions and more integration to car dealership systems.</span>
+                <span class="milestone">2019</span><span class="event">In 2019, with the availability of Flutter, they have also added mobile development in their portfolio.</span>
+                <span class="milestone">2022</span><span class="event">Currently, the team continues to accept and work on new projects while still maintaining projects with existing clients.</span>
+            </div>
+        </article>
+    </div>
+    <div class="overview">
+        <h2 class="title">Core Team</h2>
+        <p>The core team is a dynamic duo who has been working together on projects for over two decades. They handle most of the responsibilities on project intakes, consulting and software development and bring in other talents as needed on the project.
         </p>
     </div>
-
-    <div class="flex flex-col sm:flex-row">
-        
-        <div class="sm:w-1/4 pr-2 pb-2">
-            <div class="bg-white pt-6 px-3 rounded-sm shadow text-center" style="min-height: 13rem;">
-                <div class="mb-3">
-                    <img class="w-auto mx-auto rounded-full" src="/img/dev_man.svg" alt="" />
-                </div>
-                <h2 class="text-xl font-medium text-gray-700">Faisal R.</h2>
-                <span class="text-blue-500 block mb-5">Developer</span>
-            </div>
-        </div>
-        
-        <div class="sm:w-1/4 pr-2 pb-2">
-            <div class="bg-white pt-6 px-3 rounded-sm shadow text-center" style="min-height: 13rem;">
-                <div class="mb-3">
-                    <img class="w-auto mx-auto rounded-full" src="/img/dev_woman.svg" alt="" />
-                </div>
-                <h2 class="text-xl font-medium text-gray-700">Monna R.</h2>
-                <span class="text-blue-500 block mb-5">Developer</span>
-            </div>
-        </div>
-        
-        <div class="sm:w-1/4 pr-2 pb-2">
-            <div class="bg-white pt-6 px-3 rounded-sm shadow text-center" style="min-height: 13rem;">
-                <div class="mb-3">
-                    <img class="w-auto mx-auto rounded-full" src="/img/dev_woman.svg" alt="" />
-                </div>
-                <h2 class="text-xl font-medium text-gray-700">AB M.</h2>
-                <span class="text-blue-500 block mb-5">Graphic Artist</span>
-            </div>
-        </div>
-        
-        <div class="sm:w-1/4 pr-2 pb-2">
-            <div class="bg-white pt-6 px-3 rounded-sm shadow text-center" style="min-height: 13rem;">
-                <div class="mb-3">
-                    <img class="w-auto mx-auto rounded-full" src="/img/dev_woman.svg" alt="" />
-                </div>
-                <h2 class="text-xl font-medium text-gray-700">Lea M.</h2>
-                <span class="text-blue-500 block mb-5">Marketing</span>
-            </div>
-        </div>
-        
+    <div class="bio">
+        <figure>
+            <img src="https://avatars.githubusercontent.com/u/3916729?v=4" alt="Image"/>
+            <figcaption>
+                <h3 class="title">Faisal R.</h3>
+                <ul>
+                    <li><a href="https://github.com/faisalraja">Github</a></li>
+                </ul>
+            </figcaption>
+        </figure>
+        <article>
+            <h2 class="title">Faisal
+                <span class="subtitle">Architect, Fullstack Engineer</span>
+            </h2>
+            <p>Faisal is the solutions architect responsible for building core components of each project focusing
+                on performance and scalability. He currently uses Go, Flutter, and VueJS but has vast experience
+                with other technologies throughout his 16+ years of career in the software industry as a fullstack engineer.
+            </p>
+        </article>
+    </div>
+    <div class="bio">
+        <figure>
+            <img src="https://avatars.githubusercontent.com/u/4730695?v=4" alt="Image"/>
+            <figcaption>
+                <h3 class="title">Monna R.</h3>
+                <ul>
+                    <li><a href="https://github.com/monnalissa">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/monna-lissa-raja-98aaa63">LinkedIn</a></li>
+                </ul>
+            </figcaption>
+        </figure>
+        <article>
+            <h2 class="title">Monna
+                <span class="subtitle">Frontend Engineer</span>
+            </h2>
+            <p>Monna is the frontend engineer responsible for aesthetics, user experience, and presentation of applications and makes sure
+                they are building responsive web applications. Her favorite stack is VueJS and Tailwind CSS. She has been in the software
+                industry for 15+ years as software engineer, integration engineer, and frontend engineer.
+            </p>
+        </article>
     </div>
 </div>
 

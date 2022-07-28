@@ -16,26 +16,65 @@ title: Work
         </div>
     </div>
     <div class="overview">
-        <h1 class="title">
+        <h2 class="title">
             See Our Work
-        </h1>
+        </h2>
     </div>
-    {{$work := data "work.json"}}
-    {{ range $work }}
-    <div class="feature">
+    <div>
+        {{$work := data "work.json"}}
+        {{ range $work }}
+        <div class="feature">
+            <figure>
+                <img src="{{.image}}" alt="{{.title}}"/>
+            </figure>
+            <article>
+                <h2 class="title">{{.title}}</h2>
+                {{ range .description }}
+                <p>{{.}}</p>
+                {{end}}
+                {{if .url}}
+                <a class="mt-5 link" href="{{.url}}">&#x23F5; Go to {{.title}}</a>
+                {{end}}
+            </article>
+        </div>
+        {{end}}
+    </div>
+    <div class="overview">
+        <h2 class="title">
+            Open Source Projects
+        </h2>
+    </div>
+    <div class="cards">
+        {{$work := data "opensource.json"}}
+        {{ range $work }}
         <figure>
             <img src="{{.image}}" alt="{{.title}}"/>
         </figure>
-        <article>
-            <h2 class="title">{{.title}}</h2>
-            {{ range .description }}
-            <p>{{.}}</p>
-            {{end}}
-            {{if .url}}
-            <a class="mt-5 link" href="{{.url}}">&#x23F5; Learn More</a>
-            {{end}}
-        </article>
+        {{end}}
     </div>
-    {{end}}
+    <div class="overview">
+        <h2 class="title">
+            Free Tools
+        </h2>
+    </div>
+    <div class="cards">
+        {{$work := data "tools.json"}}
+        {{ range $work }}
+        <div class="card">
+            <figure>
+                <img src="{{.image}}" alt="{{.title}}"/>
+            </figure>
+            <article>
+                <h2 class="title">{{.title}}</h2>
+                {{ range .description }}
+                <p>{{.}}</p>
+                {{end}}
+                {{if .url}}
+                <a class="mt-5 link" href="{{.url}}">&#x23F5; Go to {{.title}}</a>
+                {{end}}
+            </article>
+        </div>
+        {{end}}
+    </div>
 </div>
 {{end}}
