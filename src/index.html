@@ -5,24 +5,61 @@ title: Alternative to Limitations
 
 {{define "content"}}
 
-<main class="flex flex-col-reverse sm:flex-row jusitfy-between items-center py-12">
-    <div class="sm:w-2/5 flex flex-col items-center sm:items-start text-center sm:text-left">
-        <h1 class="uppercase text-4xl md:text-6xl text-blue-900 font-bold leading-none tracking-wide mb-2">Alternative
-        </h1>
-        <h2 class="uppercase text-2xl md:text-4xl text-yellow-500 text-secondary tracking-widest mb-6">To Limitations
-        </h2>
-        <p class="text-gray-600 leading-relaxed mb-12">
-            We build custom desktop, mobile and web apps. Send us a summary of your project at <a
-                href="mailto:hello@altlimit.com" class="underline">
-                hello@altlimit.com</a> for a free consultation.
-        </p>
-        <a href="/contact"
-            class="bg-blue-300 hover:bg-blue-400 py-3 px-6 uppercase text-lg font-bold text-white rounded-sm">Contact
-        </a>
+<main>
+    <div class="hero" style="background-image:url('/img/hero.jpg')">
+        <div class="backdrop"></div>
+        <div class="pitch">
+            <article>
+                <h1 class="title">MVP Solutions & Beyond, Guaranteed Delivered!</h1>
+                <p>Our customers rely on us to build responsive web applications hosted on Google Cloud Platform.</p>
+                <a href="/contact"
+                    class="button call-to-action primary">Tell Us About Your Project
+                </a>
+            </article>
+        </div>
     </div>
-    <div class="mb-16 sm:mb-0 mt-8 sm:mt-0 sm:w-3/5 sm:pl-12">
-        <img class="w-full h-64 sm:h-auto" src="/img/main.svg" />
+    <div class="overview">
+        <h2 class="title">What We Do</h2>
+        <p>We offer customized software applications. We help customers find an efficient and affordable solution to their application needs.
+            No matter what the requirement is, there is always a way to find a solution.
+        </p>
+    </div>
+    <div class="feature cards">
+        {{$services := data "services.json"}}
+        {{ range $services }}
+        <div class="card">
+            <figure>
+                <img src="{{.image}}" alt="{{.name}}"/>
+            </figure>
+            <h2 class="title">{{.name}}</h2>
+            <p>{{.description}}</p>
+        </div>
+        {{end}}
+    </div>
+    <div class="overview">
+        <h2 class="title">What Our Customers Say About Us?</h2>
+        <p>At Altlimit, we pride ourselves with establishing long lasting relationship with our customers by making sure they are happy with our services.</p>
+    </div>
+    <div class="banner quote">
+        <article>
+            <p>"We are so fortunate to have discovered Altlimit. They were keen on finding out ways to achieve our goals for our automation requirement.
+                Faisal is a natural when it comes to software development.
+                He can do anything software related."
+                <span class="byline">- David, Florida</span>
+            </p>
+        </article>
+    </div>
+    <div class="overview">
+        <h2 class="title">Technology and Infrastructure</h2>
+        <p>Altlimit uses modern technologies to power software and services</p>
+    </div>
+    <div class="feature logos">
+        {{$tech := data "tech.json"}}
+        {{ range $tech }}
+        <figure>
+            <img src="{{.image}}" alt="{{.name}}"/>
+        </figure>
+        {{end}}
     </div>
 </main>
-
 {{end}}

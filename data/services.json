@@ -1,25 +1,49 @@
 [{
-        "image": "/img/consult.svg",
-        "name": "Consulting",
-        "description": "We will help you decide the best approach on how to solve business problems with the right technology.",
-        "tags": ["ui", "ux", "solution"]
+        "image": "/img/responsivewebapp.svg",
+        "name": "Web Application",
+        "description": "Responsive and modern HTML5/CSS3 web applications built with VueJS and Go running on Google Cloud.",
+        "tags": ["responsive", "web", "cloud"]
     },
     {
-        "image": "/img/mobile.svg",
-        "name": "Development",
-        "description": "We will work with you throughout the project for a smooth development process.",
-        "tags": ["web", "mobile", "desktop"]
+        "image": "/img/native.svg",
+        "name": "Native Apps",
+        "description": "Desktop or server applications and services for Windows or Linux.",
+        "tags": ["windows", "ubuntu", "desktop", "native"]
+    },
+    {
+        "image": "/img/flutter.svg",
+        "name": "Mobile Apps",
+        "description": "Fast, reliable and intuitive applications for Android/iOS mobile built with Flutter.",
+        "tags": ["iOS", "Android", "Flutter"]
+    },
+    {
+        "image": "/img/migration.svg",
+        "name": "Data Migration",
+        "description": "Custom application to extract data from existing systems or storage to a new location.",
+        "tags": ["migration", "extract", "data"]
+    },
+    {
+        "image": "/img/integration.svg",
+        "name": "Service Integration",
+        "description": "Implementation of third party service integration to current system.",
+        "tags": ["integration"]
+    },
+    {
+        "image": "/img/automation.svg",
+        "name": "Automation",
+        "description": "Automate manual processes to improve efficiency and reduce errors significantly.",
+        "tags": ["automation"]
+    },
+    {
+        "image": "/img/rewrite.svg",
+        "name": "Application Rewrite",
+        "description": "Modernize legacy application by rebuilding it using the best of today's technologies.",
+        "tags": ["modernization", "rewrite"]
     },
     {
         "image": "/img/support.svg",
-        "name": "Support",
-        "description": "We provide support of any size. Even the smallest tasks get handled efficiently.",
-        "tags": ["bugs", "issues", "optimize"]
-    },
-    {
-        "image": "/img/implement.svg",
-        "name": "Implement",
-        "description": "Already have a design? We'll take it and develop it for you.",
-        "tags": ["email", "landing", "custom"]
+        "name": "Maintenance & Support",
+        "description": "Codebase updates to improve software, fix bugs, or apply new features.",
+        "tags": ["maintenance", "support"]
     }
 ]

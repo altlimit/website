@@ -1,7 +1,7 @@
 /*
 ---
-serve: npm run build:css
-build: npm run build:prod:css
+serve: npx tailwindcss -i ./src/css/styles.css -o ./docs/css/styles.css
+build: npx tailwindcss -i ./src/css/styles.css -o ./docs/css/styles.css --minify
 ---
 */
 @tailwind base;
@@ -10,4 +10,995 @@ build: npm run build:prod:css
 
 [x-cloak] {
   display: none;
+}
+* {
+  @apply box-border text-neutral;
+}
+html,body {
+  @apply m-0;
+}
+
+body {
+  @apply flex flex-col justify-between min-h-screen;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply my-4;
+}
+
+.title {
+  @apply font-semibold tracking-wider text-2xl text-primary font-serif;
+}
+
+.form > .title > .subtitle {
+  @apply flex text-lg font-normal font-sans;
+}
+
+p {
+  @apply mb-4 text-neutral-medium;
+}
+
+.content-blank {
+  content:"";
+}
+
+.workspace {
+  @apply flex flex-col w-screen sm:gap-8;
+}
+
+.workspace > .sidebar {
+  @apply pl-16 items-start pb-8;
+}
+
+.sidebar {
+  @apply flex flex-col content-center justify-start items-center m-0  bg-neutral-inverse p-4 w-full;
+}
+
+.sidebar > .title {
+  @apply font-light tracking-wide text-xl text-center;
+}
+
+.sidebar.rows {
+  @apply content-start items-start;
+}
+
+.sidebar.card {
+  @apply p-0 m-8 w-auto border-neutral-inverse border drop-shadow-md justify-center items-center gap-8 bg-white;
+}
+
+.sidebar.card > article {
+  @apply text-center;
+}
+
+.sidebar.card > article > .title {
+  @apply text-5xl font-serif text-primary;
+}
+
+.sidebar.card > article > .subtitle {
+  @apply text-3xl font-sans text-neutral;
+}
+
+article {
+  @apply text-lg;
+}
+
+article > .title {
+  @apply font-serif tracking-wider font-semibold text-primary text-lg;
+}
+
+article.bullet > .title {
+  @apply -indent-8;
+}
+
+article.bullet > ul {
+  @apply -indent-4 flex flex-col gap-4;
+}
+
+article.bullet > ul > li > i {
+  @apply mr-3 text-primary;
+}
+
+.subscript {
+  @apply text-xs italic tracking-wide;
+}
+
+.main {
+  @apply flex-grow flex items-start py-8;
+}
+
+.main.rows {
+  @apply max-w-4xl;
+}
+
+.rows {
+  @apply flex-col gap-8 p-8;
+}
+
+.link {
+  @apply text-primary border-b border-primary-subtle border-dotted;
+}
+
+.link:hover {
+  @apply text-primary-strong border-solid;
+}
+
+.button {
+  @apply my-4 px-6 py-2 font-semibold tracking-wide text-lg;
+}
+
+.button.primary {
+  @apply bg-primary text-primary-inverse;
+}
+
+.button.primary:hover {
+  @apply bg-primary-strong text-white;
+}
+
+.call-to-action {
+  @apply text-2xl rounded-lg py-4 px-6;
+}
+
+.hero {
+  @apply relative bg-no-repeat bg-right bg-cover;
+  height: 500px;
+}
+
+.hero > .backdrop {
+  @apply absolute top-0 left-0 h-full w-full;
+  background: linear-gradient(to bottom, white 25%, white 40%, rgba(256,256,256,0.9) 65%, rgba(256,256,256,0.8) 75%,rgba(256,256,256,0.5) 90%, transparent 100%);
+}
+
+.hero > .pitch {
+  @apply absolute w-full bottom-0 top-0 flex gap-4 justify-items-center items-center text-center;
+}
+
+.hero > .pitch > article {
+  @apply flex flex-col gap-4 items-center p-4;
+}
+
+.hero > .pitch > article > .title {
+  @apply text-3xl tracking-wide text-neutral font-bold;
+}
+
+.hero .subtitle {
+  @apply text-xl tracking-wide text-accent;
+}
+
+.hero p {
+  @apply text-lg text-neutral;
+}
+
+footer {
+  @apply flex flex-col mt-12 bg-neutral-inverse select-none;
+}
+
+footer > .nav {
+  @apply container flex flex-col gap-4 text-xl tracking-wide font-light my-8;
+}
+
+footer > .links > ul {
+  @apply flex flex-col gap-4 items-center;
+}
+
+footer > .nav > .links {
+  @apply leading-8;
+}
+
+footer > .nav > .links > .title {
+  @apply uppercase font-light tracking-widest font-sans;
+}
+
+footer > .nav > .bullet {
+  @apply flex flex-col leading-6;
+}
+
+footer > .nav > .bullet > .header, footer > .nav > .list > .header {
+  @apply uppercase font-light tracking-widest font-sans text-primary text-xl;
+}
+
+footer > .nav > .bullet > .header, footer > .nav > .list > li > i {
+  @apply mr-3;
+}
+footer > .nav > .bullet > .header, footer > .nav > .list > .header:not(:first-child) {
+  @apply mt-4;
+}
+
+footer > .nav > .bullet > li.header {
+  @apply -indent-8;
+}
+
+footer > .nav > .bullet > li:not(.header) {
+  @apply -indent-4;
+}
+
+footer > .nav > .bullet > li > i {
+  @apply mr-3;
+}
+
+footer > .nav > .split {
+  @apply flex flex-col gap-4;
+}
+
+.anchor {
+  @apply cursor-pointer text-primary font-semibold;
+}
+
+.anchor > i {
+  @apply mr-3 text-primary;
+}
+
+.anchor:hover {
+  @apply animate-pulse;
+}
+
+footer > .nav > .bullet > .header:not(:first-child) {
+  @apply mt-4;
+}
+
+footer > .nav > .links > li > a:hover {
+  @apply text-primary-strong;
+}
+
+footer > .nav > div > .social {
+  @apply flex-col;
+}
+
+footer > .nav > div > .social > .header {
+  @apply uppercase tracking-widest text-primary;
+}
+
+footer > .nav > div > .social > li > a > i {
+  @apply mr-3;
+}
+
+footer > .footer {
+  @apply w-full bg-neutral text-neutral-inverse py-4;
+}
+
+footer > .footer > .container  {
+  @apply flex flex-col justify-start items-start px-7;
+}
+
+footer > .footer > .container > .links {
+  @apply flex flex-col divide-x-0;
+}
+
+footer > .footer > .container > span,
+footer > .footer > .container > .links,
+footer > .footer > .container > .links > li,
+footer > .footer > .container > .links > li > a,
+footer > .footer > .container > .links > li > a > i {
+  @apply text-neutral-inverse text-base tracking-wide;
+}
+
+footer > .footer > .container {
+  @apply flex flex-col-reverse gap-8;
+}
+
+footer > .footer > .container > .links > li {
+  @apply font-light px-0;
+}
+
+footer > .footer > .container > .links > li > a:hover {
+  @apply text-white;
+}
+
+.form {
+  @apply flex flex-col flex-grow w-full max-w-lg gap-4;
+}
+.field {
+  @apply flex w-auto flex-col gap-2;
+}
+.checkbox {
+  @apply flex-row-reverse justify-start items-baseline;
+}
+label {
+  @apply font-semibold tracking-wide;
+}
+.checkbox > label {
+  @apply font-light select-none tracking-normal text-base;
+}
+input[type=text],input[type=password],input[type=number],input[type=email],select {
+  @apply outline-accent border-solid border border-neutral text-lg w-full h-10;
+}
+textarea {
+  @apply outline-accent border-solid border border-neutral text-lg font-sans;
+}
+input[type=checkbox] {
+  @apply relative cursor-pointer mr-2 h-4;
+}
+input[type=checkbox]:before {
+  @apply block absolute w-5 h-5 top-0 left-0 bg-neutral-inverse content-blank;
+}
+input[type=checkbox]:checked:before {
+  @apply block absolute w-5 h-5 top-0 left-0 bg-primary content-blank;
+}
+input[type=checkbox]:checked:after {
+  @apply block w-1 h-2.5 border-solid border-primary-inverse rotate-45 absolute top-0.5 left-1.5 content-blank;
+}
+.help {
+  @apply text-sm font-normal tracking-normal;
+}
+.help.danger {
+  @apply text-danger;
+}
+.help::first-letter {
+  @apply capitalize;
+}
+.button {
+  @apply text-primary-inverse bg-primary px-8 py-4 text-lg font-medium tracking-wide border-0 rounded-md cursor-pointer;
+}
+.button:hover {
+  @apply brightness-90 drop-shadow-md;
+}
+
+.notification {
+  @apply flex flex-col justify-center justify-items-center content-center text-center p-4 drop-shadow-md border;
+  @apply border-neutral-subtle bg-neutral-subtle text-neutral;
+}
+
+.notification.success {
+  @apply border-success bg-success text-white;
+}
+
+.notification > .title {
+  @apply text-xl;
+}
+
+.notification > p {
+  @apply text-lg;
+}
+
+.overview {
+  @apply flex flex-col justify-center items-center w-full my-8 px-4;
+}
+.overview > .title {
+  @apply w-full text-lg text-neutral flex justify-center items-center my-4 mx-6 leading-6 whitespace-nowrap;
+}
+.overview > .title:before, .overview > .title:after {
+  @apply content-blank bg-accent block mx-4 my-0 flex-initial basis-24 h-1;
+}
+.overview > p {
+  @apply text-lg tracking-wide text-center;
+}
+
+.banner {
+  @apply relative bg-no-repeat bg-right bg-cover h-60;
+}
+
+.banner > .backdrop {
+  @apply absolute top-0 left-0 h-full w-full bg-accent-subtle;
+  background: linear-gradient(to bottom, #FFF08E 25%, #FFF08E 40%, rgba(255,240,142,0.9) 65%, rgba(255,240,142,0.8) 75%,rgba(255,240,142,0.5) 90%, transparent 100%);
+}
+
+.banner > .pitch {
+  @apply absolute w-full bottom-0 top-0 flex;
+}
+
+.banner > .pitch > article {
+  @apply p-8 flex w-full flex-col justify-items-center items-center text-center gap-0 leading-tight;
+}
+
+.banner > .pitch > article > .title, .banner > .pitch > article > .subtitle, .banner > .pitch > article > p {
+  @apply w-full px-0 tracking-wider;
+}
+
+.banner > .pitch > article > p {
+  @apply uppercase;
+}
+
+.banner.quote {
+  @apply bg-neutral-inverse h-auto py-2;
+}
+
+.banner.quote > article {
+  @apply flex flex-col h-full justify-center justify-items-center content-center my-8 px-8 py-16;
+}
+
+.banner.quote > article > h1,.banner.quote > article > p {
+  @apply text-center text-neutral;
+}
+
+.quote > article > p {
+  @apply font-serif normal-case my-4;
+}
+
+.quote > article > p > span.byline {
+  @apply font-sans block font-light tracking-widest uppercase text-base my-4;
+}
+
+.checklist {
+  @apply text-lg;
+}
+
+.checklist > li {
+  @apply ml-6 -indent-6;
+}
+
+.checklist > li:before {
+  content: "\1F5F8";
+  @apply text-success-strong font-bold text-2xl mr-2;
+}
+
+.checklist.cross > li:before {
+  content: "\2A2F";
+  @apply text-neutral-subtle font-bold text-2xl mr-2;
+}
+
+.table {
+  @apply bg-white text-neutral mb-4 mx-4;
+}
+
+.table > thead > tr > th {
+  @apply text-lg font-semibold;
+}
+
+.table > tbody > tr > td, .table > thead > tr > th {
+  @apply px-4 py-1 text-left;
+}
+
+.table > tbody > tr > td.check, .table > tbody > tr > td.cross {
+  @apply text-center;
+
+}
+
+td.check,td.cross {
+  @apply w-1;
+}
+
+.check,.cross {
+  @apply text-lg font-bold;
+}
+
+.check {
+  @apply text-success;
+}
+
+.cross {
+  @apply text-neutral-subtle;
+}
+
+.feature {
+  @apply flex flex-col gap-4 w-full mb-8;
+}
+
+.feature > figure > img {
+  @apply w-full;
+}
+
+.feature > article {
+  @apply p-8 text-lg text-neutral;
+}
+
+.feature > article > .title {
+  @apply text-primary text-2xl tracking-wide;
+}
+
+.legal {
+  @apply container my-8;
+}
+
+.legal > h1,.legal > h2,.legal > h3 {
+  @apply font-serif font-semibold tracking-wide text-primary-strong mt-8;
+}
+
+.legal > h1 {
+  @apply text-2xl;
+}
+
+.legal > h2 {
+  @apply text-xl;
+}
+
+.legal > p {
+  @apply text-lg;
+}
+
+.legal > p > .text-link {
+  @apply text-primary border-b border-dotted border-primary font-semibold;
+}
+
+.logos {
+  @apply flex flex-row flex-wrap gap-4 items-center justify-center justify-items-center px-4 my-4;
+}
+
+.logos > figure {
+  @apply w-auto h-20 max-h-20 mx-4;
+}
+
+.logos > figure > img {
+  @apply h-full;
+}
+
+.feature.cards {
+  @apply flex gap-8 justify-center flex-wrap w-full justify-items-center content-center px-8;
+}
+
+.feature.cards > .card {
+  @apply flex flex-col border bg-white border-primary-subtle drop-shadow-md p-8 items-center;
+}
+
+.card > .title {
+  @apply text-center;
+}
+
+.card > figure > img {
+  @apply h-32;
+}
+
+.card > p {
+  @apply text-neutral text-xl text-center;
+}
+
+.card > .title {
+  @apply text-primary font-sans text-2xl;
+}
+
+.header > header {
+  @apply py-4 flex flex-col w-full gap-4;
+}
+
+.brand {
+  @apply flex flex-row justify-between w-full items-center px-4;
+}
+
+.brand figure {
+  @apply px-4 flex items-center gap-4;
+}
+
+.brand figure > img {
+  @apply h-20;
+}
+
+.brand figure > figcaption {
+  @apply font-bold tracking-widest uppercase text-primary-strong text-5xl;
+}
+
+.brand figure > figcaption > div.tagline {
+  @apply block text-neutral text-xl lowercase tracking-wider font-normal;
+}
+
+.brand figure > figcaption > div.tagline > .highlight {
+  @apply text-highlight;
+}
+
+nav {
+  @apply flex flex-row justify-between items-center w-full;
+}
+
+nav.open > ul.links {
+  @apply flex;
+}
+nav.close > ul.links {
+  @apply hidden;
+}
+
+nav > ul.links {
+  @apply flex-col divide-y w-auto gap-1 text-primary w-full absolute top-0 left-0 mt-28 bg-white py-4 z-10;
+}
+
+nav > button {
+  @apply flex-grow-0 w-10 h-10;
+}
+
+nav > ul.links > li > a {
+  @apply text-neutral-medium font-semibold text-xl px-8 leading-10 whitespace-nowrap;
+}
+
+nav > ul.links > li > a:hover, nav > ul.links > li > a.active {
+  @apply text-neutral-strong;
+}
+
+.cards {
+  @apply flex flex-row flex-wrap gap-4 mx-2 justify-center pb-16;
+}
+
+.cards > .card {
+  @apply w-auto border border-neutral-inverse drop-shadow-md bg-neutral-inverse;
+}
+
+.cards > .card > figure {
+  @apply w-auto h-64 flex items-center justify-center;
+}
+
+.cards > .card > figure > img {
+  @apply w-auto h-64;
+}
+
+.cards > .card > article {
+  @apply p-8;
+}
+
+.bio {
+  @apply container w-auto mx-8 flex flex-col mb-8 gap-8;
+}
+
+.bio > figure {
+  @apply w-full bg-neutral flex flex-col items-center h-48 mb-12 rounded-t-md;
+}
+
+.bio > figure > img {
+  @apply w-24 h-24 border-4 border-neutral-inverse rounded-full mt-12 z-10;
+}
+
+.bio > figure > figcaption {
+  @apply bg-white w-full flex flex-col p-4 border border-2 border-neutral -mt-12 pt-12 rounded-b-md text-neutral items-center;
+}
+
+.bio > figure > figcaption > ul {
+  @apply flex flex-row gap-2 divide-x items-center;
+}
+
+.bio > figure > figcaption > ul > li {
+  @apply px-4;
+}
+
+.bio > figure > figcaption > .title {
+  @apply px-4 font-semibold text-neutral-strong text-lg font-serif self-center;
+}
+
+.bio > article {
+  @apply flex flex-col;
+}
+
+.bio > article > .title > .subtitle {
+  @apply block font-light font-sans;
+}
+
+.history {
+  @apply container;
+}
+
+.history > div {
+  @apply grid grid-cols-12 gap-8 ml-8;
+}
+
+.history > div {
+  @apply border-l-4 border-dotted border-accent;
+}
+
+.history > div > .milestone {
+  @apply bg-accent text-accent-inverse font-semibold flex items-center justify-center col-span-1 -ml-9 border-4 border-neutral-inverse rounded-full w-16 h-16;
+}
+
+.history > div > .event {
+  @apply col-span-11 flex items-center;
+}
+
+.container {
+  @apply px-8;
+}
+
+@screen sm {
+
+  .bio {
+    @apply flex-row;
+  }
+
+  .bio > figure {
+    @apply max-w-sm;
+  }
+
+  .container {
+    @apply p-0 max-w-7xl mx-auto;
+  }
+  h1.title {
+    @apply text-3xl;
+  }
+  .workspace {
+    @apply flex-row w-full items-stretch flex-grow my-8 container;
+  }
+  .sidebar {
+    @apply flex justify-start items-center px-8 py-6 m-0 bg-neutral-inverse w-1/3;
+  }
+  .sidebar > .title {
+    @apply text-2xl self-start;
+  }
+
+  .sidebar > article > .title {
+    @apply font-serif tracking-wider font-semibold text-primary text-xl;
+  }
+  .main {
+    @apply w-auto flex-grow py-0;
+  }
+
+  .cards > .card {
+    @apply max-w-sm;
+  }
+
+  .button {
+    @apply px-12 py-4 self-start justify-self-start;
+  }
+
+  nav > button {
+    @apply invisible;
+  }
+
+  nav > ul.links {
+    @apply relative mt-0 flex flex-row gap-8 divide-y-0 leading-tight justify-items-center items-center content-center;
+  }
+
+  nav > ul.links > li > a {
+    @apply border-b border-transparent border-solid px-2 leading-tight pb-0;
+  }
+
+  nav > ul.links > li > a:hover, nav > ul.links > li > a.active {
+    @apply border-neutral border-b border-solid;
+  }
+
+  nav.close > ul.links {
+    @apply flex;
+  }
+
+  .hero {
+    @apply bg-contain flex w-full;
+    height:700px;
+  }
+
+  .hero > .backdrop {
+    background: linear-gradient(125deg, #F2F3F5, #F2F3F5 58%,rgba(242,243,245,0.8) 58%,rgba(242,243,245,0.8) 60%, rgba(242,243,245,0.6) 60%, rgba(242,243,245,0.6) 61%, transparent 65%, transparent);
+  }
+
+  .hero > .pitch {
+    @apply w-full p-0 flex justify-items-center justify-center;
+    background: linear-gradient(45deg, white 75, transparent 100);
+  }
+
+  .hero > .pitch > article {
+    @apply text-left container flex flex-grow-0 items-start justify-start;
+  }
+
+  .hero > .pitch > article > .title, .hero > .pitch > article > .subtitle, .hero > .pitch > article > p {
+    @apply w-1/2;
+  }
+  .hero > .pitch > article > .title {
+    @apply text-5xl font-bold;
+  }
+
+  .hero > .pitch > article > .subtitle {
+    @apply text-3xl font-semibold;
+  }
+
+  .hero p {
+    @apply text-2xl;
+  }
+
+  .notification {
+    @apply fixed bottom-0 left-0 w-full;
+  }
+
+  .notification.success > .title {
+    @apply text-white;
+  }
+
+  .notification.success > p {
+    @apply text-white;
+  }
+
+  .overview {
+    @apply container w-full mt-16;
+  }
+
+  .overview > .title,.overview > p:not(:last-child) {
+    @apply pb-6;
+  }
+
+  .banner {
+    @apply bg-contain h-96;
+  }
+
+  .banner > .backdrop {
+    @apply absolute top-0 left-0 h-full w-full bg-neutral-inverse;
+    background: linear-gradient(90deg, #F2F3F5, #F2F3F5 70%, rgba(242,243,245,0.6) 75%, transparent 85%, transparent);
+  }
+
+  .banner > .backdrop:after {
+    @apply absolute top-0 left-0 h-full w-full bg-neutral-inverse;
+    content: "";
+    background: linear-gradient(90deg, #F2F3F5, #F2F3F5 70%, rgba(242,243,245,0.6) 75%, transparent 85%, transparent);
+  }
+
+  .banner > .pitch {
+    @apply absolute w-full bottom-0 left-0 flex;
+    background: linear-gradient(45deg, #F2F3F5 75, transparent 100);
+  }
+
+  .banner > .pitch > article {
+    @apply container flex flex-col justify-items-center text-left items-start justify-center;
+  }
+
+  .banner > .pitch > article > .title {
+    @apply text-3xl font-bold text-primary-strong;
+  }
+
+  .banner > .pitch > article > .subtitle {
+    @apply text-xl font-semibold;
+  }
+
+  .banner p {
+    @apply text-2xl -mt-4 tracking-wider uppercase;
+  }
+
+  .banner.accent > .backdrop {
+    @apply bg-accent-subtle;
+    background: linear-gradient(90deg, #FFF08E, #FFF08E 70%,  rgba(255,240,142,0.9) 75%, transparent 85%, transparent);
+  }
+
+  .banner.accent > .backdrop:after {
+    @apply bg-accent-subtle;
+    content: "";
+    background: linear-gradient(90deg, #FFF08E, #FFF08E 70%, rgba(255,240,142,0.9) 75%, transparent 85%, transparent);
+  }
+
+  .banner.accent > .pitch {
+    background: linear-gradient(45deg, white 75, transparent 100);
+  }
+
+  .banner.accent > .pitch > article > .title {
+    @apply text-primary-strong;
+  }
+
+  .banner.accent > .pitch > article > .subtitle {
+    @apply text-primary;
+  }
+
+  .banner.primary > .backdrop {
+    @apply bg-primary;
+    background: linear-gradient(90deg, #1AA1E1, #1AA1E1 70%,rgba(26,161,225,0.6) 75%, transparent 85%, transparent);
+  }
+
+  .banner.primary > .backdrop:after {
+    @apply bg-accent-subtle;
+    content: "";
+    background: linear-gradient(90deg, #1AA1E1, #1AA1E1 70%,rgba(26,161,225,0.6) 75%, transparent 85%, transparent);
+  }
+
+  .banner.primary > .pitch {
+    background: linear-gradient(45deg, white 75, transparent 100);
+  }
+
+  .banner.primary > .pitch > article > .title {
+    @apply text-accent-subtle;
+  }
+
+  .banner.primary > .pitch > article > .title > .subtitle {
+    @apply text-white;
+  }
+
+  .banner.primary p {
+    @apply text-primary-inverse;
+  }
+
+  .banner.highlight > .backdrop {
+    @apply bg-highlight;
+    background: linear-gradient(90deg, #CE5043, #CE5043 70%, rgba(206,80,67,0.6) 75%, transparent 85%, transparent);
+  }
+
+  .banner.highlight > .backdrop:after {
+    @apply bg-accent-subtle;
+    content: "";
+    background: linear-gradient(90deg, #CE5043, #CE5043 70%, rgba(206,80,67,0.6) 75%, transparent 85%, transparent);
+  }
+
+  .banner.highlight > .pitch {
+    background: linear-gradient(45deg, white 75, transparent 100);
+  }
+
+  .banner.highlight > .pitch > article > .title {
+    @apply text-accent-subtle;
+  }
+
+  .banner.highlight > .pitch > article > .title > .subtitle {
+    @apply text-white;
+  }
+
+  .banner.highlight p {
+    @apply text-primary-inverse;
+  }
+
+  .banner.quote > article {
+    @apply container;
+  }
+
+  .feature {
+    @apply flex-row container;
+  }
+
+  .cards {
+    @apply container;
+  }
+
+  .feature.reverse {
+    @apply flex-row-reverse;
+  }
+
+  .feature > figure {
+    @apply w-1/3 flex-grow flex flex-col items-center justify-center;
+  }
+
+  .feature > figure > img {
+    @apply w-full;
+  }
+
+  .feature > article {
+    @apply w-2/3;
+  }
+
+  .feature > article > .title {
+    @apply text-3xl;
+  }
+
+  .logos {
+    @apply flex flex-wrap gap-8 items-center justify-center justify-items-center container my-16;
+  }
+
+  .logos > figure {
+    @apply w-32 max-w-xs mx-4 max-h-12 flex-grow-0 content-center items-center justify-center flex;
+  }
+
+  .logos > figure > img {
+    @apply w-full h-auto;
+  }
+
+  .header > header {
+    @apply flex w-full flex-row justify-between items-center container;
+  }
+
+  .brand {
+    @apply flex flex-row gap-8 my-2;
+  }
+
+  .brand figure > figcaption {
+    @apply visible;
+  }
+
+  header > nav {
+    @apply flex-grow-0 shrink;
+  }
+
+  article.bullet > .title {
+    @apply text-3xl font-sans font-light;
+  }
+
+  .sidebar.card {
+    @apply w-1/3 p-0 m-0;
+  }
+
+  .rows {
+    @apply p-4;
+  }
+
+  footer > .nav {
+    @apply flex-row justify-between gap-16 py-4;
+  }
+
+  footer > .nav > div > .social {
+    @apply flex flex-row gap-4;
+  }
+
+  footer > .nav > .split {
+    @apply justify-between items-end;
+  }
+
+  footer > .footer > .container > .links {
+    @apply flex flex-row divide-x;
+  }
+
+  footer > .footer > .container  {
+    @apply flex flex-row justify-between items-center content-center gap-16 px-7;
+  }
+
+  footer > .footer > .container > .links > li {
+    @apply px-4;
+  }
+
+  footer > .footer > .container > .links > li:last-child {
+    @apply pr-0;
+  }
+
+  footer > .links > ul {
+    @apply flex flex-row gap-8 items-center;
+  }
+
+
 }

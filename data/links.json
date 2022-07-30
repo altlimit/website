@@ -1,22 +1,19 @@
 [{
         "path": "/",
-        "name": "Home"
+        "name": "What We Do"
     },
-    {
-        "path": "/services",
-        "name": "Services"
-    },
+
     {
         "path": "/work",
-        "name": "Work"
+        "name": "Solutions"
     },
     {
         "path": "/pricing",
         "name": "Pricing"
     },
     {
-        "path": "/about",
-        "name": "About"
+        "path": "/company",
+        "name": "Company"
     },
     {
         "path": "/contact",

@@ -3,102 +3,81 @@ template: main.html
 title: Work
 ---
 
-{{define "addHead"}}
-<script>
-    function work() {
-        let slides = null;
-        return {
-            init: function () {
-                slides = JSON.parse(this.$refs.slides.value);
-                this.timer = setInterval(this.nextSlide.bind(this), 10000);
-            },
-            slides: function () {
-                return slides;
-            },
-            slideIndex: 0,
-            timer: null,
-            slide: function () {
-                return this.slides()[this.slideIndex];
-            },
-            nextSlide: function (cancel) {
-                if (cancel) {
-                    this.cancelIterval();
-                }
-                if (this.slideIndex + 1 < slides.length) {
-                    this.slideIndex++;
-                } else {
-                    this.slideIndex = 0;
-                }
-            },
-            prevSlide: function (cancel) {
-                if (cancel) {
-                    this.cancelIterval();
-                }
-                if (this.slideIndex - 1 >= 0) {
-                    this.slideIndex--;
-                } else {
-                    this.slideIndex = slides.length - 1;
-                }
-            },
-            cancelIterval: function () {
-                clearInterval(this.timer);
-                this.timer = null;
-            }
-        }
-    }
-</script>
-{{end}}
-
 {{define "content"}}
-{{$slides := data "work.json"}}
-<div x-data="work()" x-init="init()">
-    <input x-ref="slides" value="{{$slides | json}}" type="hidden">
-    <h1 class="text-lg font-medium pb-4" x-on:click="test">Projects</h1>
-    <!-- Carousel Body -->
-    <div class="relative rounded block md:flex items-center bg-gray-100 shadow" style="min-height: 19rem;">
-        <div class="relative w-full md:w-2/5 h-full overflow-hidden rounded-t-lg md:rounded-t-none md:rounded-l-lg"
-            style="min-height: 25rem;">
-            <div class="absolute inset-0 w-full h-full opacity-75"></div>
-            <div class="absolute inset-0 w-full h-full flex items-center justify-center fill-current text-white">
-                <img class="w-full" x-bind:src="slide().image">
-            </div>
+<div>
+    <div class="banner primary" style="background-image:url('/img/solutions.jpg')">
+        <div class="backdrop"></div>
+        <div class="pitch">
+            <article>
+                <h1 class="title">Our Solutions
+                </h1>
+                <p>See some of our work</p>
+            </article>
         </div>
-        <div class="w-full md:w-3/5 h-full flex items-center bg-gray-100 rounded-lg">
-            <div class="p-12 md:pr-24 md:pl-16 md:py-12">
-                <span class="text-gray-900" x-text="slide().title"></span>
-                <template x-for="(desc, index) in slide().description" :key="index">
-                    <p class="text-gray-600 py-1" x-html="desc"></p>
-                </template>
-                <a class="flex items-baseline mt-3 text-red-600 hover:text-red-900 focus:text-red-900" target="_blank"
-                    x-bind:href="slide().url">
-                    <span x-text="'Visit ' + slide().title"></span>
-                    <span class="text-xs ml-1">&#x279c;</span>
-                </a>
-            </div>
-            <svg class="hidden md:block absolute inset-y-0 h-full w-24 fill-current text-gray-100 -ml-12"
-                viewBox="0 0 100 100" preserveAspectRatio="none">
-                <polygon points="50,0 100,0 50,100 0,100"></polygon>
-            </svg>
+    </div>
+    <div class="overview">
+        <h2 class="title">
+            Recent Projects
+        </h2>
+        <p>Check out some of our most recent projects.</p>
+    </div>
+    <div>
+        {{$work := data "work.json"}}
+        {{ range $work }}
+        <div class="feature">
+            <figure>
+                <img src="{{.image}}" alt="{{.title}}"/>
+            </figure>
+            <article>
+                <h2 class="title">{{.title}}</h2>
+                {{ range .description }}
+                <p>{{.}}</p>
+                {{end}}
+                {{if .url}}
+                <a class="mt-5 link" href="{{.url}}">&#x23F5; Go to {{.title}}</a>
+                {{end}}
+            </article>
         </div>
-        <button x-on:click="prevSlide"
-            class="absolute top-0 mt-32 left-0 bg-white rounded-full shadow-md h-12 w-12 text-2xl text-red-600 hover:text-red-400 focus:text-red-400 -ml-6 focus:outline-none focus:shadow-outline">
-            <span class="block" style="transform: scale(-1);">&#x279c;</span>
-        </button>
-        <button x-on:click="nextSlide"
-            class="absolute top-0 mt-32 right-0 bg-white rounded-full shadow-md h-12 w-12 text-2xl text-red-600 hover:text-red-400 focus:text-red-400 -mr-6 focus:outline-none focus:shadow-outline">
-            <span class="block" style="transform: scale(1);">&#x279c;</span>
-        </button>
+        {{end}}
     </div>
-
-    <!-- Carousel Tabs -->
-    <div class="hidden md:flex items-center pt-5 justify-between">
-        <template x-for="(s, index) in slides()" :key="index">
-            <button x-on:click="slideIndex = index;cancelIterval()"
-                class="px-2 opacity-50 hover:opacity-100 focus:opacity-100"
-                x-bind:class="{'text-red-900' : index == slideIndex}" x-text="s.title">
-            </button>
-        </template>
+    <div class="overview">
+        <h2 class="title">
+            Open Source Projects
+        </h2>
+        <p>See our contributions to the open source community.</p>
     </div>
-
+    <div class="cards">
+        {{$work := data "opensource.json"}}
+        {{ range $work }}
+        <figure>
+            <img src="{{.image}}" alt="{{.title}}"/>
+        </figure>
+        {{end}}
+    </div>
+    <div class="overview">
+        <h2 class="title">
+            Free Tools
+        </h2>
+        <p>Learn about some of the tools we built for free.</p>
+    </div>
+    <div class="cards">
+        {{$work := data "tools.json"}}
+        {{ range $work }}
+        <div class="card">
+            <figure>
+                <img src="{{.image}}" alt="{{.title}}"/>
+            </figure>
+            <article>
+                <h2 class="title">{{.title}}</h2>
+                {{ range .description }}
+                <p>{{.}}</p>
+                {{end}}
+                {{if .url}}
+                <a class="mt-5 link" href="{{.url}}">&#x23F5; Go to {{.title}}</a>
+                {{end}}
+            </article>
+        </div>
+        {{end}}
+    </div>
 </div>
 {{end}}

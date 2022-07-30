@@ -1,0 +1,41 @@
+[{
+        "image": "/screen/docker.svg",
+        "name": "Docker",
+        "url": "https://www.docker.com/"
+    },
+    {
+        "image": "/screen/go.svg",
+        "name": "Go",
+        "url": "https://go.dev/"
+    },
+    {
+        "image": "/screen/python.png",
+        "name": "Python",
+        "url": "https://www.python.org/"
+    },
+    {
+        "image": "/screen/vuejs.svg",
+        "name": "Vue JS",
+        "url": "https://vuejs.org/"
+    },
+    {
+        "image": "/screen/flutter.svg",
+        "name": "Flutter",
+        "url": "https://flutter.dev/"
+    },
+    {
+        "image": "/screen/ubuntu.png",
+        "name": "Ubuntu",
+        "url": "https://ubuntu.com/"
+    },
+    {
+        "image": "/screen/windows.svg",
+        "name": "Microsoft Windows",
+        "url": "https://www.microsoft.com/en-us/windows/"
+    },
+    {
+        "image": "/screen/googlecloud.svg",
+        "name": "Google Cloud",
+        "url": "https://cloud.google.com/"
+    }
+]
