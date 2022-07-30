@@ -16,10 +16,6 @@
         "name": "Company"
     },
     {
-        "path": "https://blog.altlimit.com/",
-        "name": "Blog"
-    },
-    {
         "path": "/contact",
         "name": "Contact"
     }

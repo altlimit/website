@@ -7,7 +7,7 @@
     {
         "image": "/img/native.svg",
         "name": "Native Apps",
-        "description": "Desktop or server applications and services for Windows or Ubuntu.",
+        "description": "Desktop or server applications and services for Windows or Linux.",
         "tags": ["windows", "ubuntu", "desktop", "native"]
     },
     {
@@ -19,7 +19,7 @@
     {
         "image": "/img/migration.svg",
         "name": "Data Migration",
-        "description": "Custom application to extract data from ab=n existing system or storage to a new location.",
+        "description": "Custom application to extract data from existing systems or storage to a new location.",
         "tags": ["migration", "extract", "data"]
     },
     {

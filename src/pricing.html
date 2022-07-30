@@ -3,52 +3,6 @@ template: main.html
 title: Pricing
 ---
 
-{{define "addHead"}}
-<style>
-    .tooltip-trigger .tooltip-target {
-        display: none;
-        z-index: 1;
-    }
-
-    .tooltip-trigger:hover .tooltip-target {
-        display: block;
-    }
-
-    input:checked+svg {
-        display: block;
-    }
-</style>
-<script>
-    function pricing() {
-        return {
-            cost: 10000,
-            projects: [{
-                val: 0,
-            }],
-            support: false,
-            addProject: function () {
-                this.projects = this.projects.concat([{
-                    val: 0
-                }]);
-            },
-            total: function () {
-                const total = {cost: 0, devs: 0};
-                for (let i = 0; i < this.projects.length; i++) {
-                    const p = this.projects[i];
-                    total.cost += p.val * this.cost;
-                    total.devs += p.val;
-                }
-
-                if (this.support && total.cost <= 0) {
-                    total.cost += 500;
-                }
-                total.prorate = Number(total.cost / 30).toFixed(0);
-                return total;
-            }
-        }
-    }
-</script>
-{{end}}
 
 {{define "content"}}
 
@@ -119,7 +73,6 @@ title: Pricing
                 <h2 class="title">Service Fee @ $150/hr</h2>
                 <p>We charge a flat rate of $150/hr for a minimum of $24,000 for 4 weeks of full software development service.</p>
                 <p>A 25% down payment is due prior to the start of the project. After that, the remaining balance will be due upon each project milestone completion. This process ensures that both client and the development team are on the same page throughout the project duration.</p>
-                <p>Through each billing cycle, we will include fees for server and infrastructure costs and other third party services (if applicable) as detailed items on your invoice.</p>
             </article>
             <article>
                 <h2 class="title">Server And Infrastructure Costs</h2>

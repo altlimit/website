@@ -763,6 +763,10 @@ nav > ul.links > li > a:hover, nav > ul.links > li > a.active {
     @apply text-2xl;
   }
 
+  .notification {
+    @apply fixed bottom-0 left-0 w-full;
+  }
+
   .notification.success > .title {
     @apply text-white;
   }
