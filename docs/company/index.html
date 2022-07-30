@@ -2,6 +2,7 @@
 <html>
 
 <head>
+
     
 
 <meta charset="utf-8">
@@ -29,7 +30,7 @@
 
 <body>
     <div class="header">
-        <header x-data="menu()">
+        <header id="top" x-data="menu()">
             <nav :class="[isOpen ? 'open' : 'close']" @click.away="isOpen=false"
                 x-cloak>
                 <div class="brand">
@@ -69,7 +70,7 @@
                     
                 
                 <li><a href="/" @click="isOpen = false"
-                    :class="{'active':isActive('/')}">Home</a></li>
+                    :class="{'active':isActive('/')}">What We Do</a></li>
                 
                 <li><a href="/work" @click="isOpen = false"
                     :class="{'active':isActive('/work')}">Solutions</a></li>
@@ -79,6 +80,9 @@
                 
                 <li><a href="/company" @click="isOpen = false"
                     :class="{'active':isActive('/company')}">Company</a></li>
+                
+                <li><a href="https://blog.altlimit.com/" @click="isOpen = false"
+                    :class="{'active':isActive('https://blog.altlimit.com/')}">Blog</a></li>
                 
                 <li><a href="/contact" @click="isOpen = false"
                     :class="{'active':isActive('/contact')}">Contact</a></li>
@@ -95,9 +99,9 @@
         <div class="backdrop"></div>
         <div class="pitch">
             <article>
-                <h1 class="title">Our Company
+                <h1 class="title">Who We Are
                 </h1>
-                <p>Who we are and what we do</p>
+                <p>and how did we get here?</p>
             </article>
         </div>
     </div>
@@ -165,9 +169,59 @@
 </div>
 
 
-    <footer class="footer">
-        <div class="container">
-            &copy; Altlimit LLC 2022
+    <footer>
+        <div class="nav">
+            
+            <ul class="links">
+                <li class="title">Quick Links</li>
+                
+                
+                <li><a href="/" @click="isOpen = false"
+                    :class="{'active':isActive('/')}">What We Do</a></li>
+                
+                <li><a href="/work" @click="isOpen = false"
+                    :class="{'active':isActive('/work')}">Solutions</a></li>
+                
+                <li><a href="/pricing" @click="isOpen = false"
+                    :class="{'active':isActive('/pricing')}">Pricing</a></li>
+                
+                <li><a href="/company" @click="isOpen = false"
+                    :class="{'active':isActive('/company')}">Company</a></li>
+                
+                <li><a href="https://blog.altlimit.com/" @click="isOpen = false"
+                    :class="{'active':isActive('https://blog.altlimit.com/')}">Blog</a></li>
+                
+                <li><a href="/contact" @click="isOpen = false"
+                    :class="{'active':isActive('/contact')}">Contact</a></li>
+                
+            </ul>
+            <ul class="list">
+                <li class="header">Altlimit LLC</li>
+                <li>539 W. Commerce St #4071<br/>Dallas, TX 75208</li>
+            </ul>
+            <ul class="list">
+                <li class="header">Email Us</li>
+                <li><i class="fa-solid fa-envelope"></i>support@altlimit.com</li>
+                <li class="header">Call Us</li>
+                <li><i class="fa-solid fa-phone"></i>(512) 912-7775</li>
+            </ul>
+            <div class="split">
+                <ul class="social">
+                    <li class="header">Follow Us</li>
+                    <li><a href="https://github.com/altlimit"><i class="fa-brands fa-github"></i>GitHub</a></li>
+                    <li><a href="https://twitter.com/altlimit"><i class="fa-brands fa-twitter"></i>Twitter</a></li>
+                </ul>
+                <a class="anchor" href="#top"><i class="fa-solid fa-arrow-up"></i>Back To Top</a>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <span>&copy; Altlimit LLC 2022</span>
+                <ul class="links">
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/terms">Terms and Conditions</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
 </body>

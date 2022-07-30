@@ -128,7 +128,7 @@ title: Contact
         </p>
     </div>
     <template x-if="success">
-        <div class="notification success" x-cloak>
+        <div class="notification success">
             <h2 class="title">Thank you!</h2>
             <p>Your message has been successfully sent. We will contact you very soon!</p>
         </div>
@@ -139,9 +139,10 @@ title: Contact
                 <article class="bullet">
                     <h2 class="title">Contact Information</h2>
                     <ul>
-                        <li><i class="fa-solid fa-map-location-dot"></i>539 W. Commerce St #4071<br/>Dallas, TX 75208</li>
-                        <li><i class="fa-solid fa-envelope"></i>support@altlimit.com</li>
-                        <li><i class="fa-solid fa-phone"></i>512 912 7775</li>
+                        {{$contact := data "contact.json"}}
+                        <li><i class="fa-solid fa-map-location-dot"></i>{{$contact.line1}}<br/>{{$contact.city}}, {{$contact.state}} {{$contact.zip}}</li>
+                        <li><i class="fa-solid fa-envelope"></i>{{$contact.email}}</li>
+                        <li><i class="fa-solid fa-phone"></i>{{$contact.phone}}</li>
                     </ul>
                 </article>
             </div>

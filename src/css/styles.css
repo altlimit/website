@@ -46,6 +46,10 @@ p {
   @apply flex flex-col w-screen sm:gap-8;
 }
 
+.workspace > .sidebar {
+  @apply pl-16 items-start pb-8;
+}
+
 .sidebar {
   @apply flex flex-col content-center justify-start items-center m-0  bg-neutral-inverse p-4 w-full;
 }
@@ -164,12 +168,121 @@ article.bullet > ul > li > i {
   @apply text-lg text-neutral;
 }
 
-.footer {
-  @apply flex mb-0 justify-center justify-items-center bg-neutral-inverse text-neutral py-8 gap-4 border-t-8 mt-12 border-white;
+footer {
+  @apply flex flex-col mt-12 bg-neutral-inverse select-none;
 }
-footer > div {
-  @apply text-neutral;
+
+footer > .nav {
+  @apply container flex flex-col gap-4 text-xl tracking-wide font-light my-8;
 }
+
+footer > .links > ul {
+  @apply flex flex-col gap-4 items-center;
+}
+
+footer > .nav > .links {
+  @apply leading-8;
+}
+
+footer > .nav > .links > .title {
+  @apply uppercase font-light tracking-widest font-sans;
+}
+
+footer > .nav > .bullet {
+  @apply flex flex-col leading-6;
+}
+
+footer > .nav > .bullet > .header, footer > .nav > .list > .header {
+  @apply uppercase font-light tracking-widest font-sans text-primary text-xl;
+}
+
+footer > .nav > .bullet > .header, footer > .nav > .list > li > i {
+  @apply mr-3;
+}
+footer > .nav > .bullet > .header, footer > .nav > .list > .header:not(:first-child) {
+  @apply mt-4;
+}
+
+footer > .nav > .bullet > li.header {
+  @apply -indent-8;
+}
+
+footer > .nav > .bullet > li:not(.header) {
+  @apply -indent-4;
+}
+
+footer > .nav > .bullet > li > i {
+  @apply mr-3;
+}
+
+footer > .nav > .split {
+  @apply flex flex-col gap-4;
+}
+
+.anchor {
+  @apply cursor-pointer text-primary font-semibold;
+}
+
+.anchor > i {
+  @apply mr-3 text-primary;
+}
+
+.anchor:hover {
+  @apply animate-pulse;
+}
+
+footer > .nav > .bullet > .header:not(:first-child) {
+  @apply mt-4;
+}
+
+footer > .nav > .links > li > a:hover {
+  @apply text-primary-strong;
+}
+
+footer > .nav > div > .social {
+  @apply flex-col;
+}
+
+footer > .nav > div > .social > .header {
+  @apply uppercase tracking-widest text-primary;
+}
+
+footer > .nav > div > .social > li > a > i {
+  @apply mr-3;
+}
+
+footer > .footer {
+  @apply w-full bg-neutral text-neutral-inverse py-4;
+}
+
+footer > .footer > .container  {
+  @apply flex flex-col justify-start items-start px-7;
+}
+
+footer > .footer > .container > .links {
+  @apply flex flex-col divide-x-0;
+}
+
+footer > .footer > .container > span,
+footer > .footer > .container > .links,
+footer > .footer > .container > .links > li,
+footer > .footer > .container > .links > li > a,
+footer > .footer > .container > .links > li > a > i {
+  @apply text-neutral-inverse text-base tracking-wide;
+}
+
+footer > .footer > .container {
+  @apply flex flex-col-reverse gap-8;
+}
+
+footer > .footer > .container > .links > li {
+  @apply font-light px-0;
+}
+
+footer > .footer > .container > .links > li > a:hover {
+  @apply text-white;
+}
+
 .form {
   @apply flex flex-col flex-grow w-full max-w-lg gap-4;
 }
@@ -267,7 +380,11 @@ input[type=checkbox]:checked:after {
 }
 
 .banner > .pitch > article > .title, .banner > .pitch > article > .subtitle, .banner > .pitch > article > p {
-  @apply w-full px-0;
+  @apply w-full px-0 tracking-wider;
+}
+
+.banner > .pitch > article > p {
+  @apply uppercase;
 }
 
 .banner.quote {
@@ -357,6 +474,30 @@ td.check,td.cross {
   @apply text-primary text-2xl tracking-wide;
 }
 
+.legal {
+  @apply container my-8;
+}
+
+.legal > h1,.legal > h2,.legal > h3 {
+  @apply font-serif font-semibold tracking-wide text-primary-strong mt-8;
+}
+
+.legal > h1 {
+  @apply text-2xl;
+}
+
+.legal > h2 {
+  @apply text-xl;
+}
+
+.legal > p {
+  @apply text-lg;
+}
+
+.legal > p > .text-link {
+  @apply text-primary border-b border-dotted border-primary font-semibold;
+}
+
 .logos {
   @apply flex flex-row flex-wrap gap-4 items-center justify-center justify-items-center px-4 my-4;
 }
@@ -441,7 +582,7 @@ nav > button {
 }
 
 nav > ul.links > li > a {
-  @apply text-neutral-medium font-semibold text-xl px-8 leading-10;
+  @apply text-neutral-medium font-semibold text-xl px-8 leading-10 whitespace-nowrap;
 }
 
 nav > ul.links > li > a:hover, nav > ul.links > li > a.active {
@@ -630,10 +771,6 @@ nav > ul.links > li > a:hover, nav > ul.links > li > a.active {
     @apply text-white;
   }
 
-  footer {
-    @apply gap-8;
-  }
-
   .overview {
     @apply container w-full mt-16;
   }
@@ -804,7 +941,7 @@ nav > ul.links > li > a:hover, nav > ul.links > li > a.active {
   }
 
   .brand {
-    @apply flex flex-row gap-8;
+    @apply flex flex-row gap-8 my-2;
   }
 
   .brand figure > figcaption {
@@ -826,5 +963,38 @@ nav > ul.links > li > a:hover, nav > ul.links > li > a.active {
   .rows {
     @apply p-4;
   }
+
+  footer > .nav {
+    @apply flex-row justify-between gap-16 py-4;
+  }
+
+  footer > .nav > div > .social {
+    @apply flex flex-row gap-4;
+  }
+
+  footer > .nav > .split {
+    @apply justify-between items-end;
+  }
+
+  footer > .footer > .container > .links {
+    @apply flex flex-row divide-x;
+  }
+
+  footer > .footer > .container  {
+    @apply flex flex-row justify-between items-center content-center gap-16 px-7;
+  }
+
+  footer > .footer > .container > .links > li {
+    @apply px-4;
+  }
+
+  footer > .footer > .container > .links > li:last-child {
+    @apply pr-0;
+  }
+
+  footer > .links > ul {
+    @apply flex flex-row gap-8 items-center;
+  }
+
 
 }

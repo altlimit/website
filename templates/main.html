@@ -2,6 +2,7 @@
 <html>
 
 <head>
+
     {{template "head" .}}
     <script>
         function menu() {
@@ -17,7 +18,7 @@
 
 <body>
     <div class="header">
-        <header x-data="menu()">
+        <header id="top" x-data="menu()">
             <nav :class="[isOpen ? 'open' : 'close']" @click.away="isOpen=false"
                 x-cloak>
                 <div class="brand">
@@ -65,9 +66,44 @@
         </header>
     </div>
     {{template "content" .}}
-    <footer class="footer">
-        <div class="container">
-            &copy; Altlimit LLC 2022
+    <footer>
+        <div class="nav">
+            {{$contact := data "contact.json"}}
+            <ul class="links">
+                <li class="title">Quick Links</li>
+                {{$links := data "links.json"}}
+                {{ range $links }}
+                <li><a href="{{.path}}" @click="isOpen = false"
+                    :class="{'active':isActive('{{.path}}')}">{{.name}}</a></li>
+                {{end}}
+            </ul>
+            <ul class="list">
+                <li class="header">Altlimit LLC</li>
+                <li>{{$contact.line1}}<br/>{{$contact.city}}, {{$contact.state}} {{$contact.zip}}</li>
+            </ul>
+            <ul class="list">
+                <li class="header">Email Us</li>
+                <li><i class="fa-solid fa-envelope"></i>{{$contact.email}}</li>
+                <li class="header">Call Us</li>
+                <li><i class="fa-solid fa-phone"></i>{{$contact.phone}}</li>
+            </ul>
+            <div class="split">
+                <ul class="social">
+                    <li class="header">Follow Us</li>
+                    <li><a href="https://github.com/altlimit"><i class="fa-brands fa-github"></i>GitHub</a></li>
+                    <li><a href="https://twitter.com/altlimit"><i class="fa-brands fa-twitter"></i>Twitter</a></li>
+                </ul>
+                <a class="anchor" href="#top"><i class="fa-solid fa-arrow-up"></i>Back To Top</a>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <span>&copy; Altlimit LLC 2022</span>
+                <ul class="links">
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/terms">Terms and Conditions</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
 </body>
