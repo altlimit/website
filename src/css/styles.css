@@ -458,11 +458,11 @@ td.check,td.cross {
   @apply text-lg font-bold;
 }
 
-.check {
+.check > i {
   @apply text-success;
 }
 
-.cross {
+.cross > i {
   @apply text-neutral-subtle;
 }
 
@@ -511,7 +511,7 @@ td.check,td.cross {
 }
 
 .logos > figure {
-  @apply w-auto h-20 max-h-20 mx-4;
+  @apply w-auto h-10 max-h-10 mx-4;
 }
 
 .logos > figure > img {
