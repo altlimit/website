@@ -310,7 +310,7 @@ input[type=text],input[type=password],input[type=number],input[type=email],selec
   @apply outline-accent border-solid border border-neutral text-lg w-full h-10;
 }
 textarea {
-  @apply outline-accent border-solid border border-neutral text-lg font-sans;
+  @apply outline-accent border-solid border border-neutral text-lg font-sans p-2;
 }
 input[type=checkbox] {
   @apply relative cursor-pointer mr-2 h-4;
@@ -361,7 +361,7 @@ input[type=checkbox]:checked:after {
   @apply flex flex-col justify-center items-center w-full my-8 px-4;
 }
 .overview > .title {
-  @apply w-full text-lg text-neutral flex justify-center items-center my-4 mx-6 leading-6 whitespace-nowrap;
+  @apply w-full text-lg text-neutral flex justify-center items-center my-4 mx-6 leading-6 text-center;
 }
 .overview > .title:before, .overview > .title:after {
   @apply content-blank bg-accent block mx-4 my-0 flex-initial basis-24 h-1;
@@ -519,7 +519,7 @@ td.check,td.cross {
 }
 
 .feature.cards {
-  @apply flex gap-8 justify-center flex-wrap w-full justify-items-center content-center px-8;
+  @apply flex gap-8 justify-center flex-wrap w-auto justify-items-center content-center px-4;
 }
 
 .feature.cards > .card {
@@ -590,7 +590,7 @@ nav > button {
 }
 
 nav > ul.links > li > a {
-  @apply text-neutral-medium font-semibold text-xl px-2 leading-10 whitespace-nowrap;
+  @apply text-neutral-medium font-semibold text-lg px-2 leading-10 whitespace-nowrap;
 }
 
 nav > ul.links > li > a:hover, nav > ul.links > li > a.active {
@@ -1063,6 +1063,14 @@ nav > ul.links > li > a:hover, nav > ul.links > li > a.active {
 @screen lg {
   nav > ul.links {
     @apply gap-8;
+  }
+
+  nav > ul.links > li > a {
+    @apply text-xl;
+  }
+
+  .header > header {
+    @apply container;
   }
 
   footer > .nav > div > .social {
