@@ -1,7 +1,7 @@
 [{
         "image": "/img/responsivewebapp.svg",
         "name": "Web Application",
-        "description": "Responsive and modern HTML5/CSS3 web applications built with VueJS and Go running on Google Cloud.",
+        "description": "Responsive, modern and highly scalable web applications built with VueJS and Go running on Google Cloud.",
         "tags": ["responsive", "web", "cloud"]
     },
     {
