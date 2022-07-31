@@ -306,7 +306,7 @@ label {
 .checkbox > label {
   @apply font-light select-none tracking-normal text-base;
 }
-input[type=text],input[type=password],input[type=number],input[type=email],select {
+.field > input,input[type=text],input[type=password],input[type=number],input[type=email],select {
   @apply outline-accent border-solid border border-neutral text-lg w-full h-10;
 }
 textarea {
