@@ -132,7 +132,7 @@ title: Contact
         <h1 class="title">
             Tell Us About Your Project
         </h1>
-        <p>Our team at Altlimit is committed to providing you the responsive web application you need on your project.
+        <p>Our team at Altlimit is committed to providing you the level of service that you need to build your project.
             Help us learn about your project so that we can tailor a custom approach for you. To get started, please fill up
             the form below and provide as much information as possible.
         </p>
@@ -151,47 +151,43 @@ title: Contact
         </div>
 
 
-        <div class="main" style="background-color:rgba(256,256,256,0.6)">
-            <div class="container">
-                <form class="form" x-on:submit.prevent="onSubmit">
+        <form class="main rows form" x-on:submit.prevent="onSubmit">
 
-                    <div class="field">
-                        <label for="email">
-                            E-mail*
-                        </label>
-                        <input id="email" type="email" x-model="data.email"/>
-                    </div>
-                    <div class="field">
-                        <label for="phone">
-                            Phone Number
-                        </label>
-                        <input id="phone" type="text" x-model="data.phone"/>
-                    </div>
-
-                    <div class="field">
-                        <label for="message">
-                            Message*
-                        </label>
-                        <textarea x-model="data.message" rows="5" placeholder="Provide a brief description of your project"
-                            id="message"></textarea>
-                    </div>
-                    <div class="field">
-                        <div class="g-recaptcha" :data-size="dataSize()"
-                            data-sitekey="6LdiTuASAAAAANRzW8mthTJWdBzfYXxARuhQ6AY_">
-                        </div>
-                    </div>
-                    <template x-if="error">
-                        <div class="field">
-                            <p class="text-danger" x-text="error"></p>
-                        </div>
-                    </template>
-                    <button :disabled="sending"
-                                class="button primary"
-                                type="submit" x-text="'Send' + (sending ? 'ing' : '')">dsf
-                            </button>
-                </form>
+            <div class="field">
+                <label for="email">
+                    E-mail*
+                </label>
+                <input id="email" type="email" x-model="data.email"/>
             </div>
-        </div>
+            <div class="field">
+                <label for="phone">
+                    Phone Number
+                </label>
+                <input id="phone" type="text" x-model="data.phone"/>
+            </div>
+
+            <div class="field">
+                <label for="message">
+                    Message*
+                </label>
+                <textarea x-model="data.message" rows="5" placeholder="Provide a brief description of your project"
+                    id="message"></textarea>
+            </div>
+            <div class="field">
+                <div class="g-recaptcha" :data-size="dataSize()"
+                    data-sitekey="6LdiTuASAAAAANRzW8mthTJWdBzfYXxARuhQ6AY_">
+                </div>
+            </div>
+            <template x-if="error">
+                <div class="field">
+                    <p class="text-danger" x-text="error"></p>
+                </div>
+            </template>
+            <button :disabled="sending"
+                        class="button primary"
+                        type="submit" x-text="'Send' + (sending ? 'ing' : '')">dsf
+                    </button>
+        </form>
     </div>
 </main>
 {{end}}

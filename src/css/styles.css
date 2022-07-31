@@ -30,6 +30,10 @@ h1, h2, h3, h4, h5, h6 {
   @apply font-semibold tracking-wider text-2xl text-primary font-serif;
 }
 
+.form {
+  @apply w-full;
+}
+
 .form > .title > .subtitle {
   @apply flex text-lg font-normal font-sans;
 }
@@ -184,6 +188,10 @@ footer > .nav > .links {
   @apply leading-8;
 }
 
+footer > .nav > .links > li,footer > .nav > .list > li,footer > .nav > .split > .social {
+  @apply whitespace-nowrap;
+}
+
 footer > .nav > .links > .title {
   @apply uppercase font-light tracking-widest font-sans;
 }
@@ -197,7 +205,7 @@ footer > .nav > .bullet > .header, footer > .nav > .list > .header {
 }
 
 footer > .nav > .bullet > .header, footer > .nav > .list > li > i {
-  @apply mr-3;
+  @apply mr-2;
 }
 footer > .nav > .bullet > .header, footer > .nav > .list > .header:not(:first-child) {
   @apply mt-4;
@@ -212,7 +220,7 @@ footer > .nav > .bullet > li:not(.header) {
 }
 
 footer > .nav > .bullet > li > i {
-  @apply mr-3;
+  @apply mr-2;
 }
 
 footer > .nav > .split {
@@ -248,7 +256,7 @@ footer > .nav > div > .social > .header {
 }
 
 footer > .nav > div > .social > li > a > i {
-  @apply mr-3;
+  @apply mr-2;
 }
 
 footer > .footer {
@@ -284,10 +292,10 @@ footer > .footer > .container > .links > li > a:hover {
 }
 
 .form {
-  @apply flex flex-col flex-grow w-full max-w-lg gap-4;
+  @apply flex flex-col flex-grow w-full gap-4;
 }
 .field {
-  @apply flex w-auto flex-col gap-2;
+  @apply flex w-full flex-col gap-2 max-w-lg;
 }
 .checkbox {
   @apply flex-row-reverse justify-start items-baseline;
@@ -539,23 +547,23 @@ td.check,td.cross {
 }
 
 .brand {
-  @apply flex flex-row justify-between w-full items-center px-4;
+  @apply flex flex-row justify-between w-full items-center px-0 select-none;
 }
 
 .brand figure {
-  @apply px-4 flex items-center gap-4;
+  @apply px-1 flex items-center gap-1;
 }
 
 .brand figure > img {
-  @apply h-20;
+  @apply h-10;
 }
 
 .brand figure > figcaption {
-  @apply font-bold tracking-widest uppercase text-primary-strong text-5xl;
+  @apply font-bold leading-none tracking-widest uppercase text-primary-strong text-xl;
 }
 
 .brand figure > figcaption > div.tagline {
-  @apply block text-neutral text-xl lowercase tracking-wider font-normal;
+  @apply block text-neutral text-sm lowercase tracking-wider font-normal whitespace-nowrap;
 }
 
 .brand figure > figcaption > div.tagline > .highlight {
@@ -574,7 +582,7 @@ nav.close > ul.links {
 }
 
 nav > ul.links {
-  @apply flex-col divide-y w-auto gap-1 text-primary w-full absolute top-0 left-0 mt-28 bg-white py-4 z-10;
+  @apply flex-col divide-y w-auto gap-2 text-primary w-full absolute top-0 left-0 mt-16 bg-white py-4 z-10;
 }
 
 nav > button {
@@ -582,7 +590,7 @@ nav > button {
 }
 
 nav > ul.links > li > a {
-  @apply text-neutral-medium font-semibold text-xl px-8 leading-10 whitespace-nowrap;
+  @apply text-neutral-medium font-semibold text-xl px-2 leading-10 whitespace-nowrap;
 }
 
 nav > ul.links > li > a:hover, nav > ul.links > li > a.active {
@@ -610,7 +618,7 @@ nav > ul.links > li > a:hover, nav > ul.links > li > a.active {
 }
 
 .bio {
-  @apply container w-auto mx-8 flex flex-col mb-8 gap-8;
+  @apply container w-auto mx-0 flex flex-col mb-8 gap-8;
 }
 
 .bio > figure {
@@ -625,12 +633,16 @@ nav > ul.links > li > a:hover, nav > ul.links > li > a.active {
   @apply bg-white w-full flex flex-col p-4 border border-2 border-neutral -mt-12 pt-12 rounded-b-md text-neutral items-center;
 }
 
+.bio > figure > figcaption > .title {
+  @apply whitespace-nowrap;
+}
+
 .bio > figure > figcaption > ul {
-  @apply flex flex-row gap-2 divide-x items-center;
+  @apply flex flex-row divide-x items-center;
 }
 
 .bio > figure > figcaption > ul > li {
-  @apply px-4;
+  @apply px-2;
 }
 
 .bio > figure > figcaption > .title {
@@ -650,15 +662,11 @@ nav > ul.links > li > a:hover, nav > ul.links > li > a.active {
 }
 
 .history > div {
-  @apply grid grid-cols-12 gap-8 ml-8;
-}
-
-.history > div {
-  @apply border-l-4 border-dotted border-accent;
+  @apply grid grid-cols-12 gap-4 -ml-2 border-l-4 border-dotted border-accent;
 }
 
 .history > div > .milestone {
-  @apply bg-accent text-accent-inverse font-semibold flex items-center justify-center col-span-1 -ml-9 border-4 border-neutral-inverse rounded-full w-16 h-16;
+  @apply text-sm bg-accent text-accent-inverse font-semibold flex items-center justify-center col-span-1 -ml-7 border-4 border-neutral-inverse rounded-full w-12 h-12;
 }
 
 .history > div > .event {
@@ -685,49 +693,10 @@ nav > ul.links > li > a:hover, nav > ul.links > li > a.active {
   h1.title {
     @apply text-3xl;
   }
-  .workspace {
-    @apply flex-row w-full items-stretch flex-grow my-8 container;
-  }
-  .sidebar {
-    @apply flex justify-start items-center px-8 py-6 m-0 bg-neutral-inverse w-1/3;
-  }
-  .sidebar > .title {
-    @apply text-2xl self-start;
-  }
 
-  .sidebar > article > .title {
-    @apply font-serif tracking-wider font-semibold text-primary text-xl;
-  }
-  .main {
-    @apply w-auto flex-grow py-0;
-  }
-
-  .cards > .card {
-    @apply max-w-sm;
-  }
 
   .button {
     @apply px-12 py-4 self-start justify-self-start;
-  }
-
-  nav > button {
-    @apply invisible;
-  }
-
-  nav > ul.links {
-    @apply relative mt-0 flex flex-row gap-8 divide-y-0 leading-tight justify-items-center items-center content-center;
-  }
-
-  nav > ul.links > li > a {
-    @apply border-b border-transparent border-solid px-2 leading-tight pb-0;
-  }
-
-  nav > ul.links > li > a:hover, nav > ul.links > li > a.active {
-    @apply border-neutral border-b border-solid;
-  }
-
-  nav.close > ul.links {
-    @apply flex;
   }
 
   .hero {
@@ -941,7 +910,31 @@ nav > ul.links > li > a:hover, nav > ul.links > li > a.active {
   }
 
   .header > header {
-    @apply flex w-full flex-row justify-between items-center container;
+    @apply flex w-full flex-row justify-between items-center px-2 py-0;
+  }
+
+  .brand {
+    @apply px-0;
+  }
+
+  .brand figure {
+    @apply gap-2;
+  }
+
+  .brand figure > img {
+    @apply h-12;
+  }
+
+  .brand figure > figcaption {
+    @apply text-lg;
+  }
+
+  .brand figure > figcaption > div.tagline {
+    @apply text-base;
+  }
+
+  nav > ul.links {
+    @apply gap-2 mt-16 py-4;
   }
 
   .brand {
@@ -960,20 +953,49 @@ nav > ul.links > li > a:hover, nav > ul.links > li > a.active {
     @apply text-3xl font-sans font-light;
   }
 
-  .sidebar.card {
-    @apply w-1/3 p-0 m-0;
+  .rows {
+    @apply px-8;
+  }
+  .bio > figure > figcaption {
+    @apply w-40;
+  }
+}
+
+@screen md {
+  nav > button {
+    @apply invisible;
   }
 
-  .rows {
-    @apply p-4;
+  nav > ul.links {
+    @apply relative mt-0 flex flex-row gap-4 divide-y-0 leading-tight justify-items-center items-center content-center;
+  }
+
+  nav > ul.links > li > a {
+    @apply border-b border-transparent border-solid px-1 leading-tight pb-0;
+  }
+
+  nav > ul.links > li > a:hover, nav > ul.links > li > a.active {
+    @apply border-neutral border-b border-solid;
+  }
+
+  nav.close > ul.links {
+    @apply flex;
   }
 
   footer > .nav {
-    @apply flex-row justify-between gap-16 py-4;
+    @apply flex-row justify-between gap-8 py-4;
   }
 
   footer > .nav > div > .social {
-    @apply flex flex-row gap-4;
+    @apply flex flex-col gap-1 text-base;
+  }
+
+  footer > .nav > .links > .title, footer > .nav > .list > .header,.anchor {
+    @apply text-base;
+  }
+
+  footer > .nav > ul {
+    @apply text-base;
   }
 
   footer > .nav > .split {
@@ -1000,5 +1022,55 @@ nav > ul.links > li > a:hover, nav > ul.links > li > a.active {
     @apply flex flex-row gap-8 items-center;
   }
 
+  .history > div {
+    @apply gap-4 ml-12;
+  }
 
+  .history > div > .milestone {
+    @apply text-base -ml-8 w-16 h-16;
+  }
+
+  .bio > figure > figcaption {
+    @apply w-96;
+  }
+
+  .workspace {
+    @apply flex-row w-full items-stretch flex-grow my-8 container;
+  }
+  .sidebar {
+    @apply flex justify-start items-center px-8 py-6 m-0 bg-neutral-inverse w-1/3;
+  }
+  .sidebar > .title {
+    @apply text-2xl self-start;
+  }
+
+  .sidebar > article > .title {
+    @apply font-serif tracking-wider font-semibold text-primary text-xl;
+  }
+  .main {
+    @apply w-auto flex-grow py-0;
+  }
+
+  .cards > .card {
+    @apply max-w-sm;
+  }
+  .sidebar.card {
+    @apply w-1/3 p-0 m-0;
+  }
+
+}
+
+@screen lg {
+  nav > ul.links {
+    @apply gap-8;
+  }
+
+  footer > .nav > div > .social {
+    @apply flex flex-col gap-1 text-xl;
+  }
+
+  footer > .nav > .links, footer > .nav > .list,
+  footer > .nav > .links > .title, footer > .nav > .list > .header,.anchor {
+    @apply text-xl;
+  }
 }
