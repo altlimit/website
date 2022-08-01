@@ -122,6 +122,10 @@ article.bullet > ul > li > i {
   @apply text-primary border-b border-primary-subtle border-dotted;
 }
 
+.link > i {
+  @apply text-primary mr-1;
+}
+
 .link:hover {
   @apply text-primary-strong border-solid;
 }
@@ -376,7 +380,7 @@ input[type=checkbox]:checked:after {
 
 .banner > .backdrop {
   @apply absolute top-0 left-0 h-full w-full bg-accent-subtle;
-  background: linear-gradient(to bottom, #FFF08E 25%, rgba(255,240,142,0.9) 40%, rgba(255,240,142,0.9) 65%, rgba(255,240,142,0.8) 75%,rgba(255,240,142,0.5) 90%, transparent 100%);
+  background: linear-gradient(to bottom, #F2F3F5 25%, rgba(242,243,245,0.9) 40%, rgba(242,243,245,0.9) 65%, rgba(242,243,245,0.8) 75%,rgba(242,243,245,0.5) 90%, transparent 100%);
 }
 
 .banner > .pitch {
@@ -393,6 +397,54 @@ input[type=checkbox]:checked:after {
 
 .banner > .pitch > article > p {
   @apply uppercase;
+}
+
+.banner.primary > .backdrop {
+  @apply bg-primary-subtle;
+  background: linear-gradient(to bottom, #1AA1E1 25%, rgba(26,161,225,0.9) 40%, rgba(26,161,225,0.9) 65%, rgba(26,161,225,0.8) 75%,rgba(26,161,225,0.5) 90%, transparent 100%);
+}
+
+.banner.highlight > .backdrop {
+  @apply bg-highlight-subtle;
+  background: linear-gradient(to bottom, #CE5043 25%, rgba(206,80,67,0.9) 40%, rgba(206,80,67,0.9) 65%, rgba(206,80,67,0.8) 75%,rgba(206,80,67,0.5) 90%, transparent 100%);
+}
+
+.banner.accent > .backdrop {
+  @apply bg-accent-subtle;
+  background: linear-gradient(to bottom, #FFF08E 25%, rgba(255,240,142,0.9) 40%, rgba(255,240,142,0.9) 65%, rgba(255,240,142,0.8) 75%,rgba(255,240,142,0.5) 90%, transparent 100%);
+}
+
+
+.banner.accent > .pitch > article > .title {
+  @apply text-primary-strong;
+}
+
+.banner.accent > .pitch > article > .subtitle {
+  @apply text-primary;
+}
+
+.banner.primary > .pitch > article > .title {
+  @apply text-accent-subtle;
+}
+
+.banner.primary > .pitch > article > .title > .subtitle {
+  @apply text-white;
+}
+
+.banner.primary p {
+  @apply text-primary-inverse;
+}
+
+.banner.highlight > .pitch > article > .title {
+  @apply text-accent-subtle;
+}
+
+.banner.highlight > .pitch > article > .title > .subtitle {
+  @apply text-white;
+}
+
+.banner.highlight p {
+  @apply text-primary-inverse;
 }
 
 .banner.quote {
@@ -958,7 +1010,7 @@ nav > ul.links > li > a:hover, nav > ul.links > li > a.active {
 
   .banner > .pitch {
     @apply absolute w-full bottom-0 left-0 flex;
-    background: linear-gradient(45deg, #F2F3F5 75, transparent 100);
+    background: linear-gradient(45deg, white 75, transparent 100);
   }
 
   .banner > .pitch > article {
@@ -966,7 +1018,7 @@ nav > ul.links > li > a:hover, nav > ul.links > li > a.active {
   }
 
   .banner > .pitch > article > .title {
-    @apply text-3xl font-bold text-primary-strong;
+    @apply text-3xl font-bold;
   }
 
   .banner > .pitch > article > .subtitle {
@@ -984,20 +1036,7 @@ nav > ul.links > li > a:hover, nav > ul.links > li > a.active {
 
   .banner.accent > .backdrop:after {
     @apply bg-accent-subtle;
-    content: "";
     background: linear-gradient(85deg, #FFF08E, #FFF08E 50%, rgba(255,240,142,0.9) 60%, transparent 85%, transparent);
-  }
-
-  .banner.accent > .pitch {
-    background: linear-gradient(45deg, white 75, transparent 100);
-  }
-
-  .banner.accent > .pitch > article > .title {
-    @apply text-primary-strong;
-  }
-
-  .banner.accent > .pitch > article > .subtitle {
-    @apply text-primary;
   }
 
   .banner.primary > .backdrop {
@@ -1006,25 +1045,8 @@ nav > ul.links > li > a:hover, nav > ul.links > li > a.active {
   }
 
   .banner.primary > .backdrop:after {
-    @apply bg-accent-subtle;
-    content: "";
+    @apply bg-primary;
     background: linear-gradient(85deg, #1AA1E1, #1AA1E1 50%,rgba(26,161,225,0.6) 60%, transparent 85%, transparent);
-  }
-
-  .banner.primary > .pitch {
-    background: linear-gradient(45deg, white 75, transparent 100);
-  }
-
-  .banner.primary > .pitch > article > .title {
-    @apply text-accent-subtle;
-  }
-
-  .banner.primary > .pitch > article > .title > .subtitle {
-    @apply text-white;
-  }
-
-  .banner.primary p {
-    @apply text-primary-inverse;
   }
 
   .banner.highlight > .backdrop {
@@ -1033,25 +1055,8 @@ nav > ul.links > li > a:hover, nav > ul.links > li > a.active {
   }
 
   .banner.highlight > .backdrop:after {
-    @apply bg-accent-subtle;
-    content: "";
+    @apply bg-highlight-subtle;
     background: linear-gradient(85deg, #CE5043, #CE5043 50%, rgba(206,80,67,0.6) 60%, transparent 85%, transparent);
-  }
-
-  .banner.highlight > .pitch {
-    background: linear-gradient(45deg, white 75, transparent 100);
-  }
-
-  .banner.highlight > .pitch > article > .title {
-    @apply text-accent-subtle;
-  }
-
-  .banner.highlight > .pitch > article > .title > .subtitle {
-    @apply text-white;
-  }
-
-  .banner.highlight p {
-    @apply text-primary-inverse;
   }
 
   .banner.quote > article {
