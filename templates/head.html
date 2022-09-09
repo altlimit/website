@@ -14,8 +14,13 @@
 {{end}}
 <meta charset="utf-8">
 <title>{{if .title}} {{.title}} -{{end}} Altlimit LLC</title>
-<meta name="description" content="{{.description}}">
+<meta name="description" content="{{if .description}}{{.description}}{{else}}We build custom desktop, mobile and web apps.{{end}}">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<meta property="og:url" content="https://www.altlimit.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{if .title}} {{.title}} -{{end}} Altlimit LLC">
+<meta property="og:description" content="{{if .description}}{{.description}}{{else}}We build custom desktop, mobile and web apps.{{end}}">
+<meta property="og:image" content="https://www.altlimit.com/logo.png">
 <link rel="stylesheet" href="/css/styles.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/fontawesome.min.css" integrity="sha512-R+xPS2VPCAFvLRy+I4PgbwkWjw1z5B5gNDYgJN5LfzV4gGNeRQyVrY7Uk59rX+c8tzz63j8DeZPLqmXvBxj8pA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/solid.min.css" integrity="sha512-EvFBzDO3WBynQTyPJI+wLCiV0DFXzOazn6aoy/bGjuIhGCZFh8ObhV/nVgDgL0HZYC34D89REh6DOfeJEWMwgg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
