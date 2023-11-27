@@ -68,7 +68,6 @@
     {{template "content" .}}
     <footer>
         <div class="nav">
-            {{$contact := data "contact.json"}}
             <ul class="links">
                 <li class="title">Quick Links</li>
                 {{$links := data "links.json"}}
@@ -77,10 +76,7 @@
                     :class="{'active':isActive('{{.path}}')}">{{.name}}</a></li>
                 {{end}}
             </ul>
-            <ul class="list">
-                <li class="header">Altlimit LLC</li>
-                <li>{{$contact.line1}}<br/>{{$contact.city}}, {{$contact.state}} {{$contact.zip}}</li>
-            </ul>
+            {{$contact := data "contact.json"}}
             <ul class="list">
                 <li class="header">Email Us</li>
                 <li><i class="fa-solid fa-envelope"></i>{{$contact.email}}</li>

@@ -99,9 +99,10 @@ title: Terms and Conditions
             be construed and determined under and in accordance with the laws of the U.S, without regard to conflicts of
             law principles. </p>
         <h2>Jurisdiction</h2>
+        {{$contact := data "contact.json"}}
         <p> You expressly agree that exclusive jurisdiction for any dispute with the Service or relating to your use of
             it, resides in the courts of the Texas and you further agree and expressly consent to the exercise of
-            personal jurisdiction in the courts of the Texas located in Austin in connection with any such dispute
+            personal jurisdiction in the courts of {{$contact.location}} in connection with any such dispute
             including any claim involving Service. You further agree that you and Service will not commence against the
             other a class action, class arbitration or other representative action or proceeding. </p>
         <h2>Termination</h2>

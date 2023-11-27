@@ -143,9 +143,9 @@ title: Contact
                 <h2 class="title">Contact Information</h2>
                 <ul>
                     {{$contact := data "contact.json"}}
-                    <li><i class="fa-solid fa-map-location-dot"></i>{{$contact.line1}}<br/>{{$contact.city}}, {{$contact.state}} {{$contact.zip}}</li>
                     <li><i class="fa-solid fa-envelope"></i>{{$contact.email}}</li>
                     <li><i class="fa-solid fa-phone"></i>{{$contact.phone}}</li>
+                    <li><i class="fa-solid fa-map-location-dot"></i>{{$contact.location}}</li>
                 </ul>
             </article>
         </div>

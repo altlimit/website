@@ -34,6 +34,11 @@
         "url": "https://cloud.google.com/"
     },
     {
+        "image": "/screen/aws.png",
+        "name": "AWS",
+        "url": "https://aws.amazon.com/"
+    },
+    {
         "image": "/screen/docker.svg",
         "name": "Docker",
         "url": "https://www.docker.com/"
