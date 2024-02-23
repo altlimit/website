@@ -1,4 +1,5 @@
-[{
+[
+    {
         "image": "/screen/shopswired.jpg",
         "url": "https://shopswired.com",
         "title": "Shopswired",
@@ -6,22 +7,8 @@
             "A simple eCommerce platform for physical and digital products that allows sellers to build their shop quickly. Features includes unlimited variants, built in messaging system, risk scores, website embed and more.",
             "Technologies: Google Cloud, VueJS, Go, Stripe Connect, SendGrid, TailwindCSS"
         ]
-    }, {
-        "image": "/screen/passedbox.png",
-        "url": "https://passedbox.com",
-        "title": "Passed Box",
-        "description": [
-            "A client-side encrypted digital deposit box that sends keep-alive messages and automatically sends to your designated beneficiary.",
-            "Technologies: Google Cloud, VueJS/TypeScript, Go, Stripe, SendGrid, TailwindCSS"
-        ]
-    }, {
-        "image": "/screen/dms.jpg",
-        "title": "Document Management System",
-        "description": [
-            "A document management system for a car dealership systems provider with scanning solution, flexible search engine and metadata, with DMS third party integration.",
-            "Technologies: Google Cloud, VueJS, Go, SendGrid, TailwindCSS, C#, BigQuery"
-        ]
-    }, {
+    },     
+    {
         "image": "/screen/bullion.jpg",
         "url": "https://texasbulliondepository.gov/",
         "title": "State Bullion Depository",
@@ -31,12 +18,20 @@
         ]
     },
     {
-        "image": "/screen/applauncher.png",
-        "url": "https://play.google.com/store/apps/details?id=com.altlimit.applauncherfree",
-        "title": "AppLauncher",
+        "image": "/screen/dms.jpg",
+        "title": "Document Management System",
         "description": [
-            "App Launcher Plus is an App Drawer that automatically organize your apps base on google play categories with customizable category groups and more.",
-            "Technologies: Flutter, Go, AppEngine, Datastore"
+            "A document management system for a car dealership systems provider with scanning solution, flexible search engine and metadata, with DMS third party integration.",
+            "Technologies: Google Cloud, VueJS, Go, SendGrid, TailwindCSS, C#, BigQuery"
+        ]
+    },    
+    {
+        "image": "/screen/passedbox.png",
+        "url": "https://passedbox.com",
+        "title": "Passed Box",
+        "description": [
+            "A client-side encrypted digital deposit box that sends keep-alive messages and automatically sends to your designated beneficiary.",
+            "Technologies: Google Cloud, VueJS/TypeScript, Go, Stripe, SendGrid, TailwindCSS"
         ]
     }
 ]
