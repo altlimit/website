@@ -29,15 +29,15 @@ title: Contact
             error: null,
             success: false,
             sending: false,
-            dataSize: function() {
+            dataSize: function () {
                 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator
-                        .userAgent)) {
+                    .userAgent)) {
                     return "compact";
                 } else {
                     return "normal";
                 }
             },
-            onSubmit: function() {
+            onSubmit: function () {
                 this.error = null;
                 let captchaResp = "";
                 try {
@@ -59,7 +59,7 @@ title: Contact
                                     "email": "support@altlimit.com"
                                 }],
                             }],
-                            "subject": "Altlimit LLC Contact",
+                            "subject": "Altlimit Contact",
                             "reply_to": {
                                 "email": this.data.email
                             },
@@ -76,7 +76,7 @@ title: Contact
                     this.error = "Please check I'm not a robot.";
                 }
             },
-            sendData: function(data) {
+            sendData: function (data) {
                 const xhr = createCORSRequest('POST', 'https://us-central1-altlimit-live.cloudfunctions.net/SendEmail');
                 if (!xhr) {
                     this.error = "An error has occurred."
@@ -94,9 +94,9 @@ title: Contact
                         } else {
                             this.success = true;
                             this.data = {};
-                            setTimeout(function (){
+                            setTimeout(function () {
                                 this.success = false;
-                            }.bind(this),10000);
+                            }.bind(this), 10000);
                         }
 
                     }
@@ -117,7 +117,8 @@ title: Contact
         <div class="pitch">
             <article>
                 <h1 class="title">Contact Us
-                    <span class="subtitle">And Discover</span></h1>
+                    <span class="subtitle">And Discover</span>
+                </h1>
                 <p>Alternative to Limitations</p>
             </article>
         </div>
@@ -133,7 +134,8 @@ title: Contact
             Tell Us About Your Project
         </h1>
         <p>Our team at Altlimit is committed to providing you the level of service that you need to build your project.
-            Help us learn about your project so that we can tailor a custom approach for you. To get started, please fill up
+            Help us learn about your project so that we can tailor a custom approach for you. To get started, please
+            fill up
             the form below and provide as much information as possible.
         </p>
     </div>
@@ -157,21 +159,20 @@ title: Contact
                 <label for="email">
                     E-mail*
                 </label>
-                <input id="email" type="email" x-model="data.email"/>
+                <input id="email" type="email" x-model="data.email" />
             </div>
             <div class="field">
                 <label for="phone">
                     Phone Number
                 </label>
-                <input id="phone" type="text" x-model="data.phone"/>
+                <input id="phone" type="text" x-model="data.phone" />
             </div>
 
             <div class="field">
                 <label for="message">
                     Message*
                 </label>
-                <textarea x-model="data.message" rows="5"
-                    id="message"></textarea>
+                <textarea x-model="data.message" rows="5" id="message"></textarea>
             </div>
             <div class="field">
                 <div class="g-recaptcha" :data-size="dataSize()"
@@ -183,10 +184,9 @@ title: Contact
                     <p class="text-danger" x-text="error"></p>
                 </div>
             </template>
-            <button :disabled="sending"
-                        class="button primary"
-                        type="submit" x-text="'Send' + (sending ? 'ing' : '')">dsf
-                    </button>
+            <button :disabled="sending" class="button primary" type="submit"
+                x-text="'Send' + (sending ? 'ing' : '')">dsf
+            </button>
         </form>
     </div>
 </main>

@@ -19,47 +19,33 @@
 <body>
     <div class="header">
         <header id="top" x-data="menu()">
-            <nav :class="[isOpen ? 'open' : 'close']" @click.away="isOpen=false"
-                x-cloak>
+            <nav :class="[isOpen ? 'open' : 'close']" @click.away="isOpen=false" x-cloak>
                 <div class="brand">
                     <a href="/">
                         <figure>
-                            <img src="/logo.png" class="mb-1" alt="Altlimit LLC logo" />
+                            <img src="/logo.png" class="mb-1" alt="Altlimit logo" />
                             <figcaption>Altlimit
                                 <div class="tagline">Alternative to Limitations</div>
                             </figcaption>
                         </figure>
                     </a>
                 </div>
-                <button type="button"
-                @click="isOpen = !isOpen"
+                <button type="button" @click="isOpen = !isOpen"
                     class="flex w-10 h-10 px-2 text-gray-500 hover:text-white focus:outline-none focus:text-white"
-                    :class="{ 'transition transform-180': isOpen }"
-                >
-                    <svg
-                    class="h-10 w-10 block fill-current"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    >
-                    <path
-                        x-show="isOpen"
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
-                    />
-                    <path
-                        x-show="!isOpen"
-                        fill-rule="evenodd"
-                        d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-                    />
+                    :class="{ 'transition transform-180': isOpen }">
+                    <svg class="h-10 w-10 block fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
+                        <path x-show="!isOpen" fill-rule="evenodd"
+                            d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
                     </svg>
                 </button>
                 <ul class="links">
                     {{$links := data "links.json"}}
-                {{ range $links }}
-                <li><a href="{{.path}}" @click="isOpen = false"
-                    :class="{'active':isActive('{{.path}}')}">{{.name}}</a></li>
-                {{end}}
+                    {{ range $links }}
+                    <li><a href="{{.path}}" @click="isOpen = false"
+                            :class="{'active':isActive('{{.path}}')}">{{.name}}</a></li>
+                    {{end}}
                 </ul>
 
             </nav>
@@ -72,8 +58,8 @@
                 <li class="title">Quick Links</li>
                 {{$links := data "links.json"}}
                 {{ range $links }}
-                <li><a href="{{.path}}" @click="isOpen = false"
-                    :class="{'active':isActive('{{.path}}')}">{{.name}}</a></li>
+                <li><a href="{{.path}}" @click="isOpen = false" :class="{'active':isActive('{{.path}}')}">{{.name}}</a>
+                </li>
                 {{end}}
             </ul>
             {{$contact := data "contact.json"}}
@@ -94,7 +80,9 @@
         </div>
         <div class="footer">
             <div class="container">
-                <span>&copy; Altlimit LLC <script>document.write(new Date().getFullYear());</script></span>
+                <span>&copy; Altlimit LLC
+                    <script>document.write(new Date().getFullYear());</script>
+                </span>
                 <ul class="links">
                     <li><a href="/privacy">Privacy Policy</a></li>
                     <li><a href="/terms">Terms and Conditions</a></li>
