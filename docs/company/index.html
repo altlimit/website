@@ -1,287 +1,54 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-
-    
-
-<meta charset="utf-8">
-<title> Company - Altlimit</title>
-<meta name="description"
-    content="We build custom desktop, mobile and web apps.">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-<meta property="og:url" content="https://www.altlimit.com/">
-<meta property="og:type" content="website">
-<meta property="og:title" content=" Company - Altlimit">
-<meta property="og:description"
-    content="We build custom desktop, mobile and web apps.">
-<meta property="og:image" content="https://www.altlimit.com/logo.png">
-<link rel="stylesheet" href="/css/styles.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/fontawesome.min.css"
-    integrity="sha512-R+xPS2VPCAFvLRy+I4PgbwkWjw1z5B5gNDYgJN5LfzV4gGNeRQyVrY7Uk59rX+c8tzz63j8DeZPLqmXvBxj8pA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/solid.min.css"
-    integrity="sha512-EvFBzDO3WBynQTyPJI+wLCiV0DFXzOazn6aoy/bGjuIhGCZFh8ObhV/nVgDgL0HZYC34D89REh6DOfeJEWMwgg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/brands.min.css"
-    integrity="sha512-nS1/hdh2b0U8SeA8tlo7QblY6rY6C+MgkZIeRzJQQvMsFfMQFUKp+cgMN2Uuy+OtbQ4RoLMIlO2iF7bIEY3Oyg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
-
-
-    <script>
-        function menu() {
-            return {
-                isOpen: false,
-                isActive: function (link) {
-                    return location.pathname == (link === "/" ? link : link + "/")
-                }
-            }
-        }
-    </script>
-</head>
-
-<body>
-    <div class="header">
-        <header id="top" x-data="menu()">
-            <nav :class="[isOpen ? 'open' : 'close']" @click.away="isOpen=false" x-cloak>
-                <div class="brand">
-                    <a href="/">
-                        <figure>
-                            <img src="/logo.png" class="mb-1" alt="Altlimit logo" />
-                            <figcaption>Altlimit
-                                <div class="tagline">Alternative to Limitations</div>
-                            </figcaption>
-                        </figure>
-                    </a>
-                </div>
-                <button type="button" @click="isOpen = !isOpen"
-                    class="flex w-10 h-10 px-2 text-gray-500 hover:text-white focus:outline-none focus:text-white"
-                    :class="{ 'transition transform-180': isOpen }">
-                    <svg class="h-10 w-10 block fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd"
-                            d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
-                        <path x-show="!isOpen" fill-rule="evenodd"
-                            d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
-                    </svg>
-                </button>
-                <ul class="links">
-                    
-                    
-                    <li><a href="/" @click="isOpen = false"
-                            :class="{'active':isActive('/')}">What We Do</a></li>
-                    
-                    <li><a href="/work" @click="isOpen = false"
-                            :class="{'active':isActive('/work')}">Solutions</a></li>
-                    
-                    <li><a href="/pricing" @click="isOpen = false"
-                            :class="{'active':isActive('/pricing')}">Pricing</a></li>
-                    
-                    <li><a href="/company" @click="isOpen = false"
-                            :class="{'active':isActive('/company')}">Company</a></li>
-                    
-                    <li><a href="/contact" @click="isOpen = false"
-                            :class="{'active':isActive('/contact')}">Contact</a></li>
-                    
-                </ul>
-
-            </nav>
-        </header>
-    </div>
-    
-
-<div>
-    <div class="banner accent" style="background-image:url('/img/company.jpg')">
-        <div class="backdrop"></div>
-        <div class="pitch">
-            <article>
-                <h1 class="title">Who We Are
-                </h1>
-                <p>and how did we get here?</p>
-            </article>
-        </div>
-    </div>
-    <div class="overview">
-        <h2 class="title">
-            Company
-        </h2>
-        <article>
-            <h2 class="title">
-                Passionate Developers, Scalable Teams: Build Faster with Altlimit
-            </h2>
-            <p>
-                At Altlimit, we craft innovative software solutions that empower businesses and individuals. We believe
-                in the power of collaboration, and that's why we leverage a network of highly skilled remote developers
-                to bring your unique vision to life.
-            </p>
-            <h2 class="title">Why Partner with Altlimit?</h2>
-            <div class="px-4">
-                <ul class="list-disc">
-                    <li><strong>Access Top Remote Talent</strong>: Tap into our network of pre-vetted developers with
-                        expertise in
-                        diverse
-                        technologies and frameworks, ensuring perfect fits for your software development projects.</li>
-                    <li><strong>Flexibility and Scalability</strong>: Scale your team up or down effortlessly as your
-                        project needs
-                        evolve,
-                        without the overhead of fixed costs or full-time commitments.</li>
-                    <li><strong>Streamlined Collaboration</strong>: Enjoy seamless communication and project management
-                        through our
-                        robust
-                        tools and practices, fostering a collaborative environment regardless of location.</li>
-                    <li><strong>Focus on Your Core</strong>: Offload development tasks to our experts, freeing you to
-                        focus on your core
-                        business strategies and achieve faster time-to-market.</li>
-                    <li><strong>Experienced Team</strong>: Benefit from our proven track record of successful software
-                        development
-                        projects,
-                        delivered on time and within budget.</li>
-                </ul>
-            </div>
-            <h2 class="title">Project-Based Work, Remote-First Culture:</h2>
-            <p>We understand that every project is unique. That's why we offer flexible engagement models tailored to
-                your specific needs, whether it's a short-term sprint or a long-term collaboration. We value remote work
-                and empower our developers to thrive in a flexible, supportive environment.</p>
-            <h2 class="title">Ready to Amplify Your Software Development?</h2>
-            <p><a href="/contact">Contact us</a> today to discuss your project and discover how Altlimit's on-demand
-                remote development team
-                can help you achieve your goals.</p>
-        </article>
-    </div>
-    <div class="overview">
-        <h2 class="title">
-            The Story So Far
-        </h2>
-        <article class="history">
-            <div>
-                <span class="milestone">2014</span><span class="event">Founded in 2014, Altlimit's mission has always
-                    been to find workarounds for limitations - thus, alternative to limitations. Eversince, they have
-                    always strived to deliver cost-efficient solutions to their clients' software needs.</span>
-                <span></span><span class="event">Initially, Altlimit was focused on web applications and they have
-                    delivered a full fledged crowdfunding website, a community portal, and some social media
-                    apps.</span>
-                <span class="milestone">2017</span><span class="event">In 2017, they had the honor of building an
-                    application for the state's bullion depository through a private company. This paved the way for the
-                    company to expand services after the experience it brought to the table.</span>
-                <span class="milestone">2018</span><span class="event">In 2018, a repeat customer rehired the team to
-                    work on automation, data extraction and migration. This relationship with this client has brought in
-                    more projects including a document management system with scanning solutions and more integration to
-                    car dealership systems.</span>
-                <span class="milestone">2019</span><span class="event">In 2019, with the availability of Flutter, they
-                    have also added mobile development in their portfolio.</span>
-                <span class="milestone">2022</span><span class="event">Currently, the team continues to accept and work
-                    on new projects while still maintaining projects with existing clients.</span>
-            </div>
-        </article>
-    </div>
-    <div class="overview">
-        <h2 class="title">Core Team</h2>
-        <p>The core team is a dynamic duo who has been working together on projects for over two decades. They handle
-            most of the responsibilities on project intakes, consulting and software development and bring in other
-            talents as needed on the project.
-        </p>
-    </div>
-    <div class="bio">
-        <figure>
-            <img src="https://avatars.githubusercontent.com/u/3916729?v=4" alt="Image" />
-            <figcaption>
-                <h3 class="title">Faisal R.</h3>
-                <ul>
-                    <li><a href="https://github.com/faisalraja">Github</a></li>
-                </ul>
-            </figcaption>
-        </figure>
-        <article>
-            <h2 class="title">Faisal
-                <span class="subtitle">Architect, Fullstack Engineer</span>
-            </h2>
-            <p>Faisal is the solutions architect responsible for building core components of each project focusing
-                on performance and scalability. He currently uses Go, Flutter, and VueJS but has vast experience
-                with other technologies throughout his
-                <script>document.write(new Date().getFullYear() - 2006);</script>+ years of career in the software
-                industry as a fullstack engineer.
-            </p>
-        </article>
-    </div>
-    <div class="bio">
-        <figure>
-            <img src="https://avatars.githubusercontent.com/u/4730695?v=4" alt="Image" />
-            <figcaption>
-                <h3 class="title">Monna R.</h3>
-                <ul>
-                    <li><a href="https://github.com/monnalissa">Github</a></li>
-                    <li><a href="https://www.linkedin.com/in/monna-lissa-raja-98aaa63">LinkedIn</a></li>
-                </ul>
-            </figcaption>
-        </figure>
-        <article>
-            <h2 class="title">Monna
-                <span class="subtitle">Frontend Engineer</span>
-            </h2>
-            <p>Monna is the frontend engineer responsible for aesthetics, user experience, and presentation of
-                applications and makes sure
-                they are building responsive web applications. Her favorite stack is VueJS and Tailwind CSS. She has
-                been in the software
-                industry for
-                <script>document.write(new Date().getFullYear() - 2007);</script>+ years as software engineer,
-                integration
-                engineer, and frontend engineer.
-            </p>
-        </article>
-    </div>
-</div>
-
-
-    <footer>
-        <div class="nav">
-            <ul class="links">
-                <li class="title">Quick Links</li>
-                
-                
-                <li><a href="/" @click="isOpen = false" :class="{'active':isActive('/')}">What We Do</a>
-                </li>
-                
-                <li><a href="/work" @click="isOpen = false" :class="{'active':isActive('/work')}">Solutions</a>
-                </li>
-                
-                <li><a href="/pricing" @click="isOpen = false" :class="{'active':isActive('/pricing')}">Pricing</a>
-                </li>
-                
-                <li><a href="/company" @click="isOpen = false" :class="{'active':isActive('/company')}">Company</a>
-                </li>
-                
-                <li><a href="/contact" @click="isOpen = false" :class="{'active':isActive('/contact')}">Contact</a>
-                </li>
-                
-            </ul>
-            
-            <ul class="list">
-                <li class="header">Email Us</li>
-                <li><i class="fa-solid fa-envelope"></i>support@altlimit.com</li>
-                <li class="header">Call Us</li>
-                <li><i class="fa-solid fa-phone"></i>(512) 912-7775</li>
-            </ul>
-            <div class="split">
-                <ul class="social">
-                    <li class="header">Follow Us</li>
-                    <li><a href="https://github.com/altlimit"><i class="fa-brands fa-github"></i>GitHub</a></li>
-                    <li><a href="https://twitter.com/altlimit"><i class="fa-brands fa-twitter"></i>Twitter</a></li>
-                </ul>
-                <a class="anchor" href="#top"><i class="fa-solid fa-arrow-up"></i>Back To Top</a>
-            </div>
-        </div>
-        <div class="footer">
-            <div class="container">
-                <span>&copy; Altlimit LLC
-                    <script>document.write(new Date().getFullYear());</script>
-                </span>
-                <ul class="links">
-                    <li><a href="/privacy">Privacy Policy</a></li>
-                    <li><a href="/terms">Terms and Conditions</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-</body>
-
-</html>
+<!doctype html><html><head><script async src="https://www.googletagmanager.com/gtag/js?id=UA-239138-28"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-239138-28")</script><meta charset=utf-8><title>Company - Altlimit</title>
+<meta name=description content="We build custom desktop, mobile and web apps."><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta property="og:url" content="https://www.altlimit.com/"><meta property="og:type" content="website"><meta property="og:title" content=" Company - Altlimit"><meta property="og:description" content="We build custom desktop, mobile and web apps."><meta property="og:image" content="https://www.altlimit.com/logo.png"><link rel=stylesheet href=/css/styles.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/fontawesome.min.css integrity="sha512-R+xPS2VPCAFvLRy+I4PgbwkWjw1z5B5gNDYgJN5LfzV4gGNeRQyVrY7Uk59rX+c8tzz63j8DeZPLqmXvBxj8pA==" crossorigin=anonymous referrerpolicy=no-referrer><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/solid.min.css integrity="sha512-EvFBzDO3WBynQTyPJI+wLCiV0DFXzOazn6aoy/bGjuIhGCZFh8ObhV/nVgDgL0HZYC34D89REh6DOfeJEWMwgg==" crossorigin=anonymous referrerpolicy=no-referrer><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/brands.min.css integrity="sha512-nS1/hdh2b0U8SeA8tlo7QblY6rY6C+MgkZIeRzJQQvMsFfMQFUKp+cgMN2Uuy+OtbQ4RoLMIlO2iF7bIEY3Oyg==" crossorigin=anonymous referrerpolicy=no-referrer><script defer src=https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js></script><script>function menu(){return{isOpen:!1,isActive:function(e){return location.pathname==(e==="/"?e:e+"/")}}}</script></head><body><div class=header><header id=top x-data=menu()><nav :class="[isOpen ? 'open' : 'close']" @click.away="isOpen=false" x-cloak><div class=brand><a href=/><figure><img src=/logo.png class=mb-1 alt="Altlimit logo"><figcaption>Altlimit<div class=tagline>Alternative to Limitations</div></figcaption></figure></a></div><button type=button @click="isOpen = !isOpen" class="flex w-10 h-10 px-2 text-gray-500 hover:text-white focus:outline-none focus:text-white" :class="{ 'transition transform-180': isOpen }"><svg class="h-10 w-10 block fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 01-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 01-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 011.414-1.414l4.829 4.828 4.828-4.828a1 1 0 111.414 1.414l-4.828 4.829 4.828 4.828z"/><path x-show="!isOpen" fill-rule="evenodd" d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2z"/></svg></button><ul class=links><li><a href=/ @click="isOpen = false" :class="{'active':isActive('/')}">What We Do</a><li><a href=/work @click="isOpen = false" :class="{'active':isActive('/work')}">Solutions</a><li><a href=/pricing @click="isOpen = false" :class="{'active':isActive('/pricing')}">Pricing</a><li><a href=/company @click="isOpen = false" :class="{'active':isActive('/company')}">Company</a><li><a href=/contact @click="isOpen = false" :class="{'active':isActive('/contact')}">Contact</a></ul></nav></header></div><div><div class="banner accent" style=background-image:url(/img/company.jpg)><div class=backdrop></div><div class=pitch><article><h1 class=title>Who We Are</h1><p>and how did we get here?</article></div></div><div class=overview><h2 class=title>Company</h2><article><h2 class=title>Passionate Developers, Scalable Teams: Build Faster with Altlimit</h2><p>At Altlimit, we craft innovative software solutions that empower businesses and individuals. We believe
+in the power of collaboration, and that's why we leverage a network of highly skilled remote developers
+to bring your unique vision to life.<h2 class=title>Why Partner with Altlimit?</h2><div class=px-4><ul class=list-disc><li><strong>Access Top Remote Talent</strong>: Tap into our network of pre-vetted developers with
+expertise in
+diverse
+technologies and frameworks, ensuring perfect fits for your software development projects.<li><strong>Flexibility and Scalability</strong>: Scale your team up or down effortlessly as your
+project needs
+evolve,
+without the overhead of fixed costs or full-time commitments.<li><strong>Streamlined Collaboration</strong>: Enjoy seamless communication and project management
+through our
+robust
+tools and practices, fostering a collaborative environment regardless of location.<li><strong>Focus on Your Core</strong>: Offload development tasks to our experts, freeing you to
+focus on your core
+business strategies and achieve faster time-to-market.<li><strong>Experienced Team</strong>: Benefit from our proven track record of successful software
+development
+projects,
+delivered on time and within budget.</ul></div><h2 class=title>Project-Based Work, Remote-First Culture:</h2><p>We understand that every project is unique. That's why we offer flexible engagement models tailored to
+your specific needs, whether it's a short-term sprint or a long-term collaboration. We value remote work
+and empower our developers to thrive in a flexible, supportive environment.<h2 class=title>Ready to Amplify Your Software Development?</h2><p><a href=/contact>Contact us</a> today to discuss your project and discover how Altlimit's on-demand
+remote development team
+can help you achieve your goals.</article></div><div class=overview><h2 class=title>The Story So Far</h2><article class=history><div><span class=milestone>2014</span><span class=event>Founded in 2014, Altlimit's mission has always
+been to find workarounds for limitations - thus, alternative to limitations. Eversince, they have
+always strived to deliver cost-efficient solutions to their clients' software needs.</span>
+<span></span><span class=event>Initially, Altlimit was focused on web applications and they have
+delivered a full fledged crowdfunding website, a community portal, and some social media
+apps.</span>
+<span class=milestone>2017</span><span class=event>In 2017, they had the honor of building an
+application for the state's bullion depository through a private company. This paved the way for the
+company to expand services after the experience it brought to the table.</span>
+<span class=milestone>2018</span><span class=event>In 2018, a repeat customer rehired the team to
+work on automation, data extraction and migration. This relationship with this client has brought in
+more projects including a document management system with scanning solutions and more integration to
+car dealership systems.</span>
+<span class=milestone>2019</span><span class=event>In 2019, with the availability of Flutter, they
+have also added mobile development in their portfolio.</span>
+<span class=milestone>2022</span><span class=event>Currently, the team continues to accept and work
+on new projects while still maintaining projects with existing clients.</span></div></article></div><div class=overview><h2 class=title>Core Team</h2><p>The core team is a dynamic duo who has been working together on projects for over two decades. They handle
+most of the responsibilities on project intakes, consulting and software development and bring in other
+talents as needed on the project.</div><div class=bio><figure><img src="https://avatars.githubusercontent.com/u/3916729?v=4" alt=Image><figcaption><h3 class=title>Faisal R.</h3><ul><li><a href=https://github.com/faisalraja>Github</a></ul></figcaption></figure><article><h2 class=title>Faisal
+<span class=subtitle>Architect, Fullstack Engineer</span></h2><p>Faisal is the solutions architect responsible for building core components of each project focusing
+on performance and scalability. He currently uses Go, Flutter, and VueJS but has vast experience
+with other technologies throughout his
+<script>document.write((new Date).getFullYear()-2006)</script>+ years of career in the software
+industry as a fullstack engineer.</article></div><div class=bio><figure><img src="https://avatars.githubusercontent.com/u/4730695?v=4" alt=Image><figcaption><h3 class=title>Monna R.</h3><ul><li><a href=https://github.com/monnalissa>Github</a><li><a href=https://www.linkedin.com/in/monna-lissa-raja-98aaa63>LinkedIn</a></ul></figcaption></figure><article><h2 class=title>Monna
+<span class=subtitle>Frontend Engineer</span></h2><p>Monna is the frontend engineer responsible for aesthetics, user experience, and presentation of
+applications and makes sure
+they are building responsive web applications. Her favorite stack is VueJS and Tailwind CSS. She has
+been in the software
+industry for
+<script>document.write((new Date).getFullYear()-2007)</script>+ years as software engineer,
+integration
+engineer, and frontend engineer.</article></div></div><footer><div class=nav><ul class=links><li class=title>Quick Links<li><a href=/ @click="isOpen = false" :class="{'active':isActive('/')}">What We Do</a><li><a href=/work @click="isOpen = false" :class="{'active':isActive('/work')}">Solutions</a><li><a href=/pricing @click="isOpen = false" :class="{'active':isActive('/pricing')}">Pricing</a><li><a href=/company @click="isOpen = false" :class="{'active':isActive('/company')}">Company</a><li><a href=/contact @click="isOpen = false" :class="{'active':isActive('/contact')}">Contact</a></ul><ul class=list><li class=header>Email Us<li><i class="fa-solid fa-envelope"></i>support@altlimit.com<li class=header>Call Us<li><i class="fa-solid fa-phone"></i>(512) 912-7775</ul><div class=split><ul class=social><li class=header>Follow Us<li><a href=https://github.com/altlimit><i class="fa-brands fa-github"></i>GitHub</a><li><a href=https://twitter.com/altlimit><i class="fa-brands fa-twitter"></i>Twitter</a></ul><a class=anchor href=#top><i class="fa-solid fa-arrow-up"></i>Back To Top</a></div></div><div class=footer><div class=container><span>&copy; ALTLIMIT
+<script>document.write((new Date).getFullYear())</script></span><ul class=links><li><a href=/privacy>Privacy Policy</a><li><a href=/terms>Terms and Conditions</a></ul></div></div></footer></body></html>
