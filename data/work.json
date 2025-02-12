@@ -4,34 +4,31 @@
         "url": "https://shopswired.com",
         "title": "Shopswired",
         "description": [
-            "A simple eCommerce platform for physical and digital products that allows sellers to build their shop quickly. Features includes unlimited variants, built in messaging system, risk scores, website embed and more.",
-            "Technologies: Google Cloud, VueJS, Go, Stripe Connect, SendGrid, TailwindCSS"
+            "A simple eCommerce platform for physical and digital products that allows sellers to build their shop quickly. Features includes unlimited variants, built in messaging system, risk scores, website embed and more."
         ]
-    },     
+    },
     {
         "image": "/screen/bullion.jpg",
         "url": "https://texasbulliondepository.gov/",
-        "title": "State Bullion Depository",
+        "title": "Texas Bullion Depository",
         "description": [
-            "A government audited bullion management system with banking level security and transaction system including client portal, support system, and logistics administration.",
-            "Technologies: AWS, S3, VueJS, Python3, SendGrid, Bulma"
+            "A government audited bullion management system with banking level security and transaction system including client portal, support system, and logistics administration."
         ]
     },
     {
         "image": "/screen/dms.jpg",
-        "title": "Document Management System",
+        "title": "DealerBox",
+        "url": "https://acme.dealerbox.com/",
         "description": [
-            "A document management system for a car dealership systems provider with scanning solution, flexible search engine and metadata, with DMS third party integration.",
-            "Technologies: Google Cloud, VueJS, Go, SendGrid, TailwindCSS, C#, BigQuery"
+            "A document management system for a car dealership systems provider with scanning solution, flexible search engine and metadata, with DMS third party integration."
         ]
-    },    
+    },
     {
         "image": "/screen/passedbox.png",
         "url": "https://passedbox.com",
         "title": "Passed Box",
         "description": [
-            "A client-side encrypted digital deposit box that sends keep-alive messages and automatically sends to your designated beneficiary.",
-            "Technologies: Google Cloud, VueJS/TypeScript, Go, Stripe, SendGrid, TailwindCSS"
+            "A client-side encrypted digital deposit box that sends keep-alive messages and automatically sends to your designated beneficiary."
         ]
     }
 ]
